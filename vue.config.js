@@ -41,5 +41,5 @@ module.exports = {
     ],
   },
   // 指定需要编译的依赖
-  transpileDependencies: ['uview-ui','@dcloudio/uni-ui','z-paging'],
+  transpileDependencies: ['@dcloudio/uni-ui','z-paging','uview-ui'],
 };
