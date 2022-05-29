@@ -6,7 +6,7 @@ import { assetURL } from '@/configs';
  * @description 模拟接口
  * @param mockData 想要返回的模拟数据
  */
-// http://cims_api.chetell.com/api-docs#/
+
 export const Login = (params) => request.get('/login', { params });
 
 //GET /my_cost我的费用列表

@@ -1,9 +1,9 @@
 {
-  "name": "taihaoguan",
-  "appid": "__UNI__1ECA80B",
+  "name": "haojiahuo",
+  "appid": "",
   "description": "",
-  "versionName": "1.0.0",
-  "versionCode": "100",
+  "versionName": "0.0.1",
+  "versionCode": "1",
   "transformPx": false,
   "app-plus": {
 //    解决打包出来的版本与开发出来的版本不一致的问题：
