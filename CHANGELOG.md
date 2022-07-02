@@ -1,16 +1,39 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-02 12:33:28
- * @LastEditTime: 2022-07-02 18:38:15
+ * @LastEditTime: 2022-07-03 00:36:07
  * @LastEditors: cest
- * @FilePath: /uni-app-cli/doc/CHANGELOG.md
+ * @FilePath: /uni-app-cli/CHANGELOG.md
  * @Description: 更新日志
 -->
 # Change Log
 
+## 2022-7-3
+
+ 更新：
+
+- 【uni-app-cli-preset】 工程
+  - colorui 移动到 util 目录
+  - 修改 .gitignore文件
+  - 修改 babel.config.js 文件
+  - 修改 README.md 说明文档
+  - main.js 删除冗余功能
+  - pages.json 精简注释
+  - manifest.json 修改微信小程序项目设置
+  - package.json 删除不需要的依赖
+    - 新增 postcss-comment 依赖项
+  的 resolutions 字段用于解析选择性版本，可以 辑 yarn.lock 文件。 详细 <https://  cs/selective-version-resolutions>
+    - 升级 vue-cli 版本： 4.5.0 -> 4.5.15
+  件的业务处理
+  - 目录更名
+    - doc -> docs
+    - project-doc ->project-docs
+  - CHANGELOG.md 从 docs 目录转移到根目录
+  - docs 目录：文件名变更 README.md -> index.md
+
 ## 2022-7-2
 
-- uni-app-cli-preset 工程配置
+- 【uni-app-cli-preset】 工程
   - 删除无关组件与文件
   - 新增配置文件 `.editorconfig` - 编辑器代码风格配置
   - 新增配置文件 `.env[.*][.local]` - 编译环节配置
