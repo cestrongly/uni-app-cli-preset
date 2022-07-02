@@ -1,7 +1,7 @@
 
 # uni-app-cli-preset
 
-[更新记录](./doc/CHANGELOG.md)
+[更新记录](./CHANGELOG.md)
 
 **开箱即用！！基于 ```uni-app cli``` 模式集成最佳实践脚手架**
 
