@@ -1,0 +1,9 @@
+/* ==================
+  文字截断
+ ==================== */
+
+.text-cut {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}

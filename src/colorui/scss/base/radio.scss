@@ -1,0 +1,172 @@
+radio-group {
+  display: inline-block;
+}
+
+radio {
+  position: relative;
+}
+
+/* #ifndef MP-ALIPAY */
+radio::before {
+  font-family: 'cuIcon';
+  content: '\e645';
+  position: absolute;
+  color: #ffffff !important;
+  top: 50%;
+  margin-top: -8px;
+  right: 5px;
+  font-size: 32rpx;
+  line-height: 16px;
+  pointer-events: none;
+  transform: scale(1, 1);
+  transition: all 0.3s ease-in-out 0s;
+  z-index: 9;
+}
+
+radio .wx-radio-input,
+radio .uni-radio-input
+{
+  margin: 0;
+  width: 24px;
+  height: 24px;
+}
+
+
+radio.radio::before,
+radio .wx-radio-input::before,
+radio.radio::before,
+radio .uni-radio-input::before {
+  display: none;
+}
+
+radio.radio[checked]::after,
+radio.radio .uni-radio-input-checked::after {
+  content: '';
+  background-color: transparent;
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  z-index: 999;
+  top: 0rpx;
+  left: 0rpx;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 200rpx;
+  /* #ifndef MP */
+  border: 7px solid #ffffff !important;
+  /* #endif */
+
+  /* #ifdef MP */
+  border: 8px solid #ffffff !important;
+  /* #endif */
+}
+
+radio.red[checked] .wx-radio-input,
+radio.red.checked .uni-radio-input {
+  background-color: #e54d42 !important;
+  border-color: #e54d42 !important;
+  color: #ffffff !important;
+}
+
+radio.orange[checked] .wx-radio-input,
+radio.orange.checked .uni-radio-input {
+  background-color: #f37b1d !important;
+  border-color: #f37b1d !important;
+  color: #ffffff !important;
+}
+
+radio.yellow[checked] .wx-radio-input,
+radio.yellow.checked .uni-radio-input {
+  background-color: #fbbd08 !important;
+  border-color: #fbbd08 !important;
+  color: #333333 !important;
+}
+
+radio.olive[checked] .wx-radio-input,
+radio.olive.checked .uni-radio-input {
+  background-color: #8dc63f !important;
+  border-color: #8dc63f !important;
+  color: #ffffff !important;
+}
+
+radio.green[checked] .wx-radio-input,
+radio[checked] .wx-radio-input,
+radio.green.checked .uni-radio-input,
+radio.checked .uni-radio-input {
+  background-color: #39b54a !important;
+  border-color: #39b54a !important;
+  color: #ffffff !important;
+  border-color: #39b54a !important;
+}
+
+radio.cyan[checked] .wx-radio-input,
+radio.cyan.checked .uni-radio-input {
+  background-color: #1cbbb4 !important;
+  border-color: #1cbbb4 !important;
+  color: #ffffff !important;
+}
+
+radio.blue[checked] .wx-radio-input,
+radio.blue.checked .uni-radio-input {
+  background-color: #0081ff !important;
+  border-color: #0081ff !important;
+  color: #ffffff !important;
+}
+
+radio.purple[checked] .wx-radio-input,
+radio.purple.checked .uni-radio-input {
+  background-color: #6739b6 !important;
+  border-color: #6739b6 !important;
+  color: #ffffff !important;
+}
+
+radio.mauve[checked] .wx-radio-input,
+radio.mauve.checked .uni-radio-input {
+  background-color: #9c26b0 !important;
+  border-color: #9c26b0 !important;
+  color: #ffffff !important;
+}
+
+radio.pink[checked] .wx-radio-input,
+radio.pink.checked .uni-radio-input {
+  background-color: #e03997 !important;
+  border-color: #e03997 !important;
+  color: #ffffff !important;
+}
+
+radio.brown[checked] .wx-radio-input,
+radio.brown.checked .uni-radio-input {
+  background-color: #a5673f !important;
+  border-color: #a5673f !important;
+  color: #ffffff !important;
+}
+
+radio.grey[checked] .wx-radio-input,
+radio.grey.checked .uni-radio-input {
+  background-color: #8799a3 !important;
+  border-color: #8799a3 !important;
+  color: #ffffff !important;
+}
+
+radio.gray[checked] .wx-radio-input,
+radio.gray.checked .uni-radio-input {
+  background-color: #f0f0f0 !important;
+  border-color: #f0f0f0 !important;
+  color: #333333 !important;
+}
+
+radio.black[checked] .wx-radio-input,
+radio.black.checked .uni-radio-input {
+  background-color: #333333 !important;
+  border-color: #333333 !important;
+  color: #ffffff !important;
+}
+
+radio.white[checked] .wx-radio-input,
+radio.white.checked .uni-radio-input {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #333333 !important;
+}

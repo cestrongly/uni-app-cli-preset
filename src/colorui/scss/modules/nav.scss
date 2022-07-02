@@ -1,0 +1,23 @@
+/* ==================
+         导航栏
+ ==================== */
+
+ .nav {
+  white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.nav .cu-item {
+  height: 90rpx;
+  display: inline-block;
+  line-height: 90rpx;
+  margin: 0 10rpx;
+  padding: 0 20rpx;
+}
+
+.nav .cu-item.cur {
+  border-bottom: 4rpx solid;
+}

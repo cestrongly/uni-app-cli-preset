@@ -1,0 +1,208 @@
+/* ==================
+         开关
+ ==================== */
+
+switch {
+  position: relative;
+}
+
+switch::after,
+switch::before {
+  font-family: 'cuIcon';
+  content: '\e645';
+  position: absolute;
+  color: #ffffff !important;
+  top: 0%;
+  left: 0rpx;
+  font-size: 26rpx;
+  line-height: 26px;
+  width: 50%;
+  text-align: center;
+  pointer-events: none;
+  transform: scale(0, 0);
+  transition: all 0.3s ease-in-out 0s;
+  z-index: 9;
+  bottom: 0;
+  height: 26px;
+  margin: auto;
+}
+
+switch::before {
+  content: '\e646';
+  right: 0;
+  transform: scale(1, 1);
+  left: auto;
+}
+
+switch[checked]::after,
+switch.checked::after {
+  transform: scale(1, 1);
+}
+
+switch[checked]::before,
+switch.checked::before {
+  transform: scale(0, 0);
+}
+
+switch[checked]::before {
+  transform: scale(0, 0);
+}
+
+switch .wx-switch-input,
+switch .uni-switch-input {
+  border: none;
+  padding: 0 24px;
+  width: 48px;
+  height: 26px;
+  margin: 0;
+  border-radius: 100rpx;
+}
+
+switch .wx-switch-input:not([class*='bg-']),
+switch .uni-switch-input:not([class*='bg-']) {
+  background: #8799a3 !important;
+}
+
+switch .wx-switch-input::after,
+switch .uni-switch-input::after {
+  margin: auto;
+  width: 26px;
+  height: 26px;
+  border-radius: 100rpx;
+  left: 0rpx;
+  top: 0rpx;
+  bottom: 0rpx;
+  position: absolute;
+  transform: scale(0.9, 0.9);
+  transition: all 0.1s ease-in-out 0s;
+}
+
+switch .wx-switch-input.wx-switch-input-checked::after,
+switch .uni-switch-input.uni-switch-input-checked::after {
+  margin: auto;
+  left: 22px;
+  box-shadow: none;
+  transform: scale(0.9, 0.9);
+}
+
+switch.radius .wx-switch-input::after,
+switch.radius .wx-switch-input,
+switch.radius .wx-switch-input::before,
+switch.radius .uni-switch-input::after,
+switch.radius .uni-switch-input,
+switch.radius .uni-switch-input::before {
+  border-radius: 10rpx;
+}
+
+switch .wx-switch-input::before,
+switch .uni-switch-input::before {
+  display: none;
+}
+
+switch.red[checked] .wx-switch-input.wx-switch-input-checked,
+switch.red.checked .uni-switch-input.uni-switch-input-checked{
+  background-color: #e54d42 !important;
+  border-color: #e54d42 !important;
+  color: #ffffff !important;
+}
+
+switch.orange[checked] .wx-switch-input,
+switch.orange.checked .uni-switch-input {
+  background-color: #f37b1d !important;
+  border-color: #f37b1d !important;
+  color: #ffffff !important;
+}
+
+switch.yellow[checked] .wx-switch-input,
+switch.yellow.checked .uni-switch-input {
+  background-color: #fbbd08 !important;
+  border-color: #fbbd08 !important;
+  color: #333333 !important;
+}
+
+switch.olive[checked] .wx-switch-input,
+switch.olive.checked .uni-switch-input {
+  background-color: #8dc63f !important;
+  border-color: #8dc63f !important;
+  color: #ffffff !important;
+}
+
+switch.green[checked] .wx-switch-input,
+switch[checked] .wx-switch-input,
+switch.green.checked .uni-switch-input,
+switch.checked .uni-switch-input{
+  background-color: #39b54a !important;
+  border-color: #39b54a !important;
+  color: #ffffff !important;
+  border-color: #39b54a !important;
+}
+
+switch.cyan[checked] .wx-switch-input,
+switch.cyan.checked .uni-switch-input {
+  background-color: #1cbbb4 !important;
+  border-color: #1cbbb4 !important;
+  color: #ffffff !important;
+}
+
+switch.blue[checked] .wx-switch-input,
+switch.blue.checked .uni-switch-input {
+  background-color: #0081ff !important;
+  border-color: #0081ff !important;
+  color: #ffffff !important;
+}
+
+switch.purple[checked] .wx-switch-input,
+switch.purple.checked .uni-switch-input{
+  background-color: #6739b6 !important;
+  border-color: #6739b6 !important;
+  color: #ffffff !important;
+}
+
+switch.mauve[checked] .wx-switch-input,
+switch.mauve.checked .uni-switch-input {
+  background-color: #9c26b0 !important;
+  border-color: #9c26b0 !important;
+  color: #ffffff !important;
+}
+
+switch.pink[checked] .wx-switch-input,
+switch.pink.checked .uni-switch-input {
+  background-color: #e03997 !important;
+  border-color: #e03997 !important;
+  color: #ffffff !important;
+}
+
+switch.brown[checked] .wx-switch-input,
+switch.brown.checked .uni-switch-input {
+  background-color: #a5673f !important;
+  border-color: #a5673f !important;
+  color: #ffffff !important;
+}
+
+switch.grey[checked] .wx-switch-input
+switch.grey.checked .uni-switch-input {
+  background-color: #8799a3 !important;
+  border-color: #8799a3 !important;
+  color: #ffffff !important;
+}
+
+switch.gray[checked] .wx-switch-input,
+switch.gray.checked .uni-switch-input {
+  background-color: #f0f0f0 !important;
+  border-color: #f0f0f0 !important;
+  color: #333333 !important;
+}
+
+switch.black[checked] .wx-switch-input,
+switch.black.checked .uni-switch-input{
+  background-color: #333333 !important;
+  border-color: #333333 !important;
+  color: #ffffff !important;
+}
+
+switch.white[checked] .wx-switch-input,
+switch.white.checked .uni-switch-input {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #333333 !important;
+}

@@ -1,0 +1,114 @@
+/*
+  ColorUi for uniApp  v2.1.6 | by 文晓港 2019-05-31 10:44:24
+  仅供学习交流，如作它用所承受的法律责任一概与作者无关
+
+  *使用ColorUi开发扩展与插件时，请注明基于ColorUi开发
+
+  （QQ交流群：240787041）
+*/
+
+// 变量
+@import './scss/var-preset-color.scss';
+
+// 元素样式
+// 初始化
+@import './scss/base/page.scss';
+// checkbox
+@import './scss/base/checkbox.scss';
+// image
+@import './scss/base/image.scss';
+// radio
+@import './scss/base/radio.scss';
+// 轮播
+@import './scss/base/swiper.scss';
+// switch
+@import './scss/base/switch.scss';
+
+// 基础布局
+// Flex布局
+@import './scss/layouts/flex.scss';
+// DIV布局（Float布局）
+@import './scss/layouts/float.scss';
+// Grid布局
+@import './scss/layouts/grid.scss';
+// 预设外边距
+@import './scss/layouts/margin.scss';
+// 预设内填充
+@import './scss/layouts/padding.scss';
+
+// 基础样式
+// 背景样式
+@import './scss/modules/background.scss';
+// 背景图片
+@import './scss/modules/bg-img.scss';
+// 背景蒙版
+@import './scss/modules/bg-mask.scss';
+// 视频背景
+@import './scss/modules/bg-video.scss';
+// 边框样色
+@import './scss/modules/border-color.scss';
+// 边框边角圆度
+@import './scss/modules/border-radius.scss';
+// 边框样式 细线 虚线 上右下左
+@import './scss/modules/border.scss';
+// 盒子阴影
+@import './scss/modules/box-shadow.scss';
+
+// colorui
+// 头像
+@import './scss/modules/cu-avatar.scss';
+// 操作条
+@import './scss/modules/cu-bar.scss';
+// 按钮
+@import './scss/modules/cu-btn.scss';
+// 卡片
+@import './scss/modules/cu-card.scss';
+// 聊天
+@import './scss/modules/cu-chat.scss';
+// 表单
+@import './scss/modules/cu-form-group.scss';
+// 列表
+@import './scss/modules/cu-list.scss';
+// 加载
+@import './scss/modules/cu-load.scss';
+// 模态窗口
+@import './scss/modules/cu-modal.scss';
+// 进度条
+@import './scss/modules/cu-progress.scss';
+// 步骤条
+@import './scss/modules/cu-steps.scss';
+// 徽章
+@import './scss/modules/cu-tag.scss';
+// 时间轴
+@import './scss/modules/cu-timeline.scss';
+
+// 内置图标
+@import './scss/modules/icon.scss';
+// 设置有边框的盒子里字体颜色
+@import './scss/modules/line.scss';
+// 设置有边框的盒子里字体颜色 盒子里还有盒子
+@import './scss/modules/lines.scss';
+// 导航栏
+@import './scss/modules/nav.scss';
+// 定制 Switch 性别
+@import './scss/modules/switch-sex.scss';
+
+// 文本样式
+// 文字对齐
+@import './scss/modules/text-align.scss';
+// 文字加粗
+@import './scss/modules/text-bold.scss';
+// 文字颜色
+@import './scss/modules/text-color.scss';
+// 内容行高
+@import './scss/modules/text-content.scss';
+// 文字阴影
+@import './scss/modules/text-shadow.scss';
+// 文字截断
+@import './scss/modules/text-cut.scss';
+// 特殊文字 价格
+@import './scss/modules/text-price.scss';
+// 文字大小
+@import './scss/modules/text-size.scss';
+// 特殊文字
+@import './scss/modules/text-transform.scss';
