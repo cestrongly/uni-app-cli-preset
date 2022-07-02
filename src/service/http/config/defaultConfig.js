@@ -1,0 +1,68 @@
+/**
+ * @Author: cest
+ * @Date: 2022-06-10 20:51:43
+ * @LastEditTime: 2022-06-19 01:21:03
+ * @LastEditors: cest
+ * @FilePath: /cedo-app-cli/src/service/http/config/defaultConfig.js
+ * @Description: Http请求 全局配置
+ */
+
+// #基本使用
+// http.middleware(config)
+// http.request(config)
+// http.get(url[, config])
+// http.upload(url[, config])
+// http.delete(url[, data[, config]])
+// http.head(url[, data[, config]])
+// http.post(url[, data[, config]])
+// http.put(url[, data[, config]])
+// http.connect(url[, data[, config]])
+// http.options(url[, data[, config]])
+// http.trace(url[, data[, config]])
+
+// #全局配置
+// 可选的配置项有如下：
+export default {
+  baseURL: '',
+  header: {},
+  method: 'GET',
+  dataType: 'json',
+  // #ifndef MP-ALIPAY
+  responseType: 'text',
+  // #endif
+  // 注：如果局部custom与全局custom有同名属性，则后面的属性会覆盖前面的属性，相当于Object.assign(全局，局部)
+  custom: {}, // 全局自定义参数默认值
+  // #ifdef H5 || APP-PLUS || MP-ALIPAY || MP-WEIXIN
+  timeout: 60000,
+  // #endif
+  // #ifdef APP-PLUS
+  sslVerify: true,
+  // #endif
+  // #ifdef H5
+  // 跨域请求时是否携带凭证（cookies）仅H5支持（HBuilderX 2.6.15+）
+  withCredentials: false,
+  // #endif
+  // #ifdef APP-PLUS
+  firstIpv4: false, // DNS解析时优先使用ipv4 仅 App-Android 支持 (HBuilderX 2.8.0+)
+  // #endif
+  // 局部优先级高于全局，返回当前请求的task,options。请勿在此处修改options。非必填
+  // getTask: (task, options) => {
+  // 相当于设置了请求超时时间500ms
+  //   setTimeout(() => {
+  //     task.abort()
+  //   }, 500)
+  // },
+  // 全局自定义验证器。参数为statusCode 且必存在，不用判断空情况。
+  validateStatus: statusCode => {
+    // statusCode 必存在。此处示例为全局默认配置
+    return statusCode >= 200 && statusCode < 300
+  }
+}
+
+// 可以通过http.setConfig()方法进行全局配置，比如配置请求的全局域名baseUrl：
+
+// http.setConfig((config) => {
+//     /* config 为默认全局配置*/
+//     config.baseURL = `https://www.example.com`; /* 根域名 */
+//     return config
+// })
