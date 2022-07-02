@@ -1,9 +1,9 @@
 <!--
  * @Author: cest
  * @Date: 2022-06-20 08:11:56
- * @LastEditTime: 2022-07-01 08:42:10
+ * @LastEditTime: 2022-07-02 21:06:45
  * @LastEditors: cest
- * @FilePath: /cedo-app-cli/src/App.vue
+ * @FilePath: /uni-app-cli/src/App.vue
  * @Description: 编辑描述内容
 -->
 <script>
@@ -47,7 +47,7 @@ export default {
 <style lang="scss">
 @import '@/assets/theme/dark/index.scss';
 @import '@/assets/theme/default/index.scss';
-@import 'colorui/index.scss';
-@import 'uni_modules/uview-ui/index.scss';
-@import "@/assets/scss/index.scss";
+@import '@/util/colorui/index.scss';
+@import '@/uni_modules/uview-ui/index.scss';
+@import '@/assets/scss/index.scss';
 </style>
