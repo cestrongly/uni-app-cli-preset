@@ -1,5 +1,5 @@
 {
-    "name" : "cedo-app",
+    "name" : "uni-app-preset",
     "appid" : "__UNI__B0CA536",
     "description" : "设备管理系统",
     "versionName" : "1.0.0",
@@ -8,8 +8,6 @@
     /* 5+App特有相关 */
     "app-plus" : {
         "usingComponents" : true,
-        "nvueCompiler" : "uni-app",
-        "compilerVersion" : 3,
         "splashscreen" : {
             "alwaysShowBeforeRender" : true,
             "waiting" : true,
@@ -87,7 +85,7 @@
     "mp-toutiao" : {
         "usingComponents" : true
     },
-    "uniStatistics" : {
-        "enable" : false
+    "mp-qq" : {
+        "usingComponents" : true
     }
 }
