@@ -1,0 +1,11 @@
+@import "./var.scss";
+@import "@/assets/scss/color.scss";
+
+.dark {
+  color: $u-main-color;
+  .u-block {
+    &__title {
+      color: $u-content-color;
+    }
+  }
+}
