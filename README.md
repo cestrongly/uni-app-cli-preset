@@ -3,7 +3,7 @@
 
 **开箱即用！！基于 ```uni-app cli``` 模式集成最佳实践脚手架**
 
-- 集成多平台快速开发的 UI 框架，[uView UI](https://www.uviewui.com)
+- 集成多平台快速开发的 UI 框架，[uView UI](https://www.uviewui.com) 2.0 版
 
   `uView UI` 是全面兼容nvue的uni-app 生态框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水
 
@@ -150,21 +150,23 @@ root
 ├── .prettierrc.js      // prettier 统一代码格式化风格配置文件
 ├── .yarnrc             // yarn 镜像配置文件
 ├── babel.config.js     // 对 js 文件进行编译转换增强的配置文件
-├── jsconfig.json       // JavaScript语言服务的配置文件 代码提示 文件索引等问题
+├── jsconfig.json       // JavaScript 语言服务的配置文件。比如：代码提示、文件索引等问题
 ├── LICENSE             // MIT 许可证
 ├── package.json        // 包管理配置文件
 ├── postcss.config.js   // 对 css 文件进行编译转换增强的配置文件
 ├── README.md           // uni-app-cli-preset 说明文档 
-├── vue.config.js       // vuecli配置文件
-└── yarn.lock           // yarn锁定依赖版本
+├── vue.config.js       // vue-cli 配置文件
+└── yarn.lock           // yarn 锁定依赖版本
 ```
 
 ## 使用到的框架和库
 
-- [uniapp](https://uniapp.dcloud.io/)
-- [Vue-CLI](https://cli.vuejs.org)
-- [uview2](https://www.uviewui.com/)
+- [vue](https://cn.vuejs.org/)
 - [vuex](https://vuex.vuejs.org/zh/)
+- [vuex](https://vuex.vuejs.org/zh/)
+- [uview](https://www.uviewui.com/)
+- [ColorUI](https://github.com/weilanwl/ColorUI)
+- [luch-request](https://github.com/lei-mu/luch-request)
 
 ## 关键字
 
