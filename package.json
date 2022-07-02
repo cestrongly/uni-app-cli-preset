@@ -95,6 +95,7 @@
     "less-loader": "^11.0.0",
     "mini-types": "*",
     "miniprogram-api-typings": "*",
+    "postcss-comment": "^2.0.0",
     "pug": "^3.0.2",
     "pug-html-loader": "^1.1.5",
     "pug-plain-loader": "^1.1.0",
@@ -106,6 +107,9 @@
     "Android >= 4.4",
     "ios >= 9"
   ],
+  "resolutions": {
+    "@babel/runtime": "~7.17.9"
+  },
   "uni-app": {
     "scripts": {}
   }
