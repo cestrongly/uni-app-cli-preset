@@ -69,7 +69,7 @@
       "autoAudits": false,
       "uglifyFileName": false,
       "uploadWithSourceMap": true,
-      "enhance": false,
+      "enhance": true,
       "useMultiFrameRuntime": true,
       "showShadowRootInWxmlPanel": true,
       "packNpmManually": false,

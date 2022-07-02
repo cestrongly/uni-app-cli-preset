@@ -6,7 +6,6 @@ radio {
   position: relative;
 }
 
-/* #ifndef MP-ALIPAY */
 radio::before {
   font-family: 'cuIcon';
   content: '\e645';
