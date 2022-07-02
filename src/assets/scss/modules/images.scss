@@ -1,0 +1,16 @@
+// 图片集合
+.images {
+  ::v-deep .u-row {
+    flex-wrap: wrap;
+  }
+
+  ::v-deep .u-transition,
+  ::v-deep .u-image {
+    height: 100%;
+  }
+
+  ::v-deep .u-image__image {
+    width: 100%;
+    height: 100%;
+  }
+}

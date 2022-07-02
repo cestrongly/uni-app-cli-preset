@@ -1,0 +1,22 @@
+.cedo-item {
+  background-color: #fff;
+  position: relative;
+  &__body {
+    .textarea {
+      border-radius: 6rpx;
+    }
+  }
+  .index {
+    width: 1em;
+    height: 1em;
+    border-radius: 100%;
+  }
+  .ticketStatus {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 180rpx;
+    text-align: right;
+    border-bottom-left-radius: 30rpx;
+  }
+}

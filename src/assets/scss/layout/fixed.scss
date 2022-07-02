@@ -1,0 +1,8 @@
+.fixed {
+  position:fixed ;
+  left: 0;
+  right: 0;
+  &.align-end {
+    bottom: 0;
+  }
+}

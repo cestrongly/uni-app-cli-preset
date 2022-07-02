@@ -1,0 +1,12 @@
+page {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  background-color: $u-bg-color;
+  color: $u-main-color;
+
+  .u-page {
+    flex-grow: 1;
+  }
+}

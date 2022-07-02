@@ -1,0 +1,15 @@
+// 卡面
+.area {
+  &__head {
+    .title-pre {
+      width: 4px;
+      height: 24px;
+    }
+  }
+
+  &__body {
+    .textarea {
+      border-radius: 6rpx;
+    }
+  }
+}
