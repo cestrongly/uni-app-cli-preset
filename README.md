@@ -181,7 +181,7 @@ root
 - _Cest_
 - _wangProgrammer_ itwangyang@foxmail.com
 
-### 鸣谢
+## 鸣谢
 
 - 感谢 [Vue-CLI](https://cli.vuejs.org)
 - 感谢 [vue](https://cn.vuejs.org/)
