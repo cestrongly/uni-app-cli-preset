@@ -1,51 +1,85 @@
-import Vue from 'vue';
-import App from '@/App';
-import store from '@/store';
+/**
+ * @Author: zhuangli.qin
+ * @Date: 2022-06-16 07:48:59
+ * @LastEditors: cest
+ * @LastEditTime: 2022-06-30 13:57:23
+ * @FilePath: /cedo-app-cli/src/main.js
+ * @Description:
+ * @Copyright (c) 2022 by cestrmail@163.com by zhuangli.qin, All Rights Reserved.
+ */
+import Vue from 'vue'
+import App from './App'
 
-import { router, RouterMount } from '@/router';
+// vuex
+import store from './store'
 
-import plugins from '@/plugins';
+// 引入全局uView
+import uView from '@/uni_modules/uview-ui'
 
-import requests from '@/requests';
+// 引入自定义顶部
+import cuCustom from './colorui/components/cu-custom.vue'
 
-import ViaIcon from '@/icons/components/ViaIcon';
-// todo 这样写会挂载不上 待优化
-// import icons from "@/icons";
-// Vue.use(icons);
+// 引入自定义顶部
+// import TnCustom from './components/TnCustom/TnCustom.vue'
 
-import directives from '@/directives';
+// 验证权限
+import {
+	hasPermi
+} from '@/util'
 
-import tempImage from './utils/tempImage';
+// 注册组件 自定义顶部
+Vue.component('cu-custom', cuCustom)
+// 注册组件 自定义顶部
+// Vue.component('tn-custom', TnCustom)
 
-import showDictLabel from './utils/showDictLabel';
 
-import { dialog, toast, loading } from './utils/modal';
+// vuex 默认已挂载，不需要显示挂载
+// Vue.prototype.$store = store
 
-Vue.config.productionTip = false;
+// Boolean 权限校验
+Vue.prototype.hasPermi = hasPermi
 
-App.mpType = 'app';
+/**
+ * 应该删除部分
+ * @param {Object} arr
+ * @param {Object} item
+ */
+Vue.prototype.removeArray = function(arr, item) {
+	delete arr[arr.indexOf(item)]
+	let tempArr = [];
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i]) {
+			tempArr.push(arr[i])
+		}
+	}
+	return tempArr
+}
 
-Vue.use(router);
-Vue.use(plugins);
-Vue.use(requests);
-Vue.component('ViaIcon', ViaIcon);
-Vue.use(directives);
-Vue.prototype.$tempImage = tempImage;
-Vue.prototype.$showDictLabel = showDictLabel;
-Vue.prototype.$dialog = dialog;
-Vue.prototype.$toast = toast;
-Vue.prototype.$loading = loading;
+/**
+ * 应该删除部分
+ * @param {Object} arr
+ * @param {Object} index
+ */
+Vue.prototype.removeIndex = function(arr, index) {
+	delete arr[index];
+	let tempArr = [];
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i]) {
+			tempArr.push(arr[i])
+		}
+	}
+	return tempArr;
+}
+
+Vue.config.productionTip = false
+App.mpType = 'app'
+// 安装 uView 插件
+Vue.use(uView);
 
 const app = new Vue({
-  store,
-  ...App,
-});
-
-// v1.3.5起 H5端 你应该去除原有的app.$mount();使用路由自带的渲染方式
-// #ifdef H5
-RouterMount(app, router, '#app');
-// #endif
-
-// #ifndef H5
-app.$mount(); // 为了兼容小程序及app端必须这样写才有效果
-// #endif
+	...App,
+	store
+})
+// 引入请求封装
+// require('./util/request/index')(app)
+app.$mount()
