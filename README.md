@@ -7,11 +7,11 @@
 
 - 集成多平台快速开发的 UI 框架，[uView UI](https://www.uviewui.com) 2.0 版
 
-  `uView UI` 是全面兼容nvue的uni-app 生态框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水
+  `uView UI` 是全面兼容 nvue 的 uni-app 生态框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水
 
 - 集成 [ColorUI](https://github.com/weilanwl/ColorUI)
 
-  `ColorUI` 是一个Css 类的 UI 组件库！不是一个 Js 框架。相比于同类小程序组件库，ColorUI 更注重于视觉交互！
+  `ColorUI` 是一个 Css 类的 UI 组件库！不是一个 Js 框架。相比于同类小程序组件库，ColorUI 更注重于视觉交互！
   
   - 源代码：[GitHub](https://github.com/weilanwl/ColorUI)
 
