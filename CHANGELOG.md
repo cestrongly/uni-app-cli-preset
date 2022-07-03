@@ -1,14 +1,28 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-02 12:33:28
- * @LastEditTime: 2022-07-03 00:36:07
+ * @LastEditTime: 2022-07-03 22:33:49
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/CHANGELOG.md
  * @Description: 更新日志
 -->
 # Change Log
 
-## 2022-7-3
+## 2022-7-3 v1.0.1-alpha.20220703
+
+更新：
+
+- 【uni-app-cli-preset】 工程
+  - 修复：README.md `更新记录` 链接不正确的问题
+  - package.json
+    - 新增对 stylus 语法支持
+  - 新增配置文件.stylintrc - stylus 语法校验与代码格式风格设置  
+- 【colorui】库
+  - 新增 CuTabbar 组件
+  - 新增【基础元素】导航页面（组件）
+  - 新增【交互组件】导航页面（组件）
+
+## 2022-7-3 v1.0.0.20220703
 
  更新：
 
