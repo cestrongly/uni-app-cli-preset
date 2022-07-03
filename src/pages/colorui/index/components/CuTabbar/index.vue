@@ -1,14 +1,14 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 09:06:40
- * @LastEditTime: 2022-07-03 16:56:20
+ * @LastEditTime: 2022-07-03 17:18:47
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/pages/colorui/index/components/CuTabbar/index.vue
- * @Description: 编辑描述内容
+ * @Description: tabbar 组件
 -->
 <template lang="pug">
 .cu-bar.tabbar.bg-white.shadow.foot
-  Action(
+  CuAction(
     v-for="(item, index) in tabbarList"
     :key="index"
     :text="item.text"
@@ -18,11 +18,11 @@
 </template>
 
 <script>
-import Action from './components/Action'
+import CuAction from './components/CuAction'
 export default {
   name: 'CuTabbar',
   components: {
-    Action
+    CuAction
   },
   props: {
     list: {

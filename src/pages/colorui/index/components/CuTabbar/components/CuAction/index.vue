@@ -1,10 +1,10 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 09:45:31
- * @LastEditTime: 2022-07-03 15:31:28
+ * @LastEditTime: 2022-07-03 17:19:00
  * @LastEditors: cest
- * @FilePath: /uni-app-cli/src/pages/colorui/index/components/CuTabbar/components/action/index.vue
- * @Description: 编辑描述内容
+ * @FilePath: /uni-app-cli/src/pages/colorui/index/components/CuTabbar/components/CuAction/index.vue
+ * @Description: tabbar item
 -->
 <template lang="pug">
 .action(@click="changeEventHandler" data-cur="basics")
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'Action',
+  name: 'CuAction',
   props: {
     // 名字
     text: {

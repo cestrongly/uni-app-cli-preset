@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 09:00:23
- * @LastEditTime: 2022-07-03 16:47:28
+ * @LastEditTime: 2022-07-03 17:14:23
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/pages/colorui/index/index.vue
  * @Description: 首页
@@ -14,9 +14,7 @@
     | components
   div(v-if="currentPageName == 'plugin'")
     | plugin
-  CuTabbar(
-    :list="tabbarList"
-    @changeItem="changeItem")
+  CuTabbar(:list="tabbarList" @changeItem="changeItem")
 </template>
 
 <script>
