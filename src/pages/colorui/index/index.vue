@@ -1,14 +1,14 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 09:00:23
- * @LastEditTime: 2022-07-03 17:14:23
+ * @LastEditTime: 2022-07-03 20:25:31
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/pages/colorui/index/index.vue
  * @Description: 首页
 -->
 <template lang="pug">
 .index
-  div(v-if="currentPageName == 'basics'")
+  Basics(v-if="currentPageName == 'basics'")
     | basics
   div(v-if="currentPageName == 'component'")
     | components
@@ -19,8 +19,9 @@
 
 <script>
 import CuTabbar from './components/CuTabbar'
+import Basics from './components/Basics'
 export default {
-  components: { CuTabbar },
+  components: { CuTabbar, Basics },
   data: () => ({
     currentPageName: 'basics',
     tabbarList: [
