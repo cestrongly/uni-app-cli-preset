@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 09:06:40
- * @LastEditTime: 2022-07-03 17:18:47
+ * @LastEditTime: 2022-07-03 22:07:57
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/pages/colorui/index/components/CuTabbar/index.vue
  * @Description: tabbar 组件
@@ -13,6 +13,7 @@
     :key="index"
     :text="item.text"
     :isActive="item.isActive"
+    :imgClass="item.imgClass"
     @change="change({item,index},$event)"
   )
 </template>
@@ -25,15 +26,30 @@ export default {
     CuAction
   },
   props: {
-    list: {
-      type: Array,
-      default: () => []
-    }
+    // list: {
+    //   type: Array,
+    //   default: () => []
+    // }
   },
   data() {
-    const tabbarList = this.list
     return {
-      tabbarList
+      tabbarList: [
+        {
+          text: '元素',
+          isActive: true,
+          imgClass: 'basics'
+        },
+        {
+          text: '组件',
+          isActive: false,
+          imgClass: 'component'
+        },
+        {
+          text: '扩展',
+          isActive: false,
+          imgClass: 'plugin'
+        }
+      ]
     }
   },
   computed: {},

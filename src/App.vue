@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-06-20 08:11:56
- * @LastEditTime: 2022-07-02 21:06:45
+ * @LastEditTime: 2022-07-03 22:21:23
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/App.vue
  * @Description: 编辑描述内容
@@ -48,6 +48,7 @@ export default {
 @import '@/assets/theme/dark/index.scss';
 @import '@/assets/theme/default/index.scss';
 @import '@/util/colorui/index.scss';
+@import '@/util/colorui/animation.css';
 @import '@/uni_modules/uview-ui/index.scss';
 @import '@/assets/scss/index.scss';
 </style>

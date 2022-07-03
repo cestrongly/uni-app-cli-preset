@@ -1,46 +1,28 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 09:00:23
- * @LastEditTime: 2022-07-03 20:25:31
+ * @LastEditTime: 2022-07-03 22:04:41
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/pages/colorui/index/index.vue
  * @Description: 首页
 -->
 <template lang="pug">
 .index
-  Basics(v-if="currentPageName == 'basics'")
-    | basics
-  div(v-if="currentPageName == 'component'")
-    | components
+  CuBasics(v-if="currentPageName == 'basics'")
+  CuComponent(v-if="currentPageName == 'component'")
   div(v-if="currentPageName == 'plugin'")
     | plugin
-  CuTabbar(:list="tabbarList" @changeItem="changeItem")
+  CuTabbar(@changeItem="changeItem")
 </template>
 
 <script>
 import CuTabbar from './components/CuTabbar'
-import Basics from './components/Basics'
+import CuBasics from './components/CuBasics'
+import CuComponent from './components/CuComponent'
 export default {
-  components: { CuTabbar, Basics },
+  components: { CuTabbar, CuBasics, CuComponent },
   data: () => ({
-    currentPageName: 'basics',
-    tabbarList: [
-      {
-        text: '元素',
-        isActive: true,
-        imgClass: 'basics'
-      },
-      {
-        text: '组件',
-        isActive: false,
-        imgClass: 'component'
-      },
-      {
-        text: '扩展',
-        isActive: false,
-        imgClass: 'plugin'
-      }
-    ]
+    currentPageName: 'basics'
   }),
   computed: {},
   methods: {

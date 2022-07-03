@@ -1,32 +1,25 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 20:20:11
- * @LastEditTime: 2022-07-03 21:16:12
+ * @LastEditTime: 2022-07-03 22:16:18
  * @LastEditors: cest
- * @FilePath: /uni-app-cli/src/pages/colorui/index/components/Basics/index.vue
+ * @FilePath: /uni-app-cli/src/pages/colorui/index/components/CuBasics/index.vue
  * @Description: 基础元素
 -->
 <template lang="pug">
 scroll-view.basics(scroll-y)
-  img.response(src="@/pages/colorui/static/BasicsBg.png" mode="widthFix")
-  .nav-list
-    navigator.nav-li(
-      hover-class="none"
-      :url="'/pages/basics/' + item.name" navigateTo
-      :class="'bg-' + item.color"
-      :style="[{ animation: 'show ' + ((index + 1) * 0.2 + 1) + 's 1' }]"
-      v-for="(item, index) in elements"
-      :key="index"
-    )
-      .nav-title {{ item.title }}
-      .nav-name {{ item.name }}
-      text(:class="'cuIcon-' + item.cuIcon")
+  img.response.animation-fade(src="@/pages/colorui/static/BasicsBg.png" mode="widthFix")
+  CuNavList(:list="elements")
   .cu-tabbar-height
 </template>
 
 <script>
+import CuNavList from '@/pages/colorui/components/CuNavList'
 export default {
-  name: 'Basics',
+  name: 'CuBasics',
+  components: {
+    CuNavList
+  },
   props: {},
   data: () => ({
     elements: [
@@ -110,10 +103,6 @@ export default {
   beforeDestroy() {}
 }
 </script>
-
-<style lang="stylus">
-@import './nav-list'
-</style>
 
 <style lang="stylus" scoped>
 
