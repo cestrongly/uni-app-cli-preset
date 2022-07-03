@@ -21,7 +21,7 @@
 
   **注：本脚手架集成的 `color-ui` 并不是原作者的源。**
   
-      为了适应项目的开发需求，基于 `color-ui` 进行二次开发的 sass 版本 `color-ui-sass`
+    > 为了适应项目的开发需求，基于 `color-ui` 进行二次开发的 sass 版本 `color-ui-sass`
       其功能上保持不变。
 
 - 集成 [luch-request](https://github.com/lei-mu/luch-request)
@@ -31,6 +31,19 @@
   - 源代码：[GitHub](https://github.com/lei-mu/luch-request)
 
   - [官网&使用文档]('https://www.quanzhan.co/luch-request/')
+
+- 集成当前主流的三种预编译器：`Less` `SCSS` `Stylus`
+  
+  CSS 预处理器是用一种专门的编程语言，进行 Web 页面样式设计，然后再编译成正常的 CSS 文件，以供项目使用。让你的 CSS 更加简洁、适应性更强、可读性更佳，更易于代码的维护等诸多好处。
+
+- 集成 `Pug` Template
+
+  pug 是一种前端模板引擎，原名 jade 可用来生成 HTML，它的写法类似于 CSS，语法简单易理解，同时极大的简约了我们的代码。
+  
+  **WHY PUG?**
+  > As web designers or developers, we likely all have to write our fair share of HTML. And while this is not the most difficult task, it can often feel a little boring or repetitive. This is where the Pug HTML preprocessor comes in.
+  
+  [中文文档](https://pugjs.org/zh-cn/api/getting-started.html)
 
 ## 上手指南
 
