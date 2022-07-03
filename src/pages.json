@@ -55,6 +55,18 @@
           }
         }
       ]
+    },
+    {
+      "root": "pages/colorui",
+      "pages": [
+        {
+          "path": "index/index",
+          "style": {
+            "navigationStyle": "custom",
+            "enablePullDownRefresh": false
+          }
+        }
+      ]
     }
   ]
 }

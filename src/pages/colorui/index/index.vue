@@ -1,0 +1,106 @@
+<!--
+ * @Author: cest
+ * @Date: 2022-07-03 09:00:23
+ * @LastEditTime: 2022-07-03 16:47:28
+ * @LastEditors: cest
+ * @FilePath: /uni-app-cli/src/pages/colorui/index/index.vue
+ * @Description: 首页
+-->
+<template lang="pug">
+.index
+  div(v-if="currentPageName == 'basics'")
+    | basics
+  div(v-if="currentPageName == 'component'")
+    | components
+  div(v-if="currentPageName == 'plugin'")
+    | plugin
+  CuTabbar(
+    :list="tabbarList"
+    @changeItem="changeItem")
+</template>
+
+<script>
+import CuTabbar from './components/CuTabbar'
+export default {
+  components: { CuTabbar },
+  data: () => ({
+    currentPageName: 'basics',
+    tabbarList: [
+      {
+        text: '元素',
+        isActive: true,
+        imgClass: 'basics'
+      },
+      {
+        text: '组件',
+        isActive: false,
+        imgClass: 'component'
+      },
+      {
+        text: '扩展',
+        isActive: false,
+        imgClass: 'plugin'
+      }
+    ]
+  }),
+  computed: {},
+  methods: {
+    changeItem(context) {
+      console.log('changeItem:', context)
+      const { item } = context
+      this.currentPageName = item.imgClass
+      console.log('currentPageName:', this.currentPageName)
+    }
+  },
+  watch: {},
+
+  // 页面周期函数--监听页面加载
+  onLoad() {},
+  // 页面周期函数--监听页面初次渲染完成
+  onReady() {},
+  // 页面周期函数--监听页面显示(not-nvue)
+  onShow() {},
+  // 页面周期函数--监听页面隐藏
+  onHide() {},
+  // 页面周期函数--监听页面卸载
+  onUnload() {}
+  // 页面处理函数--监听用户下拉动作
+  // onPullDownRefresh() { uni.stopPullDownRefresh(); },
+  // 页面处理函数--监听用户上拉触底
+  // onReachBottom() {},
+  // 页面处理函数--监听页面滚动(not-nvue)
+  // onPageScroll(event) {},
+  // 页面处理函数--用户点击右上角分享
+  // onShareAppMessage(options) {},
+}
+</script>
+
+<style lang="scss" scoped>
+.logo {
+  width: 200rpx;
+  height: 200rpx;
+  background-image: url('@/pages/colorui/static/logo.png');
+  background-size: 100%;
+}
+</style>
+
+<style lang="stylus">
+.cu-tabbar
+  &__img
+    background-size 100%
+    width 50rpx
+    height 50rpx
+    display inline-block
+    &.basics
+      background-image url('@/pages/colorui/static/tabbar/basics.png')
+      &_cur
+        background-image url(@/pages/colorui/static/tabbar/basics_cur.png)
+    &.component
+      background-image url('@/pages/colorui/static/tabbar/component.png')
+      &_cur
+        background-image url(@/pages/colorui/static/tabbar/component_cur.png)
+    &.plugin
+      background-image url('@/pages/colorui/static/tabbar/plugin.png')
+      &_cur
+        background-image url(@/pages/colorui/static/tabbar/plugin_cur.png)
+</style>
