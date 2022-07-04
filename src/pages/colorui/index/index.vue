@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 09:00:23
- * @LastEditTime: 2022-07-04 20:20:44
+ * @LastEditTime: 2022-07-04 22:13:15
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/pages/colorui/index/index.vue
  * @Description: 首页
@@ -11,7 +11,9 @@
   CuBasics(v-if="currentPageName == 'basics'")
   CuComponent(v-if="currentPageName == 'component'")
   CuPlugin(v-if="currentPageName == 'plugin'")
-  CuTabbar(@changeItem="changeItem")
+  CuTabbar(
+    :isDark="isDark"
+    @changeItem="changeItem")
 </template>
 
 <script>
@@ -24,7 +26,11 @@ export default {
   data: () => ({
     currentPageName: 'basics'
   }),
-  computed: {},
+  computed: {
+    isDark() {
+      return this.currentPageName === 'plugin'
+    }
+  },
   methods: {
     changeItem(context) {
       console.log('changeItem:', context)

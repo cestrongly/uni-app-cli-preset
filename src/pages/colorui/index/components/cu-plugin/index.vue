@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-04 20:18:12
- * @LastEditTime: 2022-07-04 21:33:26
+ * @LastEditTime: 2022-07-04 22:31:23
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/pages/colorui/index/components/cu-plugin/index.vue
  * @Description: 插件扩展
@@ -10,13 +10,13 @@
 scroll-view.page.bg-black(scroll-y)
   cu-custom
     block(slot="content")
-      img(
+      img.animation-fade(
         src="@/pages/colorui/static/cjkz.png"
         mode="aspectFill"
         style="width: 240upx; height: 60upx")
   view.cu-card
     view.cu-item.shadow-blur.bg-img(
-      :style="[{backgroundImage:'url('+item.img+')'}]"
+      :style="[{backgroundImage:'url('+item.img+')'},{ animation: 'show ' + ((index + 1) * 0.2 + 1) + 's 1' }]"
       @tap="toChild"
       :data-url="item.url"
       v-for="(item, index) in list"
@@ -83,6 +83,10 @@ export default {
 }
 
 .cu-item {
+  background-color: var(--ui-bg-dark-color);
+}
+
+::v-deep .tabbar {
   background-color: var(--ui-bg-dark-color);
 }
 

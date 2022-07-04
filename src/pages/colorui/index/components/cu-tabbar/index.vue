@@ -1,13 +1,13 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 09:06:40
- * @LastEditTime: 2022-07-03 22:07:57
+ * @LastEditTime: 2022-07-04 22:25:34
  * @LastEditors: cest
- * @FilePath: /uni-app-cli/src/pages/colorui/index/components/CuTabbar/index.vue
+ * @FilePath: /uni-app-cli/src/pages/colorui/index/components/cu-tabbar/index.vue
  * @Description: tabbar 组件
 -->
 <template lang="pug">
-.cu-bar.tabbar.bg-white.shadow.foot
+.cu-bar.tabbar.shadow.foot(:class="bgColor")
   CuAction(
     v-for="(item, index) in tabbarList"
     :key="index"
@@ -26,10 +26,10 @@ export default {
     CuAction
   },
   props: {
-    // list: {
-    //   type: Array,
-    //   default: () => []
-    // }
+    isDark: {
+      type: Boolean,
+      default: false
+    }
   },
   data() {
     return {
@@ -52,7 +52,12 @@ export default {
       ]
     }
   },
-  computed: {},
+  computed: {
+    bgColor() {
+      console.log('darK?',this.isDark)
+      return this.isDark? 'bg-dark':'bg-white'
+    }
+  },
   methods: {
     change({ item, index }, e) {
       console.log('change:', index, e)
@@ -61,8 +66,8 @@ export default {
         return { ...item, isActive: false }
       })
       this.tabbarList.splice(index, 1, item)
-      console.log('this.tabbarList：', this.tabbarList)
-
+      // console.log('this.tabbarList：', this.tabbarList)
+      console.log('darK?',this.isDark)
       this.$emit('changeItem', { item, index })
     }
   },
