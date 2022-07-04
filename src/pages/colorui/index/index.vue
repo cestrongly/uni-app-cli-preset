@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 09:00:23
- * @LastEditTime: 2022-07-03 22:04:41
+ * @LastEditTime: 2022-07-04 20:20:44
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/pages/colorui/index/index.vue
  * @Description: 首页
@@ -10,17 +10,17 @@
 .index
   CuBasics(v-if="currentPageName == 'basics'")
   CuComponent(v-if="currentPageName == 'component'")
-  div(v-if="currentPageName == 'plugin'")
-    | plugin
+  CuPlugin(v-if="currentPageName == 'plugin'")
   CuTabbar(@changeItem="changeItem")
 </template>
 
 <script>
-import CuTabbar from './components/CuTabbar'
-import CuBasics from './components/CuBasics'
-import CuComponent from './components/CuComponent'
+import CuTabbar from './components/cu-tabbar'
+import CuBasics from './components/cu-basics'
+import CuComponent from './components/cu-component'
+import CuPlugin from './components/cu-plugin'
 export default {
-  components: { CuTabbar, CuBasics, CuComponent },
+  components: { CuTabbar, CuBasics, CuComponent, CuPlugin },
   data: () => ({
     currentPageName: 'basics'
   }),

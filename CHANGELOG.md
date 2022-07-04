@@ -1,12 +1,19 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-02 12:33:28
- * @LastEditTime: 2022-07-03 22:33:49
+ * @LastEditTime: 2022-07-04 21:36:54
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/CHANGELOG.md
  * @Description: 更新日志
 -->
 # Change Log
+
+## 2022-7-4 v1.0.2-alpha.20220704
+
+更新：
+
+- 【colorui】库
+  - 新增【插件扩展】导航页面（组件）
 
 ## 2022-7-3 v1.0.1-alpha.20220703
 
