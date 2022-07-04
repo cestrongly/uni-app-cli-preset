@@ -1,14 +1,14 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-02 12:33:28
- * @LastEditTime: 2022-07-04 21:36:54
+ * @LastEditTime: 2022-07-04 21:46:47
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/CHANGELOG.md
  * @Description: 更新日志
 -->
 # Change Log
 
-## 2022-7-4 v1.0.2-alpha.20220704
+## 2022-7-4 v1.0.1-alpha.20220704
 
 更新：
 
