@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-02 12:33:28
- * @LastEditTime: 2022-07-02 21:08:06
+ * @LastEditTime: 2022-07-05 20:59:08
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/util/colorui/components/cu-custom.vue
  * @Description: 编辑描述内容
@@ -33,15 +33,15 @@
 export default {
   data () {
     return {
-      StatusBar: this.StatusBar,
-      CustomBar: this.CustomBar
+      StatusBar: this.$StatusBar,
+      CustomBar: this.$CustomBar
     };
   },
   name: 'CuCustom',
   computed: {
     style () {
-      var StatusBar = this.StatusBar;
-      var CustomBar = this.CustomBar;
+      var StatusBar = this.$StatusBar;
+      var CustomBar = this.$CustomBar;
       var bgImage = this.bgImage;
       var style = `height:${CustomBar}px;padding-top:${StatusBar}px;`;
       if (this.bgImage) {

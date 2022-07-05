@@ -1,24 +1,24 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 21:42:34
- * @LastEditTime: 2022-07-03 22:01:23
+ * @LastEditTime: 2022-07-05 20:14:54
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/pages/colorui/components/CuNavList/index.vue
  * @Description: 编辑描述内容
 -->
 <template lang="pug">
-  .nav-list
-    navigator.nav-li(
-      hover-class="none"
-      :url="'/pages/basics/' + item.name" navigateTo
-      :class="'bg-' + item.color"
-      :style="[{ animation: 'show ' + ((index + 1) * 0.2 + 1) + 's 1' }]"
-      v-for="(item, index) in list"
-      :key="index"
-    )
-      .nav-title {{ item.title }}
-      .nav-name {{ item.name }}
-      text(:class="'cuIcon-' + item.cuIcon")
+.nav-list
+  navigator.nav-li(
+    hover-class="none"
+    :url="item.url" navigateTo
+    :class="'bg-' + item.color"
+    :style="[{ animation: 'show ' + ((index + 1) * 0.2 + 1) + 's 1' }]"
+    v-for="(item, index) in list"
+    :key="index"
+  )
+    .nav-title {{ item.title }}
+    .nav-name {{ item.name }}
+    text(:class="'cuIcon-' + item.cuIcon")
 </template>
 
 <script>

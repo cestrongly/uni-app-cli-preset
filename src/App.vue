@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-06-20 08:11:56
- * @LastEditTime: 2022-07-03 22:21:23
+ * @LastEditTime: 2022-07-05 20:45:23
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/App.vue
  * @Description: 编辑描述内容
@@ -13,25 +13,27 @@ export default {
     uni.getSystemInfo({
       success: function (e) {
         // #ifndef MP
-        Vue.prototype.StatusBar = e.statusBarHeight
+        Vue.prototype.$StatusBar = e.statusBarHeight
         if (e.platform == 'android') {
-          Vue.prototype.CustomBar = e.statusBarHeight + 50
+          Vue.prototype.$CustomBar = e.statusBarHeight + 50
         } else {
-          Vue.prototype.CustomBar = e.statusBarHeight + 45
+          Vue.prototype.$CustomBar = e.statusBarHeight + 45
         }
         // #endif
 
         // #ifdef MP-WEIXIN
         Vue.prototype.StatusBar = e.statusBarHeight
         let custom = wx.getMenuButtonBoundingClientRect()
-        Vue.prototype.Custom = custom
-        Vue.prototype.CustomBar = custom.bottom + custom.top - e.statusBarHeight + 4
+        Vue.prototype.$Custom = custom
+        Vue.prototype.$CustomBar = custom.bottom + custom.top - e.statusBarHeight + 4
         // #endif
 
         // #ifdef MP-ALIPAY
-        Vue.prototype.StatusBar = e.statusBarHeight
-        Vue.prototype.CustomBar = e.statusBarHeight + e.titleBarHeight
+        Vue.prototype.$StatusBar = e.statusBarHeight
+        Vue.prototype.$CustomBar = e.statusBarHeight + e.titleBarHeight
         // #endif
+
+        // console.log('Vue.prototype',this)
       }
     })
   },

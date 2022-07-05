@@ -1,9 +1,9 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 20:20:11
- * @LastEditTime: 2022-07-03 22:16:18
+ * @LastEditTime: 2022-07-05 20:19:49
  * @LastEditors: cest
- * @FilePath: /uni-app-cli/src/pages/colorui/index/components/CuBasics/index.vue
+ * @FilePath: /uni-app-cli/src/pages/colorui/index/components/cu-basics/index.vue
  * @Description: 基础元素
 -->
 <template lang="pug">
@@ -27,61 +27,71 @@ export default {
         title: '布局',
         name: 'layout',
         color: 'cyan',
-        cuIcon: 'newsfill'
+        cuIcon: 'newsfill',
+        url: '/pages/colorui/layout/index'
       },
       {
         title: '背景',
         name: 'background',
         color: 'blue',
-        cuIcon: 'colorlens'
+        cuIcon: 'colorlens',
+        url: '/pages/colorui/background/index'
       },
       {
         title: '文本',
         name: 'text',
         color: 'purple',
-        cuIcon: 'font'
+        cuIcon: 'font',
+        url: '/pages/colorui/text/index'
       },
       {
         title: '图标 ',
         name: 'icon',
         color: 'mauve',
-        cuIcon: 'cuIcon'
+        cuIcon: 'cuIcon',
+        url: '/pages/colorui/icon/index'
       },
       {
         title: '按钮',
         name: 'button',
         color: 'pink',
-        cuIcon: 'btn'
+        cuIcon: 'btn',
+        url: '/pages/colorui/button/index'
       },
       {
         title: '标签',
         name: 'tag',
         color: 'brown',
-        cuIcon: 'tagfill'
+        cuIcon: 'tagfill',
+        url: '/pages/colorui/tag/index'
       },
       {
         title: '头像',
         name: 'avatar',
         color: 'red',
-        cuIcon: 'myfill'
+        cuIcon: 'myfill',
+        url: '/pages/colorui/avatar/index'
       },
       {
         title: '进度条',
         name: 'progress',
         color: 'orange',
-        cuIcon: 'icloading'
+        cuIcon: 'icloading',
+        url: '/pages/colorui/progress/index'
       },
       {
         title: '边框阴影',
         name: 'shadow',
         color: 'olive',
-        cuIcon: 'copy'
+        cuIcon: 'copy',
+        url: '/pages/colorui/shadow/index'
       },
       {
         title: '加载',
         name: 'loading',
         color: 'green',
-        cuIcon: 'loading2'
+        cuIcon: 'loading2',
+        url: '/pages/colorui/loading/index'
       }
     ]
   }),
