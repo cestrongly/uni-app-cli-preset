@@ -1,12 +1,25 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-02 12:33:28
- * @LastEditTime: 2022-07-04 21:46:47
+ * @LastEditTime: 2022-07-05 23:06:46
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/CHANGELOG.md
  * @Description: 更新日志
 -->
 # Change Log
+
+## 2022-7-5 v1.0.1-alpha.20220705
+
+更新：
+
+- 【uni-app-cli-preset】 工程
+  - 修改 `Vue` 扩展属性的扩展规则
+    - `Vue.prototype.StatusBar` -> `Vue.prototype.$StatusBar`
+    - `Vue.prototype.Custom` -> `Vue.prototype.$Custom`
+    - `Vue.prototype.CustomBar` -> `Vue.prototype.$CustomBar`
+- 【colorui】库
+  - 新增【Layout】页面
+  - 编写 Flex 布局说明文档
 
 ## 2022-7-4 v1.0.1-alpha.20220704
 

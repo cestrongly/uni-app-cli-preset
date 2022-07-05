@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-06-20 08:11:56
- * @LastEditTime: 2022-07-05 20:45:23
+ * @LastEditTime: 2022-07-05 23:02:05
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/App.vue
  * @Description: 编辑描述内容
@@ -22,7 +22,7 @@ export default {
         // #endif
 
         // #ifdef MP-WEIXIN
-        Vue.prototype.StatusBar = e.statusBarHeight
+        Vue.prototype.$StatusBar = e.statusBarHeight
         let custom = wx.getMenuButtonBoundingClientRect()
         Vue.prototype.$Custom = custom
         Vue.prototype.$CustomBar = custom.bottom + custom.top - e.statusBarHeight + 4
