@@ -1,14 +1,14 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 08:51:11
- * @LastEditTime: 2022-07-05 20:32:01
+ * @LastEditTime: 2022-07-08 22:18:28
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/pages/index/index.vue
  * @Description: 编辑描述内容
 -->
 <template lang="pug">
 .index.align-center.justify-center
-  navigator.text-xxl(url="/pages/colorui/index/index" open-type="navigate" hover-class="navigator-hover")
+  navigator.text-xxl.animation-fade(url="/pages/colorui/index/index" open-type="navigate" hover-class="navigator-hover")
     | colorui说明文档
 </template>
 

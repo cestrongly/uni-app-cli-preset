@@ -1,14 +1,14 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 21:42:34
- * @LastEditTime: 2022-07-05 20:14:54
+ * @LastEditTime: 2022-07-05 23:43:05
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/pages/colorui/components/CuNavList/index.vue
  * @Description: 编辑描述内容
 -->
 <template lang="pug">
 .nav-list
-  navigator.nav-li(
+  navigator.nav-li.animation-show(
     hover-class="none"
     :url="item.url" navigateTo
     :class="'bg-' + item.color"

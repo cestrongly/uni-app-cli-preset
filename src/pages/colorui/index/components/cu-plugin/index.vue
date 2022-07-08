@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-04 20:18:12
- * @LastEditTime: 2022-07-04 22:31:23
+ * @LastEditTime: 2022-07-06 00:29:22
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/pages/colorui/index/components/cu-plugin/index.vue
  * @Description: 插件扩展
@@ -14,16 +14,17 @@ scroll-view.page.bg-black(scroll-y)
         src="@/pages/colorui/static/cjkz.png"
         mode="aspectFill"
         style="width: 240upx; height: 60upx")
-  view.cu-card
-    view.cu-item.shadow-blur.bg-img(
-      :style="[{backgroundImage:'url('+item.img+')'},{ animation: 'show ' + ((index + 1) * 0.2 + 1) + 's 1' }]"
+  .cu-card
+    .cu-item.shadow-blur.animation-show(
+      :style="[{ animation: 'show ' + ((index + 1) * 0.2 + 1) + 's 1' }]"
       @tap="toChild"
       :data-url="item.url"
       v-for="(item, index) in list"
       :key="index"
     )
-      view.cardTitle {{ item.title }}
-  view.cu-tabbar-height
+      img.img-bg(:src="item.img")
+      .cardTitle {{ item.title }}
+  .cu-tabbar-height
 </template>
 
 <script>
@@ -43,7 +44,6 @@ export default {
           title: '微动画',
           url: '../plugin/animation',
           img: '/pages/colorui/static/nav-list-bg.png'
-
         },
         {
           title: '全屏抽屉',
@@ -77,13 +77,20 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .page {
   height: 100vh;
 }
 
 .cu-item {
+  position: relative;
   background-color: var(--ui-bg-dark-color);
+  .img-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
 }
 
 ::v-deep .tabbar {

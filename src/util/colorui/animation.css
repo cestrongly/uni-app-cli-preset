@@ -16,6 +16,12 @@
   animation-duration: 0.5s;
   animation-timing-function: ease-out;
   animation-fill-mode: both;
+  /* 动画过程有闪烁（一般出现在动画开始）的解决方法 */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  perspective: 1000;
+  /* 在 webkit 内核的浏览器中，另一个行之有效的方法 */
+  transform: translate3d(0,0,0);
 }
 
 .animation-fade {
