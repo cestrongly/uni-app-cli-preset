@@ -45,89 +45,46 @@
   
   [中文文档](https://pugjs.org/zh-cn/api/getting-started.html)
 
+- 集成项目规范（eslint + prettier）支持 `standard` 和 `eslint:recommended`,默认配置 `standard`
+
 ## 上手指南
 
-1. 安装依赖
+### 安装依赖
 
-   - 使用 npm
+```bash
+yarn
+```
 
-      ```bash
-      npm install
-      ```
+### 运行项目
 
-    - 使用 yarn
+```bash
+# 默认为H5环境 更多环境命令请参考 package.json 中的 scripts字段
+yarn serve 
+```
 
-      ```bash
-      yarn
-      ```
+### 打包发行
 
-2. 运行项目
-
-    - 使用 npm
-
-      ```bash
-      # 默认为H5环境 更多环境命令请参考 package.json 中的 scripts字段
-      npm run serve 
-      ```
-
-    - 使用 yarn
-
-      ```bash
-      # 默认为H5环境 更多环境命令请参考 package.json 中的 scripts字段
-      yarn serve 
-      ```
-
-3. 打包发行
-
-    - 使用 npm
-
-      ```bash
-      npm run build # 默认为H5环境 更多环境命令请参考 package.json 中的scripts字段
-      ```
-
-    - 使用 yarn
-
-      ```bash
-      yarn build # 默认为H5环境 更多环境命令请参考 package.json 中的 scripts字段
-      ```
+```bash
+yarn build # 默认为H5环境 更多环境命令请参考 package.json 中的 scripts字段
+```
 
 ## 微信小程序
 
-- 运行微信小程序
+### 运行微信小程序
 
-  - 使用 npm
+```bash
+yarn build:mp-weixin
+# 或者
+yarn dev
+```
 
-    ```bash
-    npm run dev:mp-weixin
-    # 或者
-    npm run dev
-    ```
+### 打包发行微信小程序
 
-  - 使用 yarn
-
-    ```bash
-    yarn build:mp-weixin
-    # 或者
-    yarn dev
-    ```
-
-- 打包发行微信小程序
-
-  - 使用 npm
-
-    ```bash
-    npm run build:mp-weixin
-    # 或者
-    npm run prod  
-    ```
-
-  - 使用 yarn
-
-    ```bash
-    yarn build:mp-weixin
-    # 或者
-    yarn prod  
-      ```
+```bash
+yarn build:mp-weixin
+# 或者
+yarn prod  
+```
 
 ## 文件目录说明
 
