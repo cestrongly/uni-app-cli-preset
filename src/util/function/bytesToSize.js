@@ -1,9 +1,9 @@
 /**
  * @Author: cest
  * @Date: 2022-06-19 02:44:57
- * @LastEditTime: 2022-06-19 03:13:23
+ * @LastEditTime: 2022-07-09 02:24:23
  * @LastEditors: cest
- * @FilePath: /cedo-app-cli/src/util/bytesToSize.js
+ * @FilePath: /uni-app-cli/src/util/function/bytesToSize.js
  * @Description: JS数据容量单位转换(kb,mb,gb,tb)
  */
 
@@ -41,10 +41,12 @@ export default function bytesToSize(bytes = 0, k = 1024) {
   if (bytes === 0) {
     return '0 B'
   }
-  const sizes = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
-    i = Math.floor(Math.log(bytes) / Math.log(k))
+  const sizes = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
+  const i = Math.floor(Math.log(bytes) / Math.log(k))
 
-  return (bytes / Math.pow(k, i)).toPrecision(3) + ' ' + sizes[i]
+  // return `${(bytes / Math.pow(k, i)).toPrecision(3)} ${sizes[i]}`
+
+  return `${(bytes / k ** i).toPrecision(3)} ${sizes[i]}`
 }
 
 // 示例：

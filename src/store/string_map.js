@@ -1,11 +1,10 @@
-
-/*
- * @Author: Zhangliu2019 47966557+Zhangliu2019@users.noreply.github.com
- * @Date: 2022-06-23 15:46:08
- * @LastEditors: Zhangliu2019 47966557+Zhangliu2019@users.noreply.github.com
- * @LastEditTime: 2022-07-01 11:43:32
- * @FilePath: \cedo-app-cli\src\store\string_map.js
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+/**
+ * @Author: cest
+ * @Date: 2022-07-02 12:33:34
+ * @LastEditTime: 2022-07-09 01:34:51
+ * @LastEditors: cest
+ * @FilePath: /uni-app-cli/src/store/string_map.js
+ * @Description: 编辑描述内容
  */
 
 export const asset = 'asset'
@@ -14,8 +13,8 @@ export const handler = 'handler'
 export const pageTotal = 'pageTotal'
 export const pagination = 'pagination'
 export const type = 'type'
-export const ticket_type = 'ticket_type'
-export const ticket_priority = 'ticket_priority'
+export const ticketType = 'ticket_type'
+export const ticketPriority = 'ticket_priority'
 export const list = 'list'
 export const item = 'item'
 export const getList = 'getList'
@@ -35,4 +34,3 @@ export const getEnvVersion = 'getEnvVersion'
 export const token = 'token'
 export const getAppTitle = 'getAppTitle'
 export const getGroupList = 'getGroupList'
-

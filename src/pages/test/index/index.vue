@@ -2,7 +2,7 @@
  * @Author: zhuangli.qin
  * @Date: 2022-06-17 09:40:27
  * @LastEditors: cest
- * @LastEditTime: 2022-07-08 23:42:14
+ * @LastEditTime: 2022-07-09 02:01:42
  * @FilePath: /uni-app-cli/src/pages/test/index/index.vue
  * @Description:
 -->
@@ -60,7 +60,7 @@ export default {
   data() {
     return {
       pageName: '单元测试',
-      list: list,
+      list,
       desc: 'uView UI，是全面兼容nvue的uni-app生态框架，全面的组件和便捷的工具会让您信手拈来，如鱼得水。'
     }
   },

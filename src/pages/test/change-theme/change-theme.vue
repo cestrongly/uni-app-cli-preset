@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-06-15 20:34:29
- * @LastEditTime: 2022-07-08 23:42:36
+ * @LastEditTime: 2022-07-09 02:02:03
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/pages/test/change-theme/change-theme.vue
  * @Description: 切换主题
@@ -68,7 +68,7 @@ export default {
 
 
          uni.setNavigationBarColor({
-          backgroundColor: '#ffffff',	//HexColor	#F7F7F7	导航栏背景颜色（同状态栏背景色）	APP与H5为#F7F7F7，小程序平台请参考相应小程序文档
+          backgroundColor: '#ffffff',	// HexColor	#F7F7F7	导航栏背景颜色（同状态栏背景色）	APP与H5为#F7F7F7，小程序平台请参考相应小程序文档
           frontColor: '#ffffff' // 导航栏标题颜色及状态栏前景颜色，仅支持 black/white
         })
 
@@ -86,7 +86,7 @@ export default {
         });
 
         uni.setNavigationBarColor({
-          backgroundColor: '#222222',	//HexColor	#F7F7F7	导航栏背景颜色（同状态栏背景色）	APP与H5为#F7F7F7，小程序平台请参考相应小程序文档
+          backgroundColor: '#222222',	// HexColor	#F7F7F7	导航栏背景颜色（同状态栏背景色）	APP与H5为#F7F7F7，小程序平台请参考相应小程序文档
           frontColor: '#ffffff' // 导航栏标题颜色及状态栏前景颜色，仅支持 black/white
         })
 

@@ -9,7 +9,6 @@
 
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { createLogger } from 'vuex'
 import state from './state'
 import getters from './getters'
 import mutations from './mutations'
@@ -46,6 +45,7 @@ function loadModules() {
 }
 
 const { context, modules } = loadModules()
+const { createLogger } = Vuex
 const store = new Vuex.Store({
   // Vuex 自带一个日志插件用于一般的调试:
   plugins: process.env.NODE_ENV !== 'production' ? [createLogger()] : [],

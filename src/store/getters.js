@@ -1,7 +1,7 @@
 /**
  * @Author: cest
  * @Date: 2022-06-20 08:11:57
- * @LastEditTime: 2022-07-08 23:30:44
+ * @LastEditTime: 2022-07-09 01:49:55
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/store/getters.js
  * @Description: 编辑描述内容
@@ -23,7 +23,7 @@ export default {
    */
   getEnvVersion: state => {
     const accountInfo = uni.getAccountInfoSync()
-    let version = state[STRING_MAP.envVersion][(accountInfo, accountInfo.miniProgram.envVersion)]
+    const version = state[STRING_MAP.envVersion][(accountInfo, accountInfo.miniProgram.envVersion)]
     if (version !== '正式版') {
       return `(${version})`
     } else {
@@ -36,6 +36,6 @@ export default {
    */
 
   getAppTitle: () => {
-    return process.env['VUE_APP_TITLE']
+    return process.env.VUE_APP_TITLE
   }
 }

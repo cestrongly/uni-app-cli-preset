@@ -1,13 +1,14 @@
 /**
  * @Author: cest
  * @Date: 2022-06-28 10:53:08
- * @LastEditTime: 2022-07-08 23:25:07
+ * @LastEditTime: 2022-07-09 02:40:32
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/store/modules/pagination.js
  * @Description: 分页业务
  */
 
 import * as TYPES from '@/store/types'
+
 export default {
   namespaced: true,
 
@@ -34,7 +35,7 @@ export default {
         console.log('getList res:', res)
         context.commit(TYPES.SET_LIST, { res, query })
       } catch (e) {
-        //TODO handle the exception
+        // TODO handle the exception
         console.error('getList err:', e)
       }
     }

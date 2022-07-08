@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-06-15 20:34:29
- * @LastEditTime: 2022-07-08 23:40:05
+ * @LastEditTime: 2022-07-09 02:01:13
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/pages/test/upload/upload.vue
  * @Description: 上传图片功能测试
@@ -122,20 +122,22 @@ export default {
     // 新增图片
     async afterRead(event) {
       // 当设置 mutiple 为 true 时, file 为数组格式，否则为对象格式
-      let lists = [].concat(event.file)
+      const lists = [].concat(event.file)
       let fileListLen = this[`fileList${event.name}`].length
       lists.map(item => {
-        this[`fileList${event.name}`].push({
+        const newItem =this[`fileList${event.name}`].push({
           ...item,
           status: 'uploading',
           message: '上传中'
         })
+        return newItem
+
       })
 
       for (let i = 0; i < lists.length; i++) {
         const result = await this.uploadFilePromise(lists[i])
 
-        let item = this[`fileList${event.name}`][fileListLen]
+        const item = this[`fileList${event.name}`][fileListLen]
         this[`fileList${event.name}`].splice(
           fileListLen,
           1,
@@ -168,8 +170,8 @@ export default {
             console.log('res:', res)
             const data = JSON.parse(res.data)
             const code = data.code
-            const status_code = HTTP_RESPONSE_STATUS_CODES.find(item => item.code === code.toString())
-            console.log('status_code:', status_code)
+            const statusCode = HTTP_RESPONSE_STATUS_CODES.find(item => item.code === code.toString())
+            console.log('status_code:', statusCode)
             if (code === 200) {
               resolve({
                 status: 'success',
@@ -177,12 +179,12 @@ export default {
                 data: data.data
               })
             } else {
-              reject({
+              reject(new Error({
                 status: 'failed',
                 message: '上传失败',
                 errMsg: data.message,
                 data: null
-              })
+              }))
             }
 
             // setTimeout(() => {
@@ -191,12 +193,12 @@ export default {
           },
           fail: res => {
             console.log('upload fail:', res)
-            reject({
+            reject(new Error({
               status: 'failed',
               message: '上传失败',
               errMsg: res.errMsg,
               data: null
-            })
+            }))
           },
           complete(res) {
             console.log('upload complete:', res)

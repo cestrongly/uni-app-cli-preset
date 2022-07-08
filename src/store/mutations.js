@@ -1,7 +1,7 @@
 /**
  * @Author: cest
  * @Date: 2022-07-02 12:33:34
- * @LastEditTime: 2022-07-08 23:21:29
+ * @LastEditTime: 2022-07-09 01:45:14
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/store/mutations.js
  * @Description: 编辑描述内容
@@ -17,7 +17,7 @@ export default {
     state.token = userInfo.token
     state.permissions = userInfo.permissions
   },
-  //更新用户信息
+  // 更新用户信息
   updateInfo(state, userInfo) {
     uni.setStorageSync('userInfo', userInfo)
     state.userInfo = userInfo
@@ -33,10 +33,13 @@ export default {
   },
   // 返回上一页 页面数据重新获取
   getBackData() {
-    var pages = getCurrentPages() //当前页面栈
+    const pages = getCurrentPages() // 当前页面栈
     if (pages.length > 1) {
-      var beforePage = pages[pages.length - 2] //获取上一个页面实例对象
-      beforePage.$vm.callback ? beforePage.$vm.callback() : () => {}
+      const beforePage = pages[pages.length - 2] // 获取上一个页面实例对象
+
+      if (beforePage.$vm.callback) {
+        beforePage.$vm.callback()
+      }
     }
   }
 }

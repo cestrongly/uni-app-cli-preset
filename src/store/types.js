@@ -1,9 +1,9 @@
 /**
  * @Author: cest
  * @Date: 2022-06-17 23:02:14
- * @LastEditTime: 2022-06-20 10:54:10
+ * @LastEditTime: 2022-07-09 01:33:46
  * @LastEditors: cest
- * @FilePath: /cedo-app-cli/src/store/types.js
+ * @FilePath: /uni-app-cli/src/store/types.js
  * @Description: mutations 函数常量声明
  */
 
@@ -35,8 +35,8 @@ export const GET_TICKET_STATUS_LABEL = 'GET_TICKET_STATUS_LABEL'
 // disposal-person.js
 export const CHANGE_DISPOSAL_PERSON_ITEM = 'CHANGE_DISPOSAL_PERSON_ITEM'
 
-//knowledge
+// knowledge
 export const CHANGE_KNOW_APPLICATION_ITEM = 'CHANGE_KNOW_APPLICATION_ITEM'
 
-//evaluation
+// evaluation
 export const CHANGE_EVAL_APPLICATION_ITEM = 'CHANGE_EVAL_APPLICATION_ITEM'

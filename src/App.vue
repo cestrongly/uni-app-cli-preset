@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-06-20 08:11:56
- * @LastEditTime: 2022-07-05 23:02:05
+ * @LastEditTime: 2022-07-09 02:02:31
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/App.vue
  * @Description: 编辑描述内容
@@ -14,7 +14,7 @@ export default {
       success: function (e) {
         // #ifndef MP
         Vue.prototype.$StatusBar = e.statusBarHeight
-        if (e.platform == 'android') {
+        if (e.platform === 'android') {
           Vue.prototype.$CustomBar = e.statusBarHeight + 50
         } else {
           Vue.prototype.$CustomBar = e.statusBarHeight + 45
@@ -23,7 +23,7 @@ export default {
 
         // #ifdef MP-WEIXIN
         Vue.prototype.$StatusBar = e.statusBarHeight
-        let custom = wx.getMenuButtonBoundingClientRect()
+        const custom = wx.getMenuButtonBoundingClientRect()
         Vue.prototype.$Custom = custom
         Vue.prototype.$CustomBar = custom.bottom + custom.top - e.statusBarHeight + 4
         // #endif

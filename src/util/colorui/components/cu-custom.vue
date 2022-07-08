@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-02 12:33:28
- * @LastEditTime: 2022-07-08 23:52:03
+ * @LastEditTime: 2022-07-09 02:25:09
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/util/colorui/components/cu-custom.vue
  * @Description: 自定义头部
@@ -51,10 +51,10 @@ export default {
       return this.$CustomBar
     },
     style() {
-      var StatusBar = this.$StatusBar
-      var CustomBar = this.$CustomBar
-      var bgImage = this.bgImage
-      var style = `height:${CustomBar}px;padding-top:${StatusBar}px;`
+      const StatusBar = this.$StatusBar
+      const CustomBar = this.$CustomBar
+      const {bgImage} = this
+      let style = `height:${CustomBar}px;padding-top:${StatusBar}px;`
       if (this.bgImage) {
         style = `${style}background-image:url(${bgImage});`
       }

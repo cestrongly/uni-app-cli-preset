@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 09:06:40
- * @LastEditTime: 2022-07-04 22:25:34
+ * @LastEditTime: 2022-07-09 03:36:51
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/pages/colorui/index/components/cu-tabbar/index.vue
  * @Description: tabbar 组件
@@ -54,20 +54,20 @@ export default {
   },
   computed: {
     bgColor() {
-      console.log('darK?',this.isDark)
-      return this.isDark? 'bg-dark':'bg-white'
+      console.log('darK?', this.isDark)
+      return this.isDark ? 'bg-dark' : 'bg-white'
     }
   },
   methods: {
     change({ item, index }, e) {
       console.log('change:', index, e)
-      item.isActive = true
+      // item.isActive = true
       this.tabbarList = this.tabbarList.map(item => {
         return { ...item, isActive: false }
       })
-      this.tabbarList.splice(index, 1, item)
+      this.tabbarList.splice(index, 1, { ...item, isActive: true })
       // console.log('this.tabbarList：', this.tabbarList)
-      console.log('darK?',this.isDark)
+      console.log('darK?', this.isDark)
       this.$emit('changeItem', { item, index })
     }
   },
