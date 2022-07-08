@@ -1,19 +1,26 @@
 <!--
  * @Author: zhuangli.qin
  * @Date: 2022-06-17 09:40:27
- * @LastEditors: zhuangli.qin
- * @LastEditTime: 2022-06-17 13:49:52
- * @FilePath: /cedo-app-cli/src/pages/test/index/index.vue
+ * @LastEditors: cest
+ * @LastEditTime: 2022-07-08 23:42:14
+ * @FilePath: /uni-app-cli/src/pages/test/index/index.vue
  * @Description:
 -->
 <template>
   <view class="u-page">
-    <cu-custom bgColor="bg-gradual-blue" :isBack="true">
-      <block slot="backText">返回</block>
-      <block slot="content">{{ pageName }}</block>
+    <cu-custom
+      bg-color="bg-gradual-blue"
+      :is-back="true"
+    >
+      <block slot="backText">
+        返回
+      </block>
+      <block slot="content">
+        {{ pageName }}
+      </block>
     </cu-custom>
     <view class="wrap">
-      <page-nav :desc="desc"></page-nav>
+      <page-nav :desc="desc" />
       <view class="list-wrap">
         <u-cell-group
           title-bg-color="rgb(243, 244, 246)"
@@ -22,19 +29,27 @@
           :key="index"
         >
           <u-cell
-            :titleStyle="{ fontWeight: 500 }"
+            :title-style="{ fontWeight: 500 }"
             :title="item1.title"
             v-for="(item1, index1) in item.list"
             :key="index1"
-            isLink
+            is-link
             @click="openPage"
             :name="item1.path"
           >
-            <image slot="icon" class="u-cell-icon" :src="getIcon(item1.icon)" mode="widthFix"></image>
+            <image
+              slot="icon"
+              class="u-cell-icon"
+              :src="getIcon(item1.icon)"
+              mode="widthFix"
+            />
           </u-cell>
         </u-cell-group>
       </view>
-      <u-gap height="30" bgColor="#fff"></u-gap>
+      <u-gap
+        height="30"
+        bg-color="#fff"
+      />
     </view>
   </view>
 </template>

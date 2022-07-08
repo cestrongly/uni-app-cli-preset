@@ -1,31 +1,41 @@
 /**
  * @Author: cest
  * @Date: 2022-06-20 08:11:57
- * @LastEditTime: 2022-06-29 19:27:05
+ * @LastEditTime: 2022-07-08 23:30:44
  * @LastEditors: cest
- * @FilePath: /cedo-app-cli/src/store/getters.js
+ * @FilePath: /uni-app-cli/src/store/getters.js
  * @Description: 编辑描述内容
  */
 import test from '@/uni_modules/uview-ui/libs/function/test'
 import * as STRING_MAP from '@/store/string_map'
-const {
-	isEmpty
-} = test
+const { isEmpty } = test
 export default {
-	defaultValue: (state, getters) => (value) => {
-		return isEmpty(value) ? '' : value
-	},
+  defaultValue:
+    () =>
+    (value, defaultValue = '') => {
+      return isEmpty(value) ? defaultValue : value
+    },
 
-  getEnvVersion (state, getters) {
-    const accountInfo = uni.getAccountInfoSync();
-    let version = state[STRING_MAP.envVersion][accountInfo, accountInfo.miniProgram.envVersion]
+  /**
+   * 获取小程序版本信息
+   * @param {*} state
+   * @returns 小程序版本信息
+   */
+  getEnvVersion: state => {
+    const accountInfo = uni.getAccountInfoSync()
+    let version = state[STRING_MAP.envVersion][(accountInfo, accountInfo.miniProgram.envVersion)]
     if (version !== '正式版') {
       return `(${version})`
     } else {
       return ''
     }
   },
-  getAppTitle(state,getters) {
+
+  /**
+   * 获取 APP 标题
+   */
+
+  getAppTitle: () => {
     return process.env['VUE_APP_TITLE']
   }
 }

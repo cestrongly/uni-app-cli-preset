@@ -1,9 +1,9 @@
 /**
  * @Author: cest
  * @Date: 2022-06-17 22:49:05
- * @LastEditTime: 2022-06-21 02:31:46
+ * @LastEditTime: 2022-07-08 23:19:06
  * @LastEditors: cest
- * @FilePath: /cedo-app-cli/.eslintrc.js
+ * @FilePath: /uni-app-cli/.eslintrc.js
  * @Description: ESLint configuration - 代码质量和纠错配置
  */
 
@@ -92,51 +92,57 @@ module.exports = {
   // "error" 或 2 - 开启规则，使用错误级别的错误：error (当被触发的时候，程序会退出)
 
   rules: {
-    'vue/attribute-hyphenation': 'off',
-    'vue/singleline-html-element-content-newline': 'off',
-    'vue/html-indent': 'off',
-    'vue/max-attributes-per-line': 'off',
-    'vue/html-closing-bracket-newline': 'off',
-    'vue/html-self-closing': 'off',
+    // 'vue/attribute-hyphenation': 'off',
+    // 'vue/singleline-html-element-content-newline': 'off',
+    // 'vue/html-indent': 'off',
+    // 'vue/max-attributes-per-line': 'off',
+    // 'vue/html-closing-bracket-newline': 'off',
+    // 'vue/html-self-closing': 'off',
     // ESLint rules
-    'no-empty': 'off',
+    // 'no-empty': 'off',
     // 'import/no-extraneous-dependencies': [
     //   'error',
     //   {
     //     devDependencies: true
     //   }
     // ],
-    'import/no-extraneous-dependencies': 'off',
-    'global-require': 'off',
-    'no-underscore-dangle': 'off',
-    'import/prefer-default-export': 'off',
-    'no-useless-escape': 'off',
-    'import/no-unresolved': 'off',
-    'no-restricted-syntax': 'off',
-    'consistent-return': 'off',
-    'no-param-reassign': 'off',
-    'no-console': 'off',
-    'no-shadow': 'off',
-    'prefer-destructuring': 'off',
-    'max-len': 'off',
-    'import/no-absolute-path': 'off',
-    'default-case': 'off',
-    'no-plusplus': 'off',
-    'no-use-before-define': 'off',
-    'array-callback-return': 'off',
-    'brace-style': 'off',
-    'no-tabs': 'off',
-    'guard-for-in': 'off',
-    eqeqeq: 'off',
-    'import/extensions': 'off',
-    camelcase: 'off',
-    'import/no-dynamic-require': 'off',
-    'no-undef': 'off',
-    'no-unused-vars': 'off',
-    'no-unused-expressions': 'off',
-    'func-names': 'off',
-    'import/no-named-as-default': 'off',
-    'no-empty-function': 'off'
+    // 'import/no-extraneous-dependencies': 'off',
+    // 'global-require': 'off',
+    // 'no-underscore-dangle': 'off',
+    // 'import/prefer-default-export': 'off',
+    // 'no-useless-escape': 'off',
+    // 'import/no-unresolved': 'off',
+    // 'no-restricted-syntax': 'off',
+    // 'consistent-return': 'off',
+    // 'no-param-reassign': 'off',
+    // 'no-console': 'off',
+    // 'no-shadow': 'off',
+    // 'prefer-destructuring': 'off',
+    // 'max-len': 'off',
+    // 'import/no-absolute-path': 'off',
+    // 'default-case': 'off',
+    // 'no-plusplus': 'off',
+    // 'no-use-before-define': 'off',
+    // 'array-callback-return': 'off',
+    // 'brace-style': 'off',
+    // 'no-tabs': 'off',
+    // 'guard-for-in': 'off',
+    // eqeqeq: 'off',
+    // 'import/extensions': 'off',
+    // camelcase: 'off',
+    // 'import/no-dynamic-require': 'off',
+    // 'no-undef': 'off',
+    // 'no-unused-vars': 'off',
+    // 'no-unused-expressions': 'off',
+    // 'func-names': 'off',
+    // 'import/no-named-as-default': 'off',
+    // 'no-empty-function': 'off'
+  },
+
+  globals: {
+    uni: true,
+    wx: true,
+    getCurrentPages: true
   }
 }
 

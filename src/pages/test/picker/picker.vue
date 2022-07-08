@@ -1,31 +1,85 @@
 <template>
-    <view class="u-page bg-white">
-        <!-- Custom Head -->
-        <cu-custom bgColor="bg-gradual-blue" :isBack="true">
-            <block slot="backText">返回</block>
-            <block slot="content">{{ pageName }}</block>
-        </cu-custom>
-        <view class="u-page" ref="page">
-            <u-navbar title="选择器" @leftClick="navigateBack" safeAreaInsetTop fixed placeholder></u-navbar>
-            <u-cell-group>
-                <!-- <u-cell @click="showPicker(index)" :title="item.title" v-for="(item, index) in list" :key="index"
+  <view class="u-page bg-white">
+    <!-- Custom Head -->
+    <cu-custom
+      bg-color="bg-gradual-blue"
+      :is-back="true"
+    >
+      <block slot="backText">
+        返回
+      </block>
+      <block slot="content">
+        {{ pageName }}
+      </block>
+    </cu-custom>
+    <view
+      class="u-page"
+      ref="page"
+    >
+      <u-navbar
+        title="选择器"
+        @leftClick="navigateBack"
+        safe-area-inset-top
+        fixed
+        placeholder
+      />
+      <u-cell-group>
+        <!-- <u-cell @click="showPicker(index)" :title="item.title" v-for="(item, index) in list" :key="index"
                     isLink>
                     <image slot="icon" class="u-cell-icon" :src="item.iconUrl" mode="widthFix"></image>
                 </u-cell> -->
-            </u-cell-group>
-            <u-picker :show="show1" :columns="columns1" @change="change" @cancel="cancel" @confirm="confirm"></u-picker>
-            <u-picker :show="show2" :columns="columns2" :defaultIndex="[1]" @cancel="cancel" @confirm="confirm"
-                @change="change"></u-picker>
-            <u-picker :show="show3" :columns="columns3" ref="uPicker3" @cancel="cancel" @confirm="confirm"
-                @change="changeHandler1"></u-picker>
-            <u-picker :show="show4" :columns="columns4" @cancel="cancel" @confirm="confirm" :loading="loading"
-                @change="changeHandler2" ref="uPicker4"></u-picker>
-            <u-picker :show="show5" :columns="columns5" title="标题太长就会显示省略号" @cancel="cancel" @confirm="confirm"
-                @change="change"></u-picker>
-            <u-picker :show="show6" :columns="columns6" closeOnClickOverlay @cancel="cancel" @confirm="confirm"
-                @close="close" @change="change"></u-picker>
-        </view>
+      </u-cell-group>
+      <u-picker
+        :show="show1"
+        :columns="columns1"
+        @change="change"
+        @cancel="cancel"
+        @confirm="confirm"
+      />
+      <u-picker
+        :show="show2"
+        :columns="columns2"
+        :default-index="[1]"
+        @cancel="cancel"
+        @confirm="confirm"
+        @change="change"
+      />
+      <u-picker
+        :show="show3"
+        :columns="columns3"
+        ref="uPicker3"
+        @cancel="cancel"
+        @confirm="confirm"
+        @change="changeHandler1"
+      />
+      <u-picker
+        :show="show4"
+        :columns="columns4"
+        @cancel="cancel"
+        @confirm="confirm"
+        :loading="loading"
+        @change="changeHandler2"
+        ref="uPicker4"
+      />
+      <u-picker
+        :show="show5"
+        :columns="columns5"
+        title="标题太长就会显示省略号"
+        @cancel="cancel"
+        @confirm="confirm"
+        @change="change"
+      />
+      <u-picker
+        :show="show6"
+        :columns="columns6"
+        close-on-click-overlay
+        @cancel="cancel"
+        @confirm="confirm"
+        @close="close"
+        @change="change"
+      />
     </view>
+  </view>
 </template>
 
 <script>
@@ -91,8 +145,6 @@ export default {
             this.change(e)
             const {
                 columnIndex,
-                value,
-                values,
                 index,
                 // 微信小程序无法将picker实例传出来，只能通过ref操作
                 picker = this.$refs.uPicker3
@@ -105,8 +157,6 @@ export default {
             this.change(e)
             const {
                 columnIndex,
-                value,
-                values,
                 index,
                 // 微信小程序无法将picker实例传出来，只能通过ref操作
                 picker = this.$refs.uPicker4
@@ -123,7 +173,7 @@ export default {
             uni.navigateBack()
         },
         change(e) {
-            // console.log('change', e);
+            console.log('change', e);
         },
         showPicker(index) {
             this.index = index + 1
@@ -134,7 +184,7 @@ export default {
             this[`show${this.index}`] = false
         },
         confirm(e) {
-            // console.log('confirm', e);
+            console.log('confirm', e);
             this[`show${this.index}`] = false
         },
         cancel() {

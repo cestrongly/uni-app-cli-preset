@@ -1,11 +1,4 @@
 public/
-src/colorui/
-src/common/qqmap-wx-jssdk.js
-# src/components/
-src/components/verify
-src/components/uni-icon
-src/components/QS-SharePoster
 src/uni_modules/
 src/util/luch-request/
 src/util/crypto-js/
-

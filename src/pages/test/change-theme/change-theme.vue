@@ -1,25 +1,37 @@
 <!--
  * @Author: cest
  * @Date: 2022-06-15 20:34:29
- * @LastEditTime: 2022-06-30 13:32:30
+ * @LastEditTime: 2022-07-08 23:42:36
  * @LastEditors: cest
- * @FilePath: /cedo-app-cli/src/pages/test/change-theme/change-theme.vue
+ * @FilePath: /uni-app-cli/src/pages/test/change-theme/change-theme.vue
  * @Description: 切换主题
 -->
 <template>
-  <view class="u-page bg-color"
-        :class="theme">
+  <view
+    class="u-page bg-color"
+    :class="theme"
+  >
     <!-- Custom Head -->
-    <cu-custom bgColor="bg-gradual-blue"
-               :isBack="true">
-      <block slot="backText">返回</block>
-      <block slot="content">{{ pageName }}</block>
+    <cu-custom
+      bg-color="bg-gradual-blue"
+      :is-back="true"
+    >
+      <block slot="backText">
+        返回
+      </block>
+      <block slot="content">
+        {{ pageName }}
+      </block>
     </cu-custom>
     <view class="u-block">
-      <view class="u-block__title">切换主题</view>
+      <view class="u-block__title">
+        切换主题
+      </view>
       <view class="u-block__section">
-        <u-switch v-model="value"
-                  @change="asyncChangeEventHandler"></u-switch> {{ value }}
+        <u-switch
+          v-model="value"
+          @change="asyncChangeEventHandler"
+        /> {{ value }}
       </view>
     </view>
   </view>
