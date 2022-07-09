@@ -50,9 +50,9 @@ export const config = {
 		// }, 500)
 	}
 	// ,
-	//validateStatus: (statusCode) => { // statusCode 必存在。此处示例为全局默认配置。演示，非必填选项
+	// validateStatus: (statusCode) => { // statusCode 必存在。此处示例为全局默认配置。演示，非必填选项
 	//	return statusCode >= 200 && statusCode < 300
-	//}
+	// }
 }
 
 // 局部修改配置，局部配置优先级高于全局配置

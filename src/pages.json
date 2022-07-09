@@ -1,79 +1,113 @@
 {
-	"pages": [
-		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/index/index",
-			"style": {
-				// "navigationBarTitleText": "首页",
-				"navigationStyle": "custom"
-			}
-		}
-	],
-	"subPackages": [
-		{
-			"root": "pages/test",
-			"pages": [
-				// 单元测试 - 切换主题
-				{
-					"path": "change-theme/change-theme",
-					"style": {
-						// "navigationBarTitleText": "自定义新增按钮风格测试",
-						"navigationStyle": "custom",
-						"enablePullDownRefresh": true
-					}
-				},
-				// 单元测试 导航入口
-				{
-					"path": "index/index",
-					"style": {
-						"navigationStyle": "custom",
-						"enablePullDownRefresh": false
-					}
-				},
-				//  单元测试 - 环境变量测试
-				{
-					"path": "process-env/process-env",
-					"style": {
-						"navigationStyle": "custom",
-						"enablePullDownRefresh": false
-					}
-				},
-				//  单元测试 - 上传测试
-				{
-					"path": "upload/upload",
-					"style": {
-						"navigationStyle": "custom",
-						"enablePullDownRefresh": false
-					}
-				},
-				// 单元测试 - 选择测试
-				{
-					"path": "picker/picker",
-					"style": {
-						"navigationStyle": "custom",
-						"enablePullDownRefresh": false
-					}
-				}
-			]
-		},
-		{
-			"root": "pages/colorui",
-			"pages": [
-				{
-					"path": "index/index",
-					"style": {
-						"navigationStyle": "custom",
-						"enablePullDownRefresh": false
-					}
-				},
-				{
-					"path": "layout/index",
-					"style": {
-						"navigationStyle": "custom",
-						"enablePullDownRefresh": false
-					}
-				}
-			]
-		}
-	]
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/index/index",
+      "style": {
+        // "navigationBarTitleText": "首页",
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "pages/colorui",
+      "pages": [
+        {
+          "path": "index/index",
+          "style": {
+            "navigationStyle": "custom",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "layout/index",
+          "style": {
+            "navigationStyle": "custom",
+            "enablePullDownRefresh": false
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/news",
+      "pages": [
+        {
+          "path": "index",
+          "style": {}
+        },
+        {
+          "path": "detail",
+          "style": {
+            "app-plus": {
+              "titleNView": {
+                "type": "transparent"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/test",
+      "pages": [
+        // 单元测试 - 切换主题
+        {
+          "path": "change-theme/change-theme",
+          "style": {
+            // "navigationBarTitleText": "自定义新增按钮风格测试",
+            "navigationStyle": "custom",
+            "enablePullDownRefresh": true
+          }
+        },
+        // 单元测试 导航入口
+        {
+          "path": "index/index",
+          "style": {
+            "navigationStyle": "custom",
+            "enablePullDownRefresh": false
+          }
+        },
+        //  单元测试 - 环境变量测试
+        {
+          "path": "process-env/process-env",
+          "style": {
+            "navigationStyle": "custom",
+            "enablePullDownRefresh": false
+          }
+        },
+        //  单元测试 - 上传测试
+        {
+          "path": "upload/upload",
+          "style": {
+            "navigationStyle": "custom",
+            "enablePullDownRefresh": false
+          }
+        },
+        // 单元测试 - 选择测试
+        {
+          "path": "picker/picker",
+          "style": {
+            "navigationStyle": "custom",
+            "enablePullDownRefresh": false
+          }
+        }
+      ]
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "新闻资讯",
+    "navigationBarBackgroundColor": "#2F85FC",
+    "backgroundColor": "#FFFFFF"
+  },
+  "rightWindow": {
+    "path": "responsive/right-window.vue",
+    "style": {
+      "width": "calc(100vw - 450px)"
+    },
+    "matchMedia": {
+      "minWidth": 768
+    }
+  }
 }

@@ -1,3 +1,12 @@
+/* eslint-disable no-extend-native */
+/**
+ * @Author: cest
+ * @Date: 2022-07-09 13:39:26
+ * @LastEditTime: 2022-07-09 15:20:05
+ * @LastEditors: cest
+ * @FilePath: /uni-app-preset/src/util/Array/extendArray.js
+ * @Description: 编辑描述内容
+ */
 /***
  * @description: removeAt() 方法通过删除现有元素来修改数组，并以数组形式返回被修改的内容。此方法会改变原数组。
  * @param {Number} index 数组索引
@@ -8,13 +17,13 @@
  * months.removeAt(3)
  * -> 结果 months ['Jan', 'March', 'April']
  */
-Array.prototype['removeAt'] = function(index) {
-	const startIndex = index
-	// console.log(startIndex)
-	if (startIndex !== -1 && startIndex <= this.length) {
-		this.splice(startIndex, 1)
-	}
-	return this
+Array.prototype.$removeAt = function (index) {
+  const startIndex = index
+  // console.log(startIndex)
+  if (startIndex !== -1 && startIndex <= this.length) {
+    this.splice(startIndex, 1)
+  }
+  return this
 }
 
 /***
@@ -28,13 +37,13 @@ Array.prototype['removeAt'] = function(index) {
  * months.removeRange(1,2)
  * -> 结果 months ['Jan', 'April']
  */
-Array.prototype['removeRange'] = function(index = 0, count = 1) {
-	const startIndex = index
-	// console.log(startIndex)
-	if (startIndex !== -1 && startIndex <= this.length) {
-		this.splice(startIndex, count)
-	}
-	return this
+Array.prototype.$removeRange = function (index = 0, count = 1) {
+  const startIndex = index
+  // console.log(startIndex)
+  if (startIndex !== -1 && startIndex <= this.length) {
+    this.splice(startIndex, count)
+  }
+  return this
 }
 
 /***
@@ -53,11 +62,11 @@ Array.prototype['removeRange'] = function(index = 0, count = 1) {
  * months.remove(item =>{return item === 'April'}) 或者 months.remove(item => item === 'April')
  * -> 结果 months ['Jan', 'March', 'June']
  */
-Array.prototype['remove'] = function(callback) {
-	const startIndex = this.findIndex(callback)
-	// console.log(startIndex)
-	if (startIndex !== -1) {
-		this.splice(startIndex, 1)
-	}
-	return this
+Array.prototype.$remove = function (callback) {
+  const startIndex = this.findIndex(callback)
+  // console.log(startIndex)
+  if (startIndex !== -1) {
+    this.splice(startIndex, 1)
+  }
+  return this
 }

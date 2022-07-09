@@ -1,9 +1,9 @@
 /**
  * @Author: zhuangli.qin
  * @Date: 2022-06-16 07:49:00
- * @LastEditors: zhuangli.qin
- * @LastEditTime: 2022-06-16 11:00:39
- * @FilePath: \cedo-app-cli\src\service\http\index.js
+ * @LastEditors: cest
+ * @LastEditTime: 2022-07-09 15:24:56
+ * @FilePath: /uni-app-preset/src/service/http/index.js
  * @Description:
  * @Copyright (c) 2022 by cestrmail@163.com by zhuangli.qin, All Rights Reserved.
  */
@@ -21,11 +21,11 @@ http.setConfig(defaultConfig => {
   // defaultConfig.baseURL = config.baseUrl /* 根域名 */
   // 修改默认配置 用于处理拦截器
   // defaultConfig.custom = {...defaultConfig.custom,...config.custom}
-  defaultConfig = {
+  const _defaultConfig = {
     ...defaultConfig,
     ...config
   }
-  return defaultConfig
+  return _defaultConfig
 })
 
 require('./requestInterceptors')(http)

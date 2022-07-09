@@ -1,9 +1,9 @@
 /**
  * @Author: cest
  * @Date: 2022-06-30 15:30:06
- * @LastEditTime: 2022-06-30 15:33:43
+ * @LastEditTime: 2022-07-09 15:09:51
  * @LastEditors: cest
- * @FilePath: /cedo-app-cli/src/util/function/formatTime.js
+ * @FilePath: /uni-app-preset/src/util/function/formatTime.js
  * @Description: 时间格式化
  *
  * @example -示例：
@@ -17,16 +17,16 @@ export default time => {
   if (typeof time !== 'number' || time < 0) {
     return time
   }
-  var hour = parseInt(time / 3600)
-  time = time % 3600
-  var minute = parseInt(time / 60)
-  time = time % 60
-  var second = time
+  const hour = parseInt(time / 3600)
+  let _time = time % 3600
+  const minute = parseInt(_time / 60)
+  _time = time % 60
+  const second = _time
 
   return [hour, minute, second]
     .map(function (n) {
-      n = n.toString()
-      return n[1] ? n : '0' + n
+      const _n = n.toString()
+      return _n[1] ? _n : '0' + _n
     })
     .join(':')
 }

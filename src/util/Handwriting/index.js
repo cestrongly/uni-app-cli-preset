@@ -3,25 +3,26 @@ class Handwriting {
   ctx = '';
   canvasWidth = 300;
   canvasHeight = 900;
-  linePrack = []; //划线轨迹 ; 生成线条的实际点
+  linePrack = []; // 划线轨迹 ; 生成线条的实际点
   currentLine = [];
   transparent = 1; // 透明度
   pressure = 0.5; // 默认压力
-  smoothness = 100; //顺滑度，用60的距离来计算速度
+  smoothness = 100; // 顺滑度，用60的距离来计算速度
   lineSize = 1.5; // 笔记倍数
   lineMin = 0.5; // 最小笔画半径
   lineMax = 2; // 最大笔画半径
   currentPoint = {};
   firstTouch = true; // 第一次触发
-  radius = 1; //画圆的半径
+  radius = 1; // 画圆的半径
   cutArea = {
     top: 0,
     right: 0,
     bottom: 0,
     left: 0
-  }; //裁剪区域
+  }; // 裁剪区域
+
   lastPoint = 0;
-  chirography = []; //笔迹
+  chirography = []; // 笔迹
   startY = 0;
   deltaY = 0;
   startValue = 0;
@@ -32,9 +33,10 @@ class Handwriting {
 		this.canvasName = opts.canvasName || 'handWriting'
     this.init()
   }
+
   init() {
     this.ctx = uni.createCanvasContext(this.canvasName)
-    var query = uni.createSelectorQuery();
+    const query = uni.createSelectorQuery();
     query.select('.handCenter').boundingClientRect(rect => {
       console.log(rect)
       this.canvasWidth = rect.width;
@@ -46,7 +48,7 @@ class Handwriting {
   // 笔迹开始
   uploadScaleStart(event) {
 		console.log('start');
-		let e = event.mp
+		const e = event.mp
     console.log(e.touches[0])
     if (e.type != 'touchstart') return false;
     this.ctx.setFillStyle(this.lineColor); // 初始线条设置颜色
@@ -72,10 +74,11 @@ class Handwriting {
     }
     this.pointToLine(this.currentLine);
   }
+
   // 笔迹移动
   uploadScaleMove(event) {
 		console.log('move');
-		let e = event.mp
+		const e = event.mp
     if (e.type != 'touchmove') return false;
     if (e.cancelable) {
       // 判断默认行为是否已经被禁用
@@ -83,11 +86,11 @@ class Handwriting {
         e.preventDefault();
       }
     }
-    let point = {
+    const point = {
       x: e.touches[0].x,
       y: e.touches[0].y
     }
-    //测试裁剪
+    // 测试裁剪
     if (point.y < this.cutArea.top) {
       this.cutArea.top = point.y;
     }
@@ -120,12 +123,13 @@ class Handwriting {
     })
     this.pointToLine(this.currentLine);
   }
+
   // 笔迹结束
   uploadScaleEnd(event) {
-		let e = event.mp
+		const e = event.mp
     if (e.type != 'touchend') return 0;
 		console.log(e);
-    let point = {
+    const point = {
       x: e.changedTouches[0].x,
       y: e.changedTouches[0].y
     }
@@ -139,13 +143,13 @@ class Handwriting {
       y: point.y
     })
     if (this.currentLine.length > 2) {
-      var info = (this.currentLine[0].time - this.currentLine[this.currentLine.length - 1].time) / this.currentLine.length;
-      //$("#info").text(info.toFixed(2));
+      const info = (this.currentLine[0].time - this.currentLine[this.currentLine.length - 1].time) / this.currentLine.length;
+      // $("#info").text(info.toFixed(2));
     }
-    //一笔结束，保存笔迹的坐标点，清空，当前笔迹
-    //增加判断是否在手写区域；
+    // 一笔结束，保存笔迹的坐标点，清空，当前笔迹
+    // 增加判断是否在手写区域；
     this.pointToLine(this.currentLine);
-    var currentChirography = {
+    const currentChirography = {
       lineSize: this.lineSize,
       lineColor: this.lineColor
     };
@@ -153,33 +157,35 @@ class Handwriting {
     this.linePrack.unshift(this.currentLine);
     this.currentLine = []
   }
+
   retDraw() {
     this.ctx.clearRect(0, 0, 700, 730)
     this.ctx.draw()
   }
 
-  //画两点之间的线条；参数为:line，会绘制最近的开始的两个点；
+  // 画两点之间的线条；参数为:line，会绘制最近的开始的两个点；
   pointToLine(line) {
     this.calcBethelLine(line);
     // this.calcBethelLine1(line);
-    return;
+    
   }
-  //计算插值的方式；
+
+  // 计算插值的方式；
   calcBethelLine(line) {
     if (line.length <= 1) {
       line[0].r = this.radius;
       return;
     }
-    let x0, x1, x2, y0, y1, y2, r0, r1, r2, len, lastRadius, dis = 0,
-      time = 0,
-      curveValue = 0.5;
+    let x0; let x1; let x2; let y0; let y1; let y2; let r0; let r1; let r2; let len; let lastRadius; let dis = 0;
+      let time = 0;
+      const curveValue = 0.5;
     if (line.length <= 2) {
       x0 = line[1].x
       y0 = line[1].y
       x2 = line[1].x + (line[0].x - line[1].x) * curveValue;
       y2 = line[1].y + (line[0].y - line[1].y) * curveValue;
-      //x2 = line[1].x;
-      //y2 = line[1].y;
+      // x2 = line[1].x;
+      // y2 = line[1].y;
       x1 = x0 + (x2 - x0) * curveValue;
       y1 = y0 + (y2 - y0) * curveValue;;
 
@@ -191,7 +197,7 @@ class Handwriting {
       x2 = x1 + (line[0].x - x1) * curveValue;
       y2 = y1 + (line[0].y - y1) * curveValue;
     }
-    //从计算公式看，三个点分别是(x0,y0),(x1,y1),(x2,y2) ；(x1,y1)这个是控制点，控制点不会落在曲线上；实际上，这个点还会手写获取的实际点，却落在曲线上
+    // 从计算公式看，三个点分别是(x0,y0),(x1,y1),(x2,y2) ；(x1,y1)这个是控制点，控制点不会落在曲线上；实际上，这个点还会手写获取的实际点，却落在曲线上
     len = this.distance({
       x: x2,
       y: y2
@@ -207,50 +213,52 @@ class Handwriting {
     }
     this.radius = Math.min(time / len * this.pressure + this.lineMin, this.lineMax) * this.lineSize
     line[0].r = this.radius;
-    //计算笔迹半径；
+    // 计算笔迹半径；
     if (line.length <= 2) {
       r0 = (lastRadius + this.radius) / 2;
       r1 = r0;
       r2 = r1;
-      //return;
+      // return;
     } else {
       r0 = (line[2].r + line[1].r) / 2;
       r1 = line[1].r;
       r2 = (line[1].r + line[0].r) / 2;
     }
-    let n = 5;
+    const n = 5;
     let point = [];
     for (let i = 0; i < n; i++) {
-      let t = i / (n - 1);
-      let x = (1 - t) * (1 - t) * x0 + 2 * t * (1 - t) * x1 + t * t * x2;
-      let y = (1 - t) * (1 - t) * y0 + 2 * t * (1 - t) * y1 + t * t * y2;
-      let r = lastRadius + (this.radius - lastRadius) / n * i;
+      const t = i / (n - 1);
+      const x = (1 - t) * (1 - t) * x0 + 2 * t * (1 - t) * x1 + t * t * x2;
+      const y = (1 - t) * (1 - t) * y0 + 2 * t * (1 - t) * y1 + t * t * y2;
+      const r = lastRadius + (this.radius - lastRadius) / n * i;
       point.push({
-        x: x,
-        y: y,
-        r: r
+        x,
+        y,
+        r
       });
       if (point.length == 3) {
-        let a = this.ctaCalc(point[0].x, point[0].y, point[0].r, point[1].x, point[1].y, point[1].r, point[2].x, point[2].y, point[2].r);
+        const a = this.ctaCalc(point[0].x, point[0].y, point[0].r, point[1].x, point[1].y, point[1].r, point[2].x, point[2].y, point[2].r);
         a[0].color = this.lineColor;
         this.bethelDraw(a, 1);
         point = [{
-          x: x,
-          y: y,
-          r: r
+          x,
+          y,
+          r
         }];
       }
     }
   }
-  //求两点之间距离
+
+  // 求两点之间距离
   distance(a, b, type) {
-    let x = b.x - a.x;
-    let y = b.y - a.y;
+    const x = b.x - a.x;
+    const y = b.y - a.y;
     return Math.sqrt(x * x + y * y) * 5;
   }
+
   ctaCalc(x0, y0, r0, x1, y1, r1, x2, y2, r2) {
-    let a = [],
-      vx01, vy01, norm, n_x0, n_y0, vx21, vy21, n_x2, n_y2;
+    const a = [];
+      let vx01; let vy01; let norm; let n_x0; let n_y0; let vx21; let vy21; let n_x2; let n_y2;
     vx01 = x1 - x0;
     vy01 = y1 - y0;
     norm = Math.sqrt(vx01 * vx01 + vy01 * vy01 + 0.0001) * 2;
@@ -322,6 +330,7 @@ class Handwriting {
     }
     return a;
   }
+
   bethelDraw(point, is_fill, color) {
     this.ctx.beginPath();
     this.ctx.moveTo(point[0].mx, point[0].my);
@@ -337,7 +346,7 @@ class Handwriting {
     }
     this.ctx.stroke();
     if (undefined != is_fill) {
-      this.ctx.fill(); //填充图形 ( 后绘制的图形会覆盖前面的图形, 绘制时注意先后顺序 )
+      this.ctx.fill(); // 填充图形 ( 后绘制的图形会覆盖前面的图形, 绘制时注意先后顺序 )
     }
     this.ctx.draw(true)
   }

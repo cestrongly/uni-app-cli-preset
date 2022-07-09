@@ -1,9 +1,9 @@
 /**
  * @Author: cest
  * @Date: 2022-06-30 15:06:36
- * @LastEditTime: 2022-06-30 15:23:54
+ * @LastEditTime: 2022-07-09 15:13:14
  * @LastEditors: cest
- * @FilePath: /cedo-app-cli/src/util/function/formatLocation.js
+ * @FilePath: /uni-app-preset/src/util/function/formatLocation.js
  * @Description: 经纬度格式化
  */
 
@@ -19,16 +19,18 @@
  *
  */
 export default (longitude, latitude) => {
+  let _longitude
+  let _latitude
   if (typeof longitude === 'string' && typeof latitude === 'string') {
-    longitude = parseFloat(longitude)
-    latitude = parseFloat(latitude)
+    _longitude = parseFloat(longitude)
+    _latitude = parseFloat(latitude)
   }
 
-  longitude = longitude.toFixed(2)
-  latitude = latitude.toFixed(2)
+  _longitude = longitude.toFixed(2)
+  _latitude = latitude.toFixed(2)
 
   return {
-    longitude: longitude.toString().split('.'),
-    latitude: latitude.toString().split('.')
+    longitude: _longitude.toString().split('.'),
+    latitude: _latitude.toString().split('.')
   }
 }

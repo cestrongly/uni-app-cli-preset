@@ -6,27 +6,20 @@
  * @FilePath: /pages/ticket/myticket/list/list/mixins/ticketPriorityMixin
  * @Description: 工单优先级状态的业务处理
  */
-import {
-	mapState,
-	mapGetters,
-	mapMutations,
-	mapActions
-} from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 export default {
-	data: function() {
-		return {}
-	},
-	computed: {
-		
-		// => store: getters
-		...mapGetters('application', {
-			ticketPriorityFormat: 'ticketPriorityFormat'
-		})
-		
-	},
-	methods: {
-		...mapActions('application', {
-			asyncGetTicketPriority: 'getTicketPriority'
-		}),
-	}
+  data: function () {
+    return {}
+  },
+  computed: {
+    // => store: getters
+    ...mapGetters('application', {
+      ticketPriorityFormat: 'ticketPriorityFormat'
+    })
+  },
+  methods: {
+    ...mapActions('application', {
+      asyncGetTicketPriority: 'getTicketPriority'
+    })
+  }
 }
