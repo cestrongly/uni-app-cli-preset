@@ -1,4 +1,6 @@
 public/
+src/common/
 src/uni_modules/
+src/util/Handwriting/
 src/util/luch-request/
-src/util/crypto-js/
+

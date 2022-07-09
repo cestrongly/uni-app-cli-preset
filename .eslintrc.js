@@ -2,9 +2,9 @@
 /**
  * @Author: cest
  * @Date: 2022-06-17 22:49:05
- * @LastEditTime: 2022-07-09 02:42:34
+ * @LastEditTime: 2022-07-09 15:53:12
  * @LastEditors: cest
- * @FilePath: /uni-app-cli/.eslintrc.js
+ * @FilePath: /uni-app-preset/.eslintrc.js
  * @Description: ESLint configuration - 代码质量和纠错配置
  */
 
@@ -175,7 +175,9 @@ module.exports = {
   globals: {
     uni: true,
     wx: true,
-    getCurrentPages: true
+    getCurrentPages: true,
+    plus: true,
+    weex: true
   }
 }
 
