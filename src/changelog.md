@@ -1,10 +1,10 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-09 13:14:15
- * @LastEditTime: 2022-07-09 13:17:55
+ * @LastEditTime: 2022-07-10 12:14:20
  * @LastEditors: cest
- * @FilePath: /uni-app-preset/src/changelog.md
- * @Description: 编辑描述内容
+ * @FilePath: /uni-app-cli/src/changelog.md
+ * @Description: 项目描述内容
 -->
 # CHANGELOG
 

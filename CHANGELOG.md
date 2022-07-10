@@ -1,12 +1,29 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-02 12:33:28
- * @LastEditTime: 2022-07-05 23:06:46
+ * @LastEditTime: 2022-07-10 12:20:29
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/CHANGELOG.md
  * @Description: 更新日志
 -->
 # Change Log
+
+## 2022-7-9
+
+更新：
+
+- 【uni-app-cli-preset】 工程
+  - 修改 ESlint 规范为 standard
+  - 更新说明文档，只保留使用 yarn 的说明
+  - 升级脚手架 @dcloudio/uni-* 版本 2.0.0-32920211029004 -> 2.0.1-34920220630001
+
+## 2022-7-8
+
+更新：
+
+- 【uni-app-cli-preset】 工程
+  - 动画性能优化
+  - ESlint 校验规则 全力全开
 
 ## 2022-7-5 v1.0.1-alpha.20220705
 
