@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-02 12:33:28
- * @LastEditTime: 2022-07-10 21:05:16
+ * @LastEditTime: 2022-07-10 21:24:20
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/CHANGELOG.md
  * @Description: 更新日志
@@ -13,10 +13,21 @@
 更新：
 
 - 【uni-app-cli-preset】 工程
+  - 首页
+
+    ![首页](./docs/screenshots/index_20220710210717.png '首页')
   - 新增 新闻/资讯类 App 模板
+
+    - 新闻-首页
+
+      ![新闻-首页](./docs/screenshots/news_index.png '新闻-首页')
+
+    - 新闻-详情页
+
+      ![新闻-详情页](./docs/screenshots/news_detail.png '新闻-详情页')
   - 修复 vscode 使用了 `@/*` 别名后，路径不提示的问题
   - 取消宽屏适配
-  
+
 ## 2022-7-9
 
 更新：
