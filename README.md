@@ -135,7 +135,6 @@ root
 
 - [vue](https://cn.vuejs.org/)
 - [vuex](https://vuex.vuejs.org/zh/)
-- [vuex](https://vuex.vuejs.org/zh/)
 - [uview](https://www.uviewui.com/)
 - [ColorUI](https://github.com/weilanwl/ColorUI)
 - [luch-request](https://github.com/lei-mu/luch-request)
