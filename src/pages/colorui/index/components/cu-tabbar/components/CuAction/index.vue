@@ -1,9 +1,9 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 09:45:31
- * @LastEditTime: 2022-07-03 17:19:00
+ * @LastEditTime: 2022-07-10 17:21:32
  * @LastEditors: cest
- * @FilePath: /uni-app-cli/src/pages/colorui/index/components/CuTabbar/components/CuAction/index.vue
+ * @FilePath: /uni-app-cli/src/pages/colorui/index/components/cu-tabbar/components/CuAction/index.vue
  * @Description: tabbar item
 -->
 <template lang="pug">

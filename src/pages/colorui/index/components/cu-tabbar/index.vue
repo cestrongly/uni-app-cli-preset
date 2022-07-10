@@ -1,13 +1,13 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 09:06:40
- * @LastEditTime: 2022-07-09 03:36:51
+ * @LastEditTime: 2022-07-10 18:29:14
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/pages/colorui/index/components/cu-tabbar/index.vue
  * @Description: tabbar 组件
 -->
 <template lang="pug">
-.cu-bar.tabbar.shadow.foot(:class="bgColor")
+.cu-tabbar.cu-bar.tabbar.shadow.foot(:class="bgColor")
   CuAction(
     v-for="(item, index) in tabbarList"
     :key="index"
@@ -73,6 +73,8 @@ export default {
   },
   watch: {},
 
+
+
   // 组件周期函数--监听组件挂载完毕
   mounted() {},
   // 组件周期函数--监听组件数据更新之前
@@ -84,6 +86,32 @@ export default {
   // 组件周期函数--监听组件停用(隐藏)
   deactivated() {},
   // 组件周期函数--监听组件销毁之前
-  beforeDestroy() {}
+  beforeDestroy() {},
+  // 解决 uniapp ::v-deep 设置 uni-app 组件样式时 h5 生效，小程序失效问题
+  options: { styleIsolation: 'shared' },
 }
 </script>
+
+<style lang="stylus" scoped>
+
+.cu-tabbar
+  // background-color red
+::v-deep .cu-tabbar
+  &__img
+    background-size 100%
+    width 50rpx
+    height 50rpx
+    display inline-block
+    &.basics
+      background-image url('@/pages/colorui/static/tabbar/basics.png')
+      &_cur
+        background-image url(@/pages/colorui/static/tabbar/basics_cur.png)
+    &.component
+      background-image url('@/pages/colorui/static/tabbar/component.png')
+      &_cur
+        background-image url(@/pages/colorui/static/tabbar/component_cur.png)
+    &.plugin
+      background-image url('@/pages/colorui/static/tabbar/plugin.png')
+      &_cur
+        background-image url(@/pages/colorui/static/tabbar/plugin_cur.png)
+</style>
