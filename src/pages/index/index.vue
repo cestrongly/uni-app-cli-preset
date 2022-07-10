@@ -1,28 +1,36 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 08:51:11
- * @LastEditTime: 2022-07-10 13:06:57
+ * @LastEditTime: 2022-07-10 16:22:00
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/pages/index/index.vue
  * @Description: 编辑描述内容
 -->
 <template lang="pug">
 .index.align-center.justify-center.text-content
+  .bg-img.animation-fade(:style="backgroundImage")
+  .bg-color
   navigator.text-xl.animation-fade.text-red(url="/pages/colorui/index/index" open-type="navigate" hover-class="navigator-hover")
     | colorui 说明文档
   navigator.text-xl.animation-scale-up.text-orange(url="/pages/news/index" open-type="navigate" hover-class="navigator-hover")
-    | 基于uni-app开发的新闻/资讯类App模板
+    | 新闻/资讯类 App 模板
   navigator.text-xl.animation-scale-down.text-yellow(url="/pages/test/index/index" open-type="navigate" hover-class="navigator-hover")
     | 单元测试导航
 </template>
 
 <script>
+const IMG_API = `https://api.yimian.xyz/img`
 export default {
   components: {},
-  data: () => ({}),
+  data: () => ({
+    backgroundImage:  `background-image: url(${IMG_API})`
+  }),
   computed: {},
   methods: {},
   watch: {},
+  async created() {
+
+  },
 
   // 页面周期函数--监听页面加载
   onLoad() {},
@@ -53,15 +61,32 @@ export default {
   height: 100%;
 }
 
-.index:before{
+.bg-color {
+  position: static;
+}
+.bg-color::after {
+  content: "";
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.bg-img{
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: .3;
+  opacity: 1;
   z-index: -1;
   content: "";
   position: fixed;
-  background: url(https://api.paugram.com/wallpaper/) center/cover;
+  /* background: url(https://api.paugram.com/wallpaper/) center/cover; */
 }
 </style>

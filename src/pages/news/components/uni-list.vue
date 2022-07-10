@@ -1,41 +1,24 @@
-<!-- eslint-disable vue/valid-template-root -->
 <template>
-  <!-- #ifdef APP-VUE -->
-  <view class="uni-list">
-    <slot />
-  </view>
-  <!-- #endif -->
-  <!-- #ifdef APP-NVUE -->
-  <!-- <list
-    ref="list"
-    class="uni-list"
-    :enable-back-to-top="enableBackToTop"
-    loadmoreoffset="15"
-    :scroll-y="scrollY"
-    @loadmore="loadMore"
-  >
-    <slot />
-  </list> -->
-  <!-- #endif -->
-  <!-- #ifdef H5 || MP-WEIXIN || MP-QQ -->
-  <!-- <scroll-view
-    class="uni-list"
-    :enable-back-to-top="enableBackToTop"
-    :scroll-y="scrollY"
-    @scrolltolower="loadMore"
-  >
-    <slot />
-  </scroll-view> -->
-  <!-- #endif -->
-  <!-- #ifdef MP-ALIPAY || MP-BAIDU || MP-TOUTIAO -->
-  <!-- <scroll-view
-    class="uni-list"
-    :scroll-y="scrollY"
-    @scrolltolower="loadMore"
-  >
-    <slot />
-  </scroll-view> -->
-  <!-- #endif -->
+	<!-- #ifdef APP-VUE -->
+	<view class="uni-list">
+		<slot />
+	</view>
+	<!-- #endif -->
+	<!-- #ifdef APP-NVUE -->
+	<list ref="list" class="uni-list" :enableBackToTop="enableBackToTop" loadmoreoffset="15" :scroll-y="scrollY" @loadmore="loadMore">
+		<slot />
+	</list>
+	<!-- #endif -->
+	<!-- #ifdef H5 || MP-WEIXIN || MP-QQ -->
+	<scroll-view class="uni-list" :enableBackToTop="enableBackToTop" :scroll-y="scrollY" @scrolltolower="loadMore">
+		<slot />
+	</scroll-view>
+	<!-- #endif -->
+	<!-- #ifdef MP-ALIPAY || MP-BAIDU || MP-TOUTIAO -->
+	<scroll-view class="uni-list" :scroll-y="scrollY" @scrolltolower="loadMore">
+		<slot />
+	</scroll-view>
+	<!-- #endif -->
 </template>
 
 <script>
@@ -96,9 +79,9 @@
 					return
 				}
 
-				// const oldHeight = this.height;
-				const endY = e.touches[0].pageY || e.changedTouches[0].pageY;
-				let newHeight = endY - this.touchStartY;
+				var oldHeight = this.height;
+				var endY = e.touches[0].pageY || e.changedTouches[0].pageY;
+				var newHeight = endY - this.touchStartY;
 				if (newHeight > this.pullDown.maxHeight) {
 					return;
 				}
@@ -120,7 +103,7 @@
 				this.refreshInstance.callMethod("onchange", false);
 
 				if (this.height > this.pullDown.threshold) {
-					this.refreshInstance.callMethod(this.pullDown.callRefresh);
+					refreshInstance.callMethod(this.pullDown.callRefresh);
 					return;
 				}
 
@@ -128,7 +111,7 @@
 			},
 			_updateRefresh(height) {
 				this.refreshInstance.setStyle({
-					height
+					'height': height
 				});
 			}
 		}
