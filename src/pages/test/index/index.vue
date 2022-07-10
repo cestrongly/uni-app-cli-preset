@@ -2,7 +2,7 @@
  * @Author: zhuangli.qin
  * @Date: 2022-06-17 09:40:27
  * @LastEditors: cest
- * @LastEditTime: 2022-07-09 02:01:42
+ * @LastEditTime: 2022-07-10 16:51:01
  * @FilePath: /uni-app-cli/src/pages/test/index/index.vue
  * @Description:
 -->
@@ -20,7 +20,6 @@
       </block>
     </cu-custom>
     <view class="wrap">
-      <page-nav :desc="desc" />
       <view class="list-wrap">
         <u-cell-group
           title-bg-color="rgb(243, 244, 246)"

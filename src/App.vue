@@ -1,9 +1,9 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-09 13:14:15
- * @LastEditTime: 2022-07-09 15:55:38
+ * @LastEditTime: 2022-07-10 16:34:44
  * @LastEditors: cest
- * @FilePath: /uni-app-preset/src/App.vue
+ * @FilePath: /uni-app-cli/src/App.vue
  * @Description: 编辑描述内容
 -->
 <script>
@@ -45,7 +45,7 @@ export default {
     const domModule = weex.requireModule('dom')
     domModule.addRule('fontFace', {
       fontFamily: 'texticons',
-      src: "url('./static/text-icon.ttf')"
+      src: "url('@/pages/news/static/text-icon.ttf')"
     })
     // #endif
 
