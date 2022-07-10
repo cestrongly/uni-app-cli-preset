@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 08:51:11
- * @LastEditTime: 2022-07-10 16:22:00
+ * @LastEditTime: 2022-07-10 22:17:12
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/pages/index/index.vue
  * @Description: 编辑描述内容
@@ -23,9 +23,17 @@ const IMG_API = `https://api.yimian.xyz/img`
 export default {
   components: {},
   data: () => ({
-    backgroundImage:  `background-image: url(${IMG_API})`
+
   }),
-  computed: {},
+  computed: {
+    backgroundImage()  {
+      let _backgroundImage = `background-image: url(${IMG_API}/?type=moe&display=750-1080x*&range=100&R18=true)`
+      /* #ifdef H5 */
+      _backgroundImage = `background-image: url(${IMG_API}/?type=moe&R18=true&display=true)`
+      /* #endif */
+      return _backgroundImage
+      }
+  },
   methods: {},
   watch: {},
   async created() {
@@ -84,7 +92,7 @@ export default {
   right: 0;
   bottom: 0;
   opacity: 1;
-  z-index: -1;
+  z-index: 0;
   content: "";
   position: fixed;
   /* background: url(https://api.paugram.com/wallpaper/) center/cover; */
