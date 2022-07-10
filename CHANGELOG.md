@@ -1,13 +1,22 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-02 12:33:28
- * @LastEditTime: 2022-07-10 12:20:29
+ * @LastEditTime: 2022-07-10 21:05:16
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/CHANGELOG.md
  * @Description: 更新日志
 -->
 # Change Log
 
+## 2022-7-10
+
+更新：
+
+- 【uni-app-cli-preset】 工程
+  - 新增 新闻/资讯类 App 模板
+  - 修复 vscode 使用了 `@/*` 别名后，路径不提示的问题
+  - 取消宽屏适配
+  
 ## 2022-7-9
 
 更新：
