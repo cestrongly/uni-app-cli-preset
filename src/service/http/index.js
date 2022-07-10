@@ -2,8 +2,8 @@
  * @Author: zhuangli.qin
  * @Date: 2022-06-16 07:49:00
  * @LastEditors: cest
- * @LastEditTime: 2022-07-09 15:24:56
- * @FilePath: /uni-app-preset/src/service/http/index.js
+ * @LastEditTime: 2022-07-10 14:08:54
+ * @FilePath: /uni-app-cli/src/service/http/index.js
  * @Description:
  * @Copyright (c) 2022 by cestrmail@163.com by zhuangli.qin, All Rights Reserved.
  */
@@ -21,11 +21,7 @@ http.setConfig(defaultConfig => {
   // defaultConfig.baseURL = config.baseUrl /* 根域名 */
   // 修改默认配置 用于处理拦截器
   // defaultConfig.custom = {...defaultConfig.custom,...config.custom}
-  const _defaultConfig = {
-    ...defaultConfig,
-    ...config
-  }
-  return _defaultConfig
+  return { ...defaultConfig, ...config }
 })
 
 require('./requestInterceptors')(http)
