@@ -36,7 +36,7 @@
 </template>
 
 <script>
-  import htmlParser from '../../common/html-parser'
+  import htmlParser from '@/util/html-parser'
 
   const FAIL_CONTENT = '<p>获取信息失败1</p>';
 

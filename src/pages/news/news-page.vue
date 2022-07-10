@@ -63,11 +63,11 @@
 </template>
 
 <script>
-import { friendlyDate } from '@/common/util.js'
+import { friendlyDate } from '@/util/function/friendlyDate'
 
 import newsItem from './news-item'
 // import uniLoadMore from '@/components/uni-load-more.vue';
-import noData from '@/components/nodata'
+import noData from '../components/nodata'
 
 export default {
   components: {

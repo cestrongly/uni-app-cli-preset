@@ -1,15 +1,19 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 08:51:11
- * @LastEditTime: 2022-07-08 22:18:28
+ * @LastEditTime: 2022-07-10 13:06:57
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/pages/index/index.vue
  * @Description: 编辑描述内容
 -->
 <template lang="pug">
-.index.align-center.justify-center
-  navigator.text-xxl.animation-fade(url="/pages/colorui/index/index" open-type="navigate" hover-class="navigator-hover")
-    | colorui说明文档
+.index.align-center.justify-center.text-content
+  navigator.text-xl.animation-fade.text-red(url="/pages/colorui/index/index" open-type="navigate" hover-class="navigator-hover")
+    | colorui 说明文档
+  navigator.text-xl.animation-scale-up.text-orange(url="/pages/news/index" open-type="navigate" hover-class="navigator-hover")
+    | 基于uni-app开发的新闻/资讯类App模板
+  navigator.text-xl.animation-scale-down.text-yellow(url="/pages/test/index/index" open-type="navigate" hover-class="navigator-hover")
+    | 单元测试导航
 </template>
 
 <script>
@@ -47,5 +51,17 @@ export default {
   flex-direction: column;
   /* align-items: stretch; */
   height: 100%;
+}
+
+.index:before{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .3;
+  z-index: -1;
+  content: "";
+  position: fixed;
+  background: url(https://api.paugram.com/wallpaper/) center/cover;
 }
 </style>

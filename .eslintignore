@@ -1,6 +1,7 @@
 public/
-src/common/
+
 src/uni_modules/
 src/util/Handwriting/
+src/util/html-parser/
 src/util/luch-request/
 
