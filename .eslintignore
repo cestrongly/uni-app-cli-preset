@@ -4,4 +4,5 @@ src/uni_modules/
 src/util/Handwriting/
 src/util/html-parser/
 src/util/luch-request/
+src/pages/z-paging/http/
 

@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 08:51:11
- * @LastEditTime: 2022-07-10 22:17:12
+ * @LastEditTime: 2022-07-12 20:12:50
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/src/pages/index/index.vue
  * @Description: 编辑描述内容
@@ -16,6 +16,8 @@
     | 新闻/资讯类 App 模板
   navigator.text-xl.animation-scale-down.text-yellow(url="/pages/test/index/index" open-type="navigate" hover-class="navigator-hover")
     | 单元测试导航
+  navigator.text-xl.animation-slide-top.text-olive(url="/pages/z-paging/index/index" open-type="navigate" hover-class="navigator-hover")
+    | z-paging
 </template>
 
 <script>

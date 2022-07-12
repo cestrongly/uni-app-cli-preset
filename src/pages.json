@@ -93,6 +93,23 @@
           }
         }
       ]
+    },
+    {
+      "root": "pages/z-paging",
+      "pages": [
+        {
+          "path": "index/index",
+          "style": {
+            "navigationBarTitleText": "index"
+          }
+        },
+        {
+          "path": "common-demo/common-demo",
+          "style": {
+            "navigationBarTitleText": "普通模式演示"
+          }
+        }
+      ]
     }
   ],
   "globalStyle": {
