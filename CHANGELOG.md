@@ -1,12 +1,19 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-02 12:33:28
- * @LastEditTime: 2022-07-10 21:24:20
+ * @LastEditTime: 2022-07-12 20:53:35
  * @LastEditors: cest
  * @FilePath: /uni-app-cli/CHANGELOG.md
  * @Description: 更新日志
 -->
 # Change Log
+
+## 2022-7-12 v1.1.0.20220712
+
+更新：
+
+- 累计更新（2022-7-3 v1.0.1-alpha.20220703 ~ 2022-7-10）
+- 集成 z-paging
 
 ## 2022-7-10
 

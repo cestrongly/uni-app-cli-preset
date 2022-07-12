@@ -45,6 +45,15 @@
   
   [中文文档](https://pugjs.org/zh-cn/api/getting-started.html)
 
+- 集成 z-paging
+
+  一个 uni-app 分页组件。
+
+  全平台兼容，支持自定义下拉刷新、上拉加载更多，支持虚拟列表，支持自动管理空数据图、点击返回顶部，支持聊天分页、本地分页，支持展示最后更新时间，支持国际化等等。
+
+  - 源代码：[GitHub](https://github.com/SmileZXLee/uni-z-paging)
+  - [官网&使用文档](https://z-paging.zxlee.cn/start/intro.html)  
+
 - 集成项目规范（eslint + prettier）支持 `standard` 和 `eslint:recommended`,默认配置 `standard`
 
 ## 上手指南
