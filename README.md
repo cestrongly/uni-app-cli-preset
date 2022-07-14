@@ -82,7 +82,7 @@ yarn build # 默认为H5环境 更多环境命令请参考 package.json 中的 s
 ### 运行微信小程序
 
 ```bash
-yarn build:mp-weixin
+yarn dev:mp-weixin
 # 或者
 yarn dev
 ```
