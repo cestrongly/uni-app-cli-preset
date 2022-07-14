@@ -17,27 +17,27 @@
     .padding.bg-white
       .flex.flex-wrap
         .basis-xs.bg-blue.margin-xs.padding-sm.radius xs(20%)
-        .basis-df.margin-xs.padding-sm basis-xs(20%)
-        .basis-sm.bg-blue.margin-xs.padding-sm.radius basis-sm(40%)
+        .basis-df.margin-xs.padding-sm .basis-xs(20%)
+        .basis-sm.bg-blue.margin-xs.padding-sm.radius .basis-sm(40%)
         .basis-df
-        .basis-df.bg-blue.margin-xs.padding-sm.radius basis-df(50%)
-        .basis-lg.bg-blue.margin-xs.padding-sm.radius basis-lg(60%)
-        .basis-xl.bg-blue.margin-xs.padding-sm.radius basis-xl(80%)
+        .basis-df.bg-blue.margin-xs.padding-sm.radius .basis-df(50%)
+        .basis-lg.bg-blue.margin-xs.padding-sm.radius .basis-lg(60%)
+        .basis-xl.bg-blue.margin-xs.padding-sm.radius .basis-xl(80%)
     .cu-bar.bg-white.margin-top.solid-bottom
       .action
         text.cuIcon-title.text-blue
-        | 比例布局 flex
+        | 比例布局 .flex
     .padding.bg-white
       .flex
-        .flex-sub.bg-blue.padding-sm.margin-xs.radius flex-sub 1
-        .flex-sub.bg-blue.padding-sm.margin-xs.radius flex-sub 1
+        .flex-sub.bg-blue.padding-sm.margin-xs.radius .flex-sub 1
+        .flex-sub.bg-blue.padding-sm.margin-xs.radius .flex-sub 1
       .flex.p-xs.margin-bottom-sm.mb-sm
-        .flex-sub.bg-blue.padding-sm.margin-xs.radius flex-sub 1
-        .flex-twice.bg-blue.padding-sm.margin-xs.radius flex-twice 2
+        .flex-sub.bg-blue.padding-sm.margin-xs.radius  .flex-sub 1
+        .flex-twice.bg-blue.padding-sm.margin-xs.radius .flex-twice 2
       .flex.p-xs.margin-bottom-sm.mb-sm
-        .flex-sub.bg-blue.padding-sm.margin-xs.radius flex-sub 1
-        .flex-twice.bg-blue.padding-sm.margin-xs.radius flex-twice 2
-        .flex-treble.bg-blue.padding-sm.margin-xs.radius flex-treble 3
+        .flex-sub.bg-blue.padding-sm.margin-xs.radius  flex-sub 1
+        .flex-twice.bg-blue.padding-sm.margin-xs.radius .flex-twice 2
+        .flex-treble.bg-blue.padding-sm.margin-xs.radius .flex-treble 3
     .cu-bar.bg-white.margin-top.solid-bottom
       .action
         text.cuIcon-title.text-blue
@@ -111,13 +111,13 @@
     .bg-white
       .flex.flex-wrap.solid-bottom.padding
         .flex-sub.bg-blue.padding-lg.margin-xs.radius(style="height:100px") ColorUi
-        .flex-sub.bg-blue.padding-sm.margin-xs.radius.self-start self-start
-        .flex-sub.bg-blue.padding-lg.margin-xs.radius(style="height:100px") ColorUi
-        .flex-sub.bg-blue.padding-sm.margin-xs.radius.self-center self-center
-        .flex-sub.bg-blue.padding-lg.margin-xs.radius(style="height:100px") ColorUi
-        .flex-sub.bg-blue.padding-sm.margin-xs.radius.self-end self-end
-        .flex-sub.bg-blue.padding-lg.margin-xs.radius(style="height:100px") ColorUi
-        .flex-sub.bg-blue.padding-sm.margin-xs.radius.self-stretch self-stretch
+        .flex-sub.bg-blue.padding-sm.margin-xs.radius.self-start .self-start
+        .flex-sub.bg-blue.padding-lg.margin-xs.radius(style="height:200px") ColorUi
+        .flex-sub.bg-blue.padding-sm.margin-xs.radius.self-center .self-center
+        .flex-sub.bg-blue.padding-lg.margin-xs.radius(style="height:300px") ColorUi
+        .flex-sub.bg-blue.padding-sm.margin-xs.radius.self-end .self-end
+        .flex-sub.bg-blue.padding-lg.margin-xs.radius(style="height:400px") ColorUi
+        .flex-sub.bg-blue.padding-sm.margin-xs.radius.self-stretch .self-stretch
   //- Grid 布局
   block(v-if="TabCur == 1")
     .cu-bar.bg-white.margin-top.solid-bottom
@@ -127,16 +127,19 @@
       .action
     .bg-white.padding
       .grid.margin-bottom.text-center(v-for="(item, index) in 5" :key="index" :class="'col-' + (index + 1)")
-        .padding(:class="indexs % 2 == 0 ? 'bg-cyan' : 'bg-blue'" v-for="(item, indexs) in (index + 1) * 2" :key="indexs")
+        .view.padding(:class="indexs % 2 == 0 ? 'bg-cyan' : 'bg-blue'" v-for="(item, indexs) in (index + 1) * 2" :key="indexs")
           | {{ indexs + 1 }}
     .cu-bar.bg-white.margin-top.solid-bottom
       .action
         text.cuIcon-title.text-blue
-        | 等高
+        | 等高布局
       .action
     .bg-white.padding
       .grid.col-4.grid-square
-        .bg-img(v-for="(item, index) in avatar" :key="index" :style="[{ backgroundImage: 'url(' + avatar[index] + ')' }]")
+        .view.bg-img(v-for="(item, index) in avatar" :key="index")
+          img.image(:src="avatar[index]")
+          .cu-tag 6
+          .text.cuIcon-pic 图标
   //- 辅助布局
   block(v-if="TabCur == 2")
     .cu-bar.bg-white.margin-top.solid-bottom
@@ -195,17 +198,19 @@ export default {
   components: {},
   data: () => ({
     TabCur: 0,
-    avatar: [
-      'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg',
-      'https://ossweb-img.qq.com/images/lol/web201310/skin/big81005.jpg',
-      'https://ossweb-img.qq.com/images/lol/web201310/skin/big25002.jpg',
-      'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
-    ],
     tabNav: ['Flex布局', 'Grid布局', '辅助布局']
   }),
   computed: {
     CustomBar() {
       return this.$CustomBar
+    },
+    avatar(){
+      return [
+      'https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images',
+      'http://api.mtyqx.cn/tapi/random.php',
+      'https://api.ixiaowai.cn/api/api.php',
+      'https://img.xjh.me/random_img.php?return=302&type=bg&ctype=acg'
+    ]
     }
   },
   methods: {
