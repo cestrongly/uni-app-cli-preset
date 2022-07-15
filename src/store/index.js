@@ -1,9 +1,9 @@
 /**
  * @Author: cest
  * @Date: 2022-06-17 23:02:14
- * @LastEditTime: 2022-07-02 12:57:51
+ * @LastEditTime: 2022-07-13 14:05:42
  * @LastEditors: cest
- * @FilePath: /uni-app-cli/src/store/index.js
+ * @FilePath: /dms-app-cli/src/store/index.js
  * @Description: vuex 状态管理总管
  */
 
@@ -21,30 +21,43 @@ Vue.use(Vuex)
 // 为了偷懒，也为了避免团队开发时同时对index.js 进行修改引发冲突
 // 所以在index.js中 动态的对子目录和模块进行注册
 
-function loadModules() {
-  const context = require.context('./modules', true, /([a-z_]+)\.js$/i)
+// function loadModules() {
+//   const context = require.context('./modules', true, /([a-z_]+)\.js$/i)
 
-  const modules = context
-    .keys()
-    .map(key => ({
-      key,
-      name: key.match(/([a-z_]+)\.js$/i)[1]
-    }))
-    .reduce(
-      (modules, { key, name }) => ({
-        ...modules,
-        [name]: context(key).default
-      }),
-      {}
-    )
+//   const modules = context
+//     .keys()
+//     .map(key => ({
+//       key,
+//       name: key.match(/([a-z_]+)\.js$/i)[1]
+//     }))
+//     .reduce(
+//       (modules, { key, name }) => ({
+//         ...modules,
+//         [name]: context(key).default
+//       }),
+//       {}
+//     )
 
-  return {
-    context,
-    modules
-  }
-}
+//   return {
+//     context,
+//     modules
+//   }
+// }
 
-const { context, modules } = loadModules()
+// const { context, modules } = loadModules()
+
+// 获取moudules文件下所有js文件
+const context = require.context('./modules', true, /\.js$/)
+// context.keys() 返回匹配成功模块的名字组成的数组
+const modules = context.keys().reduce((modules, modulePath) => {
+  const moduleName = modulePath.replace(/^\.\/(.*)\.\w+$/, '$1')
+  // 通过context(key)导出文件内容。在文件中时通过export.default导出的，所以后边加.default
+  const fileModule = context(modulePath)
+  // eslint-disable-next-line no-param-reassign
+  modules[moduleName] = fileModule.default
+  return modules
+}, {})
+
 const { createLogger } = Vuex
 const store = new Vuex.Store({
   // Vuex 自带一个日志插件用于一般的调试:
@@ -61,14 +74,13 @@ const store = new Vuex.Store({
   getters,
   mutations,
   actions,
+  // modules
   modules
 })
 
 if (module.hot) {
   // 在任何模块发生改变时进行热重载。
   module.hot.accept(context.id, () => {
-    const { modules } = loadModules()
-
     store.hotUpdate({
       modules
     })
