@@ -1,8 +1,12 @@
-@import "./var.scss";
-@import "@/assets/scss/color.scss";
+@import './var.scss';
+@import '../../../assets/scss/color.scss';
 
 .u-block {
   &__title {
     color: $u-content-color;
   }
+}
+
+.default {
+  @include box;
 }

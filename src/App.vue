@@ -1,9 +1,9 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-09 13:14:15
- * @LastEditTime: 2022-07-10 16:34:44
+ * @LastEditTime: 2022-07-15 21:46:14
  * @LastEditors: cest
- * @FilePath: /uni-app-cli/src/App.vue
+ * @FilePath: /uni-app-cli-preset/src/App.vue
  * @Description: 编辑描述内容
 -->
 <script>
@@ -86,10 +86,10 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/theme/dark/index.scss';
-@import '@/assets/theme/default/index.scss';
-@import '@/util/colorui/index.scss';
-@import '@/util/colorui/animation.css';
-@import '@/uni_modules/uview-ui/index.scss';
-@import '@/assets/scss/index.scss';
+// @import '@/assets/theme/dark/index.scss';
+// @import '@/assets/theme/default/index.scss';
+// @import '@/util/colorui/index.scss';
+// @import '@/util/colorui/animation.css';
+// @import '@/uni_modules/uview-ui/index.scss';
+// @import '@/assets/scss/index.scss';
 </style>

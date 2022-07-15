@@ -1,0 +1,163 @@
+:not(.dark) {
+  --ui-bg-color: #f3f4f6;
+  --ui-bg-dark-color: #606266;
+}
+
+page {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  background-color: #f3f4f6;
+  color: #303133;
+}
+page .u-page {
+  flex-grow: 1;
+}
+
+.fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+.fixed.align-end {
+  bottom: 0;
+}
+
+.area__head .title-pre {
+  width: 4px;
+  height: 24px;
+}
+.area__body .textarea {
+  border-radius: 6rpx;
+}
+
+.card {
+  background-color: #fff;
+  position: relative;
+  border-radius: 6rpx;
+}
+.card__body .textarea {
+  border-radius: 6rpx;
+}
+.card .index {
+  width: 1em;
+  height: 1em;
+  border-radius: 100%;
+}
+.card .ticketStatus {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 180rpx;
+  text-align: right;
+  border-bottom-left-radius: 30rpx;
+}
+
+.cedo-item {
+  background-color: #fff;
+  position: relative;
+}
+.cedo-item__body .textarea {
+  border-radius: 6rpx;
+}
+.cedo-item .index {
+  width: 1em;
+  height: 1em;
+  border-radius: 100%;
+}
+.cedo-item .ticketStatus {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 180rpx;
+  text-align: right;
+  border-bottom-left-radius: 30rpx;
+}
+
+.empty-area {
+  height: 160px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.images ::v-deep .u-row {
+  flex-wrap: wrap;
+}
+.images ::v-deep .u-transition,
+.images ::v-deep .u-image {
+  height: 100%;
+}
+.images ::v-deep .u-image__image {
+  width: 100%;
+  height: 100%;
+}
+
+.search-form {
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
+}
+.search-form .u-search__action {
+  color: #303133;
+}
+
+.space-box {
+  height: 128rpx;
+  margin-bottom: 30rpx;
+}
+
+.square {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-bottom: 100%;
+}
+.square .con {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.square .img {
+  width: 100%;
+  height: 100%;
+}
+
+.u-block {
+  padding: 14px;
+}
+.u-block__section {
+  margin-bottom: 10px;
+}
+.u-block__title {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #606266;
+  margin-bottom: 10px;
+}
+.u-block__fle {
+  /* #ifndef APP-NVUE */
+  display: flex;
+  /* #endif */
+}
+
+.u-cell-icon {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 8rpx;
+}
+
+.u-page {
+  padding: 0 0 40px 0;
+}
+
+/*# sourceMappingURL=index.css.map */

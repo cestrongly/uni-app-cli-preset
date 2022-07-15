@@ -1,0 +1,18 @@
+:not(.dark) {
+  --ui-bg-color: #f3f4f6;
+  --ui-bg-dark-color: #606266;
+}
+
+page {
+  background-color: var(--ui-bg-color);
+}
+
+.bg-color {
+  background-color: var(--ui-bg-color);
+}
+
+.u-block__title {
+  color: #606266;
+}
+
+/*# sourceMappingURL=index.css.map */
