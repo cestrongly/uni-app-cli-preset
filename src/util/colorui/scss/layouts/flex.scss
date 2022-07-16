@@ -43,48 +43,75 @@
   }
 }
 
-/*  -- flex-direction column
-flex 容器的主轴和块轴相同。主轴起点与主轴终点和书写模式的前后点相同 -- */
+/*
+  -- flex-direction column
+  flex 容器的主轴和块轴相同。主轴起点与主轴终点和书写模式的前后点相同
+  --
+*/
 
 .flex-direction {
   flex-direction: column;
 }
 
-/*  -- flex-direction wrap
-flex 元素被打断到多个行中。cross-start 会根据 flex-direction 的值等价于 start 或before。cross-end 为确定的 cross-start 的另一端。 -- */
+/*
+  -- flex-direction wrap
+  flex 元素被打断到多个行中。cross-start 会根据 flex-direction 的值等价于 start 或before。cross-end 为确定的 cross-start 的另一端。
+  --
+*/
 
 .flex-wrap {
   flex-wrap: wrap;
 }
 
-/*  -- .flex.align-[start|end|center|stretch] 垂直对齐(align)
- align-items 属性将所有直接子节点上的 align-self 值设置为一个组。align-self 属性设置项目在其包含块中在交叉轴方向上的对齐方式 -- */
+/*
+  -- .flex.align-[start|end|center|stretch] 垂直对齐(align)
+  align-items 属性将所有直接子节点上的 align-self 值设置为一个组。
+  --
+*/
 
-// flex-start
-// 元素向侧轴起点对齐
+/*
+  flex-start
+  元素向侧轴起点对齐
+*/
+
 .align-start {
   align-items: flex-start;
 }
-// flex-end
-// 元素向侧轴终点对齐。
+
+/*
+  flex-end
+  元素向侧轴终点对齐
+*/
+
 .align-end {
   align-items: flex-end;
 }
-// center
-// 元素在侧轴居中。如果元素在侧轴上的高度高于其容器，那么在两个方向上溢出距离相同。
+
+/*
+  center
+  元素在侧轴居中。如果元素在侧轴上的高度高于其容器，那么在两个方向上溢出距离相同。
+*/
+
 .align-center {
   align-items: center;
 }
-// stretch
-// 弹性项包含外边距的交叉轴尺寸被拉升至行高
+
+/*
+  stretch
+  弹性项包含外边距的交叉轴尺寸被拉升至行高
+*/
+
 .align-stretch {
   align-items: stretch;
 }
 
-/*  -- align-self
-align-self 会对齐当前 grid 或 flex 行中的元素，并覆盖已有的 align-items 的值。
-In Grid, it aligns the item inside the grid area.
-在 Flexbox 中，会按照 cross axis（当前 flex 元素排列方向的垂直方向）进行排列。 -- */
+/*
+  -- align-self
+  align-self 会对齐当前 grid 或 flex 行中的元素，并覆盖已有的 align-items 的值。
+  In Grid, it aligns the item inside the grid area.
+  在 Flexbox 中，会按照 cross axis（当前 flex 元素排列方向的垂直方向）进行排列。
+  --
+*/
 
 /*  -- .self-[start|center|end|stretch] -- */
 .self-start {
@@ -103,43 +130,63 @@ In Grid, it aligns the item inside the grid area.
   align-self: stretch;
 }
 
-/*  -- .flex.justify-[start|end|center|between|around] 垂直对齐(justify)
-justify-content 属性定义了浏览器之间，如何分配顺着弹性容器主轴 (或者网格行轴) 的元素之间及其周围的空间。 -- */
+/*
+  -- .flex.justify-[start|end|center|between|around] 垂直对齐(justify)
+  justify-content 属性定义了浏览器之间，如何分配顺着弹性容器主轴 (或者网格行轴) 的元素之间及其周围的空间。
+  --
+*/
 
-// flex-start
-// 从行首开始排列。每行第一个弹性元素与行首对齐，同时所有后续的弹性元素与前一个对齐。
+/*
+  flex-start
+  从行首开始排列。每行第一个弹性元素与行首对齐，同时所有后续的弹性元素与前一个对齐。
+*/
+
 .justify-start {
   justify-content: flex-start;
 }
 
-// flex-end
-// 从行尾开始排列。每行最后一个弹性元素与行尾对齐，其他元素将与后一个对齐。
+/*
+  flex-end
+  从行尾开始排列。每行最后一个弹性元素与行尾对齐，其他元素将与后一个对齐。
+*/
+
 .justify-end {
   justify-content: flex-end;
 }
 
-// center
-// 伸缩元素向每行中点排列。每行第一个元素到行首的距离将与每行最后一个元素到行尾的距离相同。
+/*
+  center
+  伸缩元素向每行中点排列。每行第一个元素到行首的距离将与每行最后一个元素到行尾的距离相同。
+*/
+
 .justify-center {
   justify-content: center;
 }
 
-// space-between
-// 在每行上均匀分配弹性元素。相邻元素间距离相同。每行第一个元素与行首对齐，每行最后一个元素与行尾对齐。
+/*
+  space-between
+  在每行上均匀分配弹性元素。相邻元素间距离相同。每行第一个元素与行首对齐，每行最后一个元素与行尾对齐。
+*/
+
 .justify-between {
   justify-content: space-between;
 }
 
-// space-around
-// 在每行上均匀分配弹性元素。相邻元素间距离相同。每行第一个元素到行首的距离和每行最后一个元素到行尾的距离将会是相邻元素之间距离的一半。
+/*
+  space-around
+  在每行上均匀分配弹性元素。相邻元素间距离相同。每行第一个元素到行首的距离和每行最后一个元素到行尾的距离将会是相邻元素之间距离的一半。
+*/
 .justify-around {
   justify-content: space-around;
 }
 
-// space-evenly
-// flex 项都沿着主轴均匀分布在指定的对齐容器中。相邻 flex 项之间的间距，主轴起始位置到第一个 flex 项的间距，主轴结束位置到最后一个 flex 项的间距，都完全一样。
-// ！！！注意：IOS 11 以下不支持 justify-content: space-evenly
-// > 'justify-content: space-evenly' is not supported by Safari on iOS < 11.
+/*
+  space-evenly
+  flex 项都沿着主轴均匀分布在指定的对齐容器中。相邻 flex 项之间的间距，主轴起始位置到第一个 flex 项的间距，主轴结束位置到最后一个 flex 项的间距，都完全一样。
+  ！！！注意：IOS 11 以下不支持 justify-content: space-evenly
+  > 'justify-content: space-evenly' is not supported by Safari on iOS < 11.
+*/
+
 .justify-evenly {
   justify-content: space-evenly;
 }

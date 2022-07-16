@@ -35,7 +35,7 @@
         .flex-sub.bg-blue.padding-sm.margin-xs.radius  .flex-sub 1
         .flex-twice.bg-blue.padding-sm.margin-xs.radius .flex-twice 2
       .flex.p-xs.margin-bottom-sm.mb-sm
-        .flex-sub.bg-blue.padding-sm.margin-xs.radius  flex-sub 1
+        .flex-sub.bg-blue.padding-sm.margin-xs.radius  .flex-sub 1
         .flex-twice.bg-blue.padding-sm.margin-xs.radius .flex-twice 2
         .flex-treble.bg-blue.padding-sm.margin-xs.radius .flex-treble 3
     .cu-bar.bg-white.margin-top.solid-bottom

@@ -1,8 +1,4 @@
-:not(.dark) {
-  --ui-bg-color: #f3f4f6;
-  --ui-bg-dark-color: #606266;
-}
-
+:root,
 page {
   display: flex;
   flex-direction: column;
@@ -11,6 +7,7 @@ page {
   background-color: #f3f4f6;
   color: #303133;
 }
+:root .u-page,
 page .u-page {
   flex-grow: 1;
 }
@@ -154,6 +151,26 @@ page .u-page {
   width: 36rpx;
   height: 36rpx;
   margin-right: 8rpx;
+}
+
+.u-demo-block {
+  flex: 1;
+  margin-bottom: 23px;
+}
+.u-demo-block__content {
+  /* #ifndef APP-NVUE */
+  display: flex;
+  /* #endif */
+  flex-direction: column;
+}
+.u-demo-block__title {
+  font-size: 14px;
+  color: rgb(143, 156, 162);
+  margin-bottom: 8px;
+  /* #ifndef APP-NVUE */
+  display: flex;
+  /* #endif */
+  flex-direction: row;
 }
 
 .u-page {
