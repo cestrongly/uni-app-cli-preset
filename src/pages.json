@@ -27,6 +27,13 @@
             "navigationStyle": "custom",
             "enablePullDownRefresh": false
           }
+        },
+        {
+          "path": "background/index",
+          "style": {
+            "navigationStyle": "custom",
+            "enablePullDownRefresh": false
+          }
         }
       ]
     },

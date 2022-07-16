@@ -1,9 +1,9 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 21:42:34
- * @LastEditTime: 2022-07-05 23:43:05
+ * @LastEditTime: 2022-07-16 14:24:50
  * @LastEditors: cest
- * @FilePath: /uni-app-cli/src/pages/colorui/components/CuNavList/index.vue
+ * @FilePath: /uni-app-cli-preset/src/pages/colorui/components/CuNavList/index.vue
  * @Description: 编辑描述内容
 -->
 <template lang="pug">
@@ -51,4 +51,12 @@ export default {
 
 <style lang="stylus">
 @import '@/pages/colorui/index/nav-list'
+</style>
+<style lang="scss" scoped>
+//
+// 内置图标
+//
+
+//
+@import '@/util/colorui/scss/modules/icon.scss';
 </style>

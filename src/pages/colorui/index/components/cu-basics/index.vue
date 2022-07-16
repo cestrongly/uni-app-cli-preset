@@ -1,9 +1,9 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 20:20:11
- * @LastEditTime: 2022-07-05 20:19:49
+ * @LastEditTime: 2022-07-16 14:24:57
  * @LastEditors: cest
- * @FilePath: /uni-app-cli/src/pages/colorui/index/components/cu-basics/index.vue
+ * @FilePath: /uni-app-cli-preset/src/pages/colorui/index/components/cu-basics/index.vue
  * @Description: 基础元素
 -->
 <template lang="pug">
@@ -115,7 +115,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
 .page {
 		height: 100vh;
 	}

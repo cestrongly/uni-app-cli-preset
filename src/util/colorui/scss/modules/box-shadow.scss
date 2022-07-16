@@ -1,8 +1,8 @@
 /* ==================
-  阴影
+          阴影
  ==================== */
 
- .shadow[class*='-red'] {
+.shadow[class*='-red'] {
   box-shadow: 6rpx 6rpx 8rpx rgba(204, 69, 59, 0.2);
 }
 
@@ -96,6 +96,7 @@
 
 .shadow-blur {
   position: relative;
+  z-index: 1;
 }
 
 .shadow-blur::before {
