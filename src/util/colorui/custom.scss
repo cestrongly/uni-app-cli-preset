@@ -70,13 +70,15 @@
 // 头像
 // @import './scss/modules/cu-avatar.scss';
 // 操作条
-// @import './scss/modules/cu-bar.scss';
+@import './scss/modules/cu-bar.scss';
 // 按钮
 // @import './scss/modules/cu-btn.scss';
 // 卡片
 // @import './scss/modules/cu-card.scss';
 // 聊天
 // @import './scss/modules/cu-chat.scss';
+// 自定义头部导航
+@import './scss/modules/cu-custom.scss';
 // 表单
 // @import './scss/modules/cu-form-group.scss';
 // 列表

@@ -145,52 +145,283 @@
     .cu-bar.bg-white.margin-top.solid-bottom
       .action
         text.cuIcon-title.text-blue
-        | 浮动
+        | 浮动 .cf
     .bg-white.padding
       .cf.padding-sm
-        .bg-blue.radius.fl.padding-sm ColorUi fl
-        .bg-blue.radius.fr.padding-sm ColorUi fr
+        .bg-blue.radius.fl.padding-sm ColorUi .fl
+        .bg-blue.radius.fr.padding-sm ColorUi .fr
     .cu-bar.bg-white.solid-bottom.margin-top.solid-bottom
       .action
         text.cuIcon-title.text-blue
         | 内外边距
     .bg-white
-      .padding.bg-gray {size}的尺寸有xs/sm/df/lg/xl
+      .padding.bg-gray {size}的尺寸有xs/sm/lg/xl
+
       .flex.flex-wrap.padding.solid-top
-        .basis-df.padding-bottom-xs 外边距
-        .basis-df.padding-bottom-xs 内边距
-        .basis-df .margin-{size}
-        .basis-df .padding-{size}
+        .padding-bottom-xs 外边距 .margin[-0|xs|sm|lg|xl]
+      .flex.flex-wrap.align-center.justify-evenly
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-0 .margin-0
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-xs .margin-xs
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-sm .margin-sm
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin .margin
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-lg .margin-lg
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-xl .margin-xl
+
       .flex.flex-wrap.padding.solid-top
-        .basis-df.padding-bottom-xs 水平方向外边距
-        .basis-df.padding-bottom-xs 水平方向内边距
-        .basis-df .margin-lr-{size}
-        .basis-df .padding-lr-{size}
+        .padding-bottom-xs 水平方向外边距 .margin-lr[-0|xs|sm|lg|xl]
+      .flex.flex-wrap.align-center.justify-evenly
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-lr-0 .margin-lr-0
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-lr-xs .margin-lr-xs
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-lr-sm .margin-lr-sm
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-lr .margin-lr
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-lr-lg .margin-lr-lg
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-lr-xl .margin-lr-xl
+
       .flex.flex-wrap.padding.solid-top
-        .basis-df.padding-bottom-xs 垂直方向外边距
-        .basis-df.padding-bottom-xs 垂直方向内边距
-        .basis-df .margin-tb-{size}
-        .basis-df .padding-tb-{size}
+        .padding-bottom-xs 垂直方向外边距 .margin-tb[-0|xs|sm|lg|xl]
+      .flex.flex-wrap.align-center.justify-evenly
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-tb-0 .margin-tb-0
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-tb-xs .margin-tb-xs
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-tb-sm .margin-tb-sm
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-tb .margin-tb
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-tb-lg .margin-tb-lg
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-tb-xl .margin-tb-xl
+
       .flex.flex-wrap.padding.solid-top
-        .basis-df.padding-bottom-xs 上外边距
-        .basis-df.padding-bottom-xs 上内边距
-        .basis-df .margin-top-{size}
-        .basis-df .padding-top-{size}
+        .padding-bottom-xs 上外边距 .margin-top[-0|xs|sm|lg|xl]
+      .flex.flex-wrap.align-center.justify-evenly
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-top-0 .margin-top-0
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-top-xs .margin-top-xs
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-top-sm .margin-top-sm
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-top .margin-top
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-top-lg .margin-top-lg
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-top-xl .margin-top-xl
+
       .flex.flex-wrap.padding.solid-top
-        .basis-df.padding-bottom-xs 右外边距
-        .basis-df.padding-bottom-xs 右内边距
-        .basis-df .margin-right-{size}
-        .basis-df .padding-right-{size}
+        .padding-bottom-xs 右外边距 .margin-right[-0|xs|sm|lg|xl]
+      .flex.flex-wrap.align-center.justify-evenly
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-right-0 .margin-0
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-right-xs .margin-xs
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-right-sm .margin-sm
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-right .margin
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-right-lg .margin-lg
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-right-xl .margin-xl
+
       .flex.flex-wrap.padding.solid-top
-        .basis-df.padding-bottom-xs 下外边距
-        .basis-df.padding-bottom-xs 下内边距
-        .basis-df margin-bottom-{size}
-        .basis-df .padding-bottom-{size}
+        .padding-bottom-xs 下外边距 .margin-bottom[-0|xs|sm|lg|xl]
+      .flex.flex-wrap.align-center.justify-evenly
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-bottom-0 .margin-bottom-0
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-bottom-xs .margin-bottom-xs
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-bottom-sm .margin-bottom-sm
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-bottom .margin-bottom
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-bottom-lg .margin-bottom-lg
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-bottom-xl .margin-bottom-xl
+
       .flex.flex-wrap.padding.solid-top
-        .basis-df.padding-bottom-xs 左外边距
-        .basis-df.padding-bottom-xs 左内边距
-        .basis-df .margin-left-{size}
-        .basis-df .padding-left-{size}
+        .padding-bottom-xs 外边距 .margin-left[-0|xs|sm|lg|xl]
+      .flex.flex-wrap.align-center.justify-evenly
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-left-0 .margin-left-0
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-left-xs .margin-left-xs
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-left-sm .margin-left-sm
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-left .margin-left
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-left-lg .margin-left-lg
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.margin-left-xl .margin-left-xl
+
+      .flex.flex-wrap.padding.solid-top
+        .padding-bottom-xs 内填充 .padding[-0|xs|sm|lg|xl]
+      .flex.flex-wrap.align-center.justify-evenly
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-0
+            .content.bg-pink .padding-0
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-xs
+            .content.bg-pink .padding-xs
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-sm
+            .content.bg-pink .padding-sm
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding
+            .content.bg-pink .padding
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-lg
+            .content.bg-pink .padding-lg
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-xl
+            .content.bg-pink .padding-xl
+
+      .flex.flex-wrap.padding.solid-top
+        .padding-bottom-xs 水平方向内填充 .padding-lr[-0|xs|sm|lg|xl]
+      .flex.flex-wrap.align-center.justify-evenly
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-lr-0
+            .content.bg-pink .padding-lr-0
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-lr-xs
+            .content.bg-pink .padding-lr-xs
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-lr-sm
+            .content.bg-pink .padding-lr-sm
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-lr
+            .content.bg-pink .padding-lr
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-lr-lg
+            .content.bg-pink .padding-lr-lg
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-lr-xl
+            .content.bg-pink .padding-lr-xl
+
+      .flex.flex-wrap.padding.solid-top
+        .padding-bottom-xs 垂直方向内填充 .padding-tb[-0|xs|sm|lg|xl]
+      .flex.flex-wrap.align-center.justify-evenly
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-tb-0
+            .content.bg-pink .padding-tb-0
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-tb-xs
+            .content.bg-pink .padding-tb-xs
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-tb-sm
+            .content.bg-pink .padding-tb-sm
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-tb
+            .content.bg-pink .padding-tb
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-tb-lg
+            .content.bg-pink .padding-tb-lg
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-tb-xl
+            .content.bg-pink .padding-tb-xl
+
+      .flex.flex-wrap.padding.solid-top
+        .padding-bottom-xs 上内填充 .padding-top[-0|xs|sm|lg|xl]
+      .flex.flex-wrap.align-center.justify-evenly
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-top-0
+            .content.bg-pink .padding-top-0
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-top-xs
+            .content.bg-pink .padding-top-xs
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-top-sm
+            .content.bg-pink .padding-top-sm
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-top
+            .content.bg-pink .padding-top
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-top-lg
+            .content.bg-pink .padding-top-lg
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-top-xl
+            .content.bg-pink .padding-top-xl
+
+      .flex.flex-wrap.padding.solid-top
+        .padding-bottom-xs 右内填充 .padding-right[-0|xs|sm|lg|xl]
+      .flex.flex-wrap.align-center.justify-evenly
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-right-0
+            .content.bg-pink .padding-right-0
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-right-xs
+            .content.bg-pink .padding-right-xs
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-right-sm
+            .content.bg-pink .padding-right-sm
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-right
+            .content.bg-pink .padding-right
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-right-lg
+            .content.bg-pink .padding-right-lg
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-right-xl
+            .content.bg-pink .padding-right-xl
+
+      .flex.flex-wrap.padding.solid-top
+        .padding-bottom-xs 下内填充 .padding-bottom[-0|xs|sm|lg|xl]
+      .flex.flex-wrap.align-center.justify-evenly
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-bottom-0
+            .content.bg-pink .padding-bottom-0
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-bottom-xs
+            .content.bg-pink .padding-bottom-xs
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-bottom-sm
+            .content.bg-pink .padding-bottom-sm
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-bottom
+            .content.bg-pink .padding-bottom
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-bottom-lg
+            .content.bg-pink .padding-bottom-lg
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-bottom-xl
+            .content.bg-pink .padding-bottom-xl
+
+      .flex.flex-wrap.padding.solid-top
+        .padding-bottom-xs 左内填充 .padding-left[-0|xs|sm|lg|xl]
+      .flex.flex-wrap.align-center.justify-evenly
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-left-0
+            .content.bg-pink .padding-left-0
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-left-xs
+            .content.bg-pink .padding-left-xs
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-left-sm
+            .content.bg-pink .padding-left-sm
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-left
+            .content.bg-pink .padding-left
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-left-lg
+            .content.bg-pink .padding-left-lg
+        .box.solid.line-red.margin-tb
+          .inner-box.bg-blue.padding-left-xl
+            .content.bg-pink .padding-left-xl
 </template>
 
 <script>
@@ -204,13 +435,13 @@ export default {
     CustomBar() {
       return this.$CustomBar
     },
-    avatar(){
+    avatar() {
       return [
-      'https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images',
-      'http://api.mtyqx.cn/tapi/random.php',
-      'https://api.ixiaowai.cn/api/api.php',
-      'https://img.xjh.me/random_img.php?return=302&type=bg&ctype=acg'
-    ]
+        'https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images',
+        'http://api.mtyqx.cn/tapi/random.php',
+        'https://api.ixiaowai.cn/api/api.php',
+        'https://img.xjh.me/random_img.php?return=302&type=bg&ctype=acg'
+      ]
     }
   },
   methods: {
@@ -245,8 +476,28 @@ export default {
 }
 </script>
 
-<style>
-	page {
-		padding-top: 45px;
-	}
+<style lang="scss" scoped>
+// 列表
+@import '@/util/colorui/scss/modules/nav.scss';
+page {
+  padding-top: 45px;
+}
+.box {
+  overflow: hidden;
+  .inner-box {
+    box-sizing:border-box;
+    display: flex;
+    width: 150px;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+  }
+  .content {
+    width: 100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 </style>
