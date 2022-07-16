@@ -12,7 +12,7 @@
   ],
   "subPackages": [
     {
-      "root": "pages/colorui",
+      "root": "pages/color-ui",
       "pages": [
         {
           "path": "index/index",

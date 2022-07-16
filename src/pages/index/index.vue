@@ -10,7 +10,7 @@
 .index.align-center.justify-center.text-content
   .bg-img.animation-fade(:style="backgroundImage")
   .bg-color
-  navigator.text-xl.animation-fade.text-red(url="/pages/colorui/index/index" open-type="navigate" hover-class="navigator-hover")
+  navigator.text-xl.animation-fade.text-red(url="/pages/color-ui/index/index" open-type="navigate" hover-class="navigator-hover")
     | colorui 说明文档
   navigator.text-xl.animation-scale-up.text-orange(url="/pages/news/index" open-type="navigate" hover-class="navigator-hover")
     | 新闻/资讯类 App 模板

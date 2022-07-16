@@ -88,8 +88,8 @@ export default {
 <style lang="scss">
 // @import '@/assets/theme/dark/index.scss';
 // @import '@/assets/theme/default/index.scss';
-// @import '@/util/colorui/index.scss';
-// @import '@/util/colorui/animation.css';
+// @import '@/util/color-ui/index.scss';
+// @import '@/util/color-ui/animation.css';
 // @import '@/uni_modules/uview-ui/index.scss';
 // @import '@/assets/scss/index.scss';
 </style>

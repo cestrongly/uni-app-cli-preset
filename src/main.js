@@ -9,8 +9,8 @@
  */
 
 import './uni_modules/uview-ui/index.scss'
-import './util/colorui/custom.scss'
-import './util/colorui/css/animation.css'
+import './util/color-ui/custom.scss'
+import './util/color-ui/css/animation.css'
 import './assets/scss/index.scss'
 import './assets/theme/default/index.scss'
 import './assets/theme/dark/index.scss'
@@ -24,7 +24,7 @@ import store from './store'
 // 引入全局uView
 import uView from './uni_modules/uview-ui'
 // 引入自定义顶部
-import cuCustom from './util/colorui/components/cu-custom.vue'
+import cuCustom from './util/color-ui/components/cu-custom.vue'
 // #endif
 
 const host = 'https://unidemo.dcloud.net.cn/'
