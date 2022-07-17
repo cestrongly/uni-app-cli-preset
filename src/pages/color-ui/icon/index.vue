@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-17 09:19:07
- * @LastEditTime: 2022-07-17 10:55:28
+ * @LastEditTime: 2022-07-17 11:02:09
  * @LastEditors: cest
  * @FilePath: /uni-app-cli-preset/src/pages/color-ui/icon/index.vue
  * @Description: 编辑描述内容
@@ -17,7 +17,7 @@
     view.search-form.round
       text.cuIcon-search
       input(type="text" placeholder="搜索cuIcon" confirm-type="search" @input="searchIcon")
-  view.cu-list.grid.col-3
+  view.cu-list.grid.col-2
     block(v-for="(item,index) in CuIconSortByNameAsc" :key="index")
       view.cu-item(v-if="item.isShow" @click="copyTextEventHandler('cuIcon-' + item.name)")
         text.lg.text-gray(:class="'cuIcon-' + item.name")
