@@ -24,8 +24,8 @@
 const env = process.env
 
 // OSS 路径
-export const BASE_OSS_PATH = env.VUE_APP_BASE_OSS_PATH || 'https://wl-app.oss-cn-shenzhen.aliyuncs.com/cedo-pro'
+export const BASE_OSS_PATH = env.VUE_APP_BASE_OSS_PATH
 // api 接口
-export const API_BASE_URL = env.VUE_APP_API_BASE_URL || `http://120.79.78.90:9000`
+export const API_BASE_URL = env.VUE_APP_API_BASE_URL
 // 二维码有效期 单位:分钟/min
 export const EXPORT_CONST_CODE_VALID = env.VUE_APP_EXPORT_CONST_CODE_VALID || 10
