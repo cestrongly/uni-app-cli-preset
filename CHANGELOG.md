@@ -1,12 +1,66 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-02 12:33:28
- * @LastEditTime: 2022-07-12 20:53:35
+ * @LastEditTime: 2022-07-23 16:05:41
  * @LastEditors: cest
- * @FilePath: /uni-app-cli/CHANGELOG.md
+ * @FilePath: /uni-app-cli-preset/CHANGELOG.md
  * @Description: 更新日志
 -->
 # Change Log
+
+## 2022-7-23 v1.2.0.20220723
+
+累计更新（2022-7-16 ~ 2022-7-23）
+
+主要更新：
+
+- 新增图标字体库 iconfont-24gl-1.0-no-circle-no-squarel、iconfont-uview2
+- 修改vuex modules 动态导入的实现方式，解决 modules 不同命名空间下不能重名的问题
+- 修改根字体大小 12px
+- 更名 colorui -> color-ui
+
+- 更新【color-ui】说明文档与demo
+  - 更新辅助布局说明文档
+  - 更新背景说明文档
+  - 更新文本说明文档
+  - 更新图标说明文档
+
+## 2022-7-23
+
+- 删除样式 .test
+- 新增样式模块 overflow
+- 删除样式模块 cedo-item
+- 重构 store string_map 与 types
+- 新增图标库： iconfont-24gl-1.0-no-circle-no-squarel
+- 新增图标字体库 iconfont-uview2
+- 新增主题 变量
+- 修改根字体大小 12px
+- 删除不必要的文件
+
+## 2022-7-17
+
+- 更名 colorui -> color-ui
+- 【color-ui】
+  - 更新图标说明文档
+  - 更新图标说明文档 优化排版
+
+## 2022-7-16
+
+- 【colorui】
+  - 更新辅助布局说明文档
+  - 更新背景说明文档
+  - 更新文本说明文档
+
+## 2022-7-15
+
+- 【uni-app-cli-preset】 工程
+  - 修改vuex modules 动态导入的实现方式，解决 modules 不同命名空间下不能重名的问题
+  - scss 混入测试
+
+## 2022-7-14
+
+- 【colorui】
+  - 更新 grid 布局 demo和 grid.scss 说明文档
 
 ## 2022-7-12 v1.1.0.20220712
 
