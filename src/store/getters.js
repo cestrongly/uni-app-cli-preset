@@ -7,7 +7,7 @@
  * @Description: 编辑描述内容
  */
 import test from '@/uni_modules/uview-ui/libs/function/test'
-import * as STRING_MAP from '@/store/string_map'
+import * as MAP from '@/store/maps'
 const { isEmpty } = test
 export default {
   defaultValue:
@@ -23,7 +23,7 @@ export default {
    */
   getEnvVersion: state => {
     const accountInfo = uni.getAccountInfoSync()
-    const version = state[STRING_MAP.envVersion][(accountInfo, accountInfo.miniProgram.envVersion)]
+    const version = state[MAP.envVersion][(accountInfo, accountInfo.miniProgram.envVersion)]
     if (version !== '正式版') {
       return `(${version})`
     } else {

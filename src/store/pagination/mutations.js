@@ -7,7 +7,7 @@
  * @Description: 编辑描述内容
  */
 
-import * as TYPES from '@/store/types'
+import * as paginationMap from '@/store/maps/paginationMap'
 export default {
   /**
    * 分页数据处理
@@ -15,7 +15,7 @@ export default {
    * @param {*} state - 当前模块的 state
    * @param {*} payload - 负载参数，调用者传递过来的参数
    */
-  [TYPES.SET_LIST](state, { res, query }) {
+  [paginationMap.SET_LIST](state, { res, query }) {
     if (query.pageNum > 1) {
       state.list = state.list.concat(res.rows)
     } else {
@@ -29,7 +29,7 @@ export default {
    * @param {*} state 当前模块的 state
    * @param {*} payload - 负载参数，调用者传递过来的参数
    */
-  [TYPES.CHANGE_ITEM](state, payload) {
+  [paginationMap.CHANGE_ITEM](state, payload) {
     state.item = payload
   }
 }

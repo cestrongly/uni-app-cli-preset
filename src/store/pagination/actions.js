@@ -7,7 +7,7 @@
  * @Description: 编辑描述内容
  */
 
-import * as TYPES from '@/store/types'
+import * as paginationMap from '@/store/maps/paginationMap'
 export default {
   /**
    * 分页处理
@@ -19,7 +19,7 @@ export default {
     try {
       const res = await getList(query)
       console.log('getList res:', res)
-      context.commit(TYPES.SET_LIST, { res, query })
+      context.commit(paginationMap.SET_LIST, { res, query })
     } catch (e) {
       // TODO handle the exception
       console.error('getList err:', e)
