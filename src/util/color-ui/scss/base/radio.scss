@@ -1,3 +1,7 @@
+/* ==================
+    单选按钮  radio
+ ==================== */
+
 radio-group {
   display: inline-block;
 }
@@ -23,13 +27,11 @@ radio::before {
 }
 
 radio .wx-radio-input,
-radio .uni-radio-input
-{
+radio .uni-radio-input {
   margin: 0;
   width: 24px;
   height: 24px;
 }
-
 
 radio.radio::before,
 radio .wx-radio-input::before,

@@ -1,22 +1,8 @@
 /* ==================
-        初始化
+      根节点 page|root
  ==================== */
- body,
- page {
-  // background-color: #f2f5f9;
+:root,
+page {
   font-size: 14px;
-  // color: #333333;
   font-family: Helvetica Neue, Helvetica, sans-serif;
-}
-
-view,
-scroll-view,
-swiper,
-button,
-input,
-textarea,
-label,
-navigator,
-image {
-  box-sizing: border-box;
 }

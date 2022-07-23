@@ -1,3 +1,7 @@
+/* ==================
+    复选框 checkbox
+ ==================== */
+
 checkbox {
   position: relative;
 }
@@ -30,14 +34,13 @@ checkbox.round .uni-checkbox-input {
   border-radius: 100rpx;
 }
 
-
 checkbox .wx-checkbox-input::before,
 checkbox .uni-checkbox-input::before {
   display: none;
 }
 
 checkbox.red[checked] .wx-checkbox-input,
-checkbox.red.checked .uni-checkbox-input{
+checkbox.red.checked .uni-checkbox-input {
   background-color: #e54d42 !important;
   border-color: #e54d42 !important;
   color: #ffffff !important;
@@ -75,7 +78,7 @@ checkbox.checked .uni-checkbox-input {
 }
 
 checkbox.cyan[checked] .wx-checkbox-input,
-checkbox.cyan.checked .uni-checkbox-input{
+checkbox.cyan.checked .uni-checkbox-input {
   background-color: #1cbbb4 !important;
   border-color: #1cbbb4 !important;
   color: #ffffff !important;
@@ -138,7 +141,7 @@ checkbox.black.checked .uni-checkbox-input {
 }
 
 checkbox.white[checked] .wx-checkbox-input,
-checkbox.white.checked .uni-checkbox-input{
+checkbox.white.checked .uni-checkbox-input {
   background-color: #ffffff !important;
   border-color: #ffffff !important;
   color: #333333 !important;

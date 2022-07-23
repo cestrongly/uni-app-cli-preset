@@ -7,19 +7,20 @@
   （QQ交流群：240787041）
 */
 
-// 变量
+// 变量 预设颜色
 @import './scss/var-preset-color.scss';
 
 //
 // 元素样式
 //
 
-// 初始化
-@import './scss/base/page.scss';
+@import './scss/base/border-box.scss';
 // checkbox
 @import './scss/base/checkbox.scss';
 // image
 @import './scss/base/image.scss';
+// 初始化
+@import './scss/base/page.scss';
 // radio
 @import './scss/base/radio.scss';
 // 轮播

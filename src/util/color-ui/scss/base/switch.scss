@@ -1,5 +1,5 @@
 /* ==================
-         开关
+      开关 switch
  ==================== */
 
 switch {
@@ -100,7 +100,7 @@ switch .uni-switch-input::before {
 }
 
 switch.red[checked] .wx-switch-input.wx-switch-input-checked,
-switch.red.checked .uni-switch-input.uni-switch-input-checked{
+switch.red.checked .uni-switch-input.uni-switch-input-checked {
   background-color: #e54d42 !important;
   border-color: #e54d42 !important;
   color: #ffffff !important;
@@ -130,7 +130,7 @@ switch.olive.checked .uni-switch-input {
 switch.green[checked] .wx-switch-input,
 switch[checked] .wx-switch-input,
 switch.green.checked .uni-switch-input,
-switch.checked .uni-switch-input{
+switch.checked .uni-switch-input {
   background-color: #39b54a !important;
   border-color: #39b54a !important;
   color: #ffffff !important;
@@ -152,7 +152,7 @@ switch.blue.checked .uni-switch-input {
 }
 
 switch.purple[checked] .wx-switch-input,
-switch.purple.checked .uni-switch-input{
+switch.purple.checked .uni-switch-input {
   background-color: #6739b6 !important;
   border-color: #6739b6 !important;
   color: #ffffff !important;
@@ -179,8 +179,7 @@ switch.brown.checked .uni-switch-input {
   color: #ffffff !important;
 }
 
-switch.grey[checked] .wx-switch-input
-switch.grey.checked .uni-switch-input {
+switch.grey[checked] .wx-switch-input switch.grey.checked .uni-switch-input {
   background-color: #8799a3 !important;
   border-color: #8799a3 !important;
   color: #ffffff !important;
@@ -194,7 +193,7 @@ switch.gray.checked .uni-switch-input {
 }
 
 switch.black[checked] .wx-switch-input,
-switch.black.checked .uni-switch-input{
+switch.black.checked .uni-switch-input {
   background-color: #333333 !important;
   border-color: #333333 !important;
   color: #ffffff !important;

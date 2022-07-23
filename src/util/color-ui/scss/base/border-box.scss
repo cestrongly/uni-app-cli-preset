@@ -1,0 +1,15 @@
+/* ==================
+    盒子模型 border-box
+ ==================== */
+
+view,
+scroll-view,
+swiper,
+button,
+input,
+textarea,
+label,
+navigator,
+image {
+  box-sizing: border-box;
+}
