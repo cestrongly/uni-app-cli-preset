@@ -61,6 +61,10 @@
 @import './scss/modules/cu-bar.scss';
 // 按钮
 @import './scss/modules/cu-btn.scss';
+// 按钮 细边框
+@import './scss/modules/cu-btn-line.scss';
+// 按钮 粗边框
+@import './scss/modules/cu-btn-lines.scss';
 // 卡片
 @import './scss/modules/cu-card.scss';
 // 聊天
@@ -84,10 +88,7 @@
 
 // 内置图标
 @import './scss/modules/icon.scss';
-// 设置有边框的盒子里字体颜色
-@import './scss/modules/line.scss';
-// 设置有边框的盒子里字体颜色 盒子里还有盒子
-@import './scss/modules/lines.scss';
+
 // 导航栏
 @import './scss/modules/nav.scss';
 // 定制 Switch 性别
