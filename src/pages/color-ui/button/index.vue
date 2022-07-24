@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-24 08:40:26
- * @LastEditTime: 2022-07-24 10:33:55
+ * @LastEditTime: 2022-07-24 14:59:39
  * @LastEditors: cest
  * @FilePath: /uni-app-cli-preset/src/pages/color-ui/button/index.vue
  * @Description: 编辑描述内容
@@ -133,8 +133,8 @@
 <script>
 import '@/util/color-ui/scss/modules/icon.scss'
 import '@/util/color-ui/scss/modules/cu-btn.scss'
-import '@/util/color-ui/scss/modules/cu-btn-line.scss'
-import '@/util/color-ui/scss/modules/cu-btn-lines.scss'
+import '@/util/color-ui/scss/modules/cu-box-line.scss'
+import '@/util/color-ui/scss/modules/cu-box-lines.scss'
 import ColorList from '@/pages/color-ui/data/ColorList'
 export default {
   components: {},

@@ -52,7 +52,7 @@
 // 边框样式 细线 虚线 上右下左
 @import './scss/modules/border.scss';
 // 盒子阴影
-@import './scss/modules/box-shadow.scss';
+@import './scss/modules/cu-box-shadow.scss';
 
 // colorui
 // 头像
@@ -62,9 +62,9 @@
 // 按钮
 @import './scss/modules/cu-btn.scss';
 // 按钮 细边框
-@import './scss/modules/cu-btn-line.scss';
+@import './scss/modules/cu-box-line.scss';
 // 按钮 粗边框
-@import './scss/modules/cu-btn-lines.scss';
+@import './scss/modules/cu-box-lines.scss';
 // 卡片
 @import './scss/modules/cu-card.scss';
 // 聊天
