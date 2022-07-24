@@ -1,12 +1,23 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-02 12:33:28
- * @LastEditTime: 2022-07-23 16:05:41
+ * @LastEditTime: 2022-07-25 07:52:42
  * @LastEditors: cest
  * @FilePath: /uni-app-cli-preset/CHANGELOG.md
  * @Description: 更新日志
 -->
 # Change Log
+
+## 2022-7-24
+
+更新：
+
+- 【color-ui】
+  - 更新按钮说明文档
+  - 样式模块更名 line.scss -> cu-box-line.scss
+  - 样式模块更名 lines.scss -> cu-box-lines.scss
+  - 样式模块更名 box-shadow.scss -> cu-box-shadow.scss
+  - 更新标签说明文档
 
 ## 2022-7-23 v1.2.0.20220723
 
