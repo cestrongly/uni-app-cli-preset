@@ -55,6 +55,13 @@
             "navigationStyle": "custom",
             "enablePullDownRefresh": false
           }
+        },
+        {
+          "path": "tag/index",
+          "style": {
+            "navigationStyle": "custom",
+            "enablePullDownRefresh": false
+          }
         }
       ]
     },
