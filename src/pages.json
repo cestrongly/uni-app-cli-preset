@@ -15,6 +15,13 @@
       "root": "pages/color-ui",
       "pages": [
         {
+          "path": "button/index",
+          "style": {
+            "navigationStyle": "custom",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
           "path": "index/index",
           "style": {
             "navigationStyle": "custom",

@@ -1,9 +1,9 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 08:51:11
- * @LastEditTime: 2022-07-12 20:12:50
+ * @LastEditTime: 2022-07-24 08:29:51
  * @LastEditors: cest
- * @FilePath: /uni-app-cli/src/pages/index/index.vue
+ * @FilePath: /uni-app-cli-preset/src/pages/index/index.vue
  * @Description: 编辑描述内容
 -->
 <template lang="pug">
@@ -11,7 +11,7 @@
   .bg-img.animation-fade(:style="backgroundImage")
   .bg-color
   navigator.text-xl.animation-fade.text-red(url="/pages/color-ui/index/index" open-type="navigate" hover-class="navigator-hover")
-    | colorui 说明文档
+    | color ui 说明文档
   navigator.text-xl.animation-scale-up.text-orange(url="/pages/news/index" open-type="navigate" hover-class="navigator-hover")
     | 新闻/资讯类 App 模板
   navigator.text-xl.animation-scale-down.text-yellow(url="/pages/test/index/index" open-type="navigate" hover-class="navigator-hover")
