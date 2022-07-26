@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-03 08:51:11
- * @LastEditTime: 2022-07-24 08:29:51
+ * @LastEditTime: 2022-07-26 14:53:11
  * @LastEditors: cest
  * @FilePath: /uni-app-cli-preset/src/pages/index/index.vue
  * @Description: 编辑描述内容
@@ -18,6 +18,8 @@
     | 单元测试导航
   navigator.text-xl.animation-slide-top.text-olive(url="/pages/z-paging/index/index" open-type="navigate" hover-class="navigator-hover")
     | z-paging
+  navigator.text-xl.animation-slide-top.text-olive(url="/pages/test/vuex-demo/index" open-type="navigate" hover-class="navigator-hover")
+    | vuex-demo
 </template>
 
 <script>

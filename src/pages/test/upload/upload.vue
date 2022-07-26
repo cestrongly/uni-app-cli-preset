@@ -1,9 +1,9 @@
 <!--
  * @Author: cest
  * @Date: 2022-06-15 20:34:29
- * @LastEditTime: 2022-07-09 02:01:13
+ * @LastEditTime: 2022-07-26 16:05:12
  * @LastEditors: cest
- * @FilePath: /uni-app-cli/src/pages/test/upload/upload.vue
+ * @FilePath: /uni-app-cli-preset/src/pages/test/upload/upload.vue
  * @Description: 上传图片功能测试
 -->
 <template>
@@ -101,7 +101,7 @@
 <script>
 import { API_BASE_URL } from '@/setting'
 import HTTP_RESPONSE_STATUS_CODES from '@/util/CONSTANT/HTTP_RESPONSE_STATUS_CODES'
-import store from '@/store'
+import store from '@/store/__index_'
 import bytesToSize from '@/util/function/bytesToSize'
 export default {
   data() {
