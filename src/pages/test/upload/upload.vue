@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-06-15 20:34:29
- * @LastEditTime: 2022-07-26 16:05:12
+ * @LastEditTime: 2022-07-27 10:01:49
  * @LastEditors: cest
  * @FilePath: /uni-app-cli-preset/src/pages/test/upload/upload.vue
  * @Description: 上传图片功能测试
@@ -101,7 +101,7 @@
 <script>
 import { API_BASE_URL } from '@/setting'
 import HTTP_RESPONSE_STATUS_CODES from '@/util/CONSTANT/HTTP_RESPONSE_STATUS_CODES'
-import store from '@/store/__index_'
+import store from '@/store'
 import bytesToSize from '@/util/function/bytesToSize'
 export default {
   data() {

@@ -23,18 +23,6 @@
   width: 240rpx;
 }
 
-.cu-custom .cu-bar {
-  min-height: 0px;
-  /* #ifdef MP-WEIXIN */
-  padding-right: 220rpx;
-  /* #endif */
-  /* #ifdef MP-ALIPAY */
-  padding-right: 150rpx;
-  /* #endif */
-  box-shadow: 0rpx 0rpx 0rpx;
-  z-index: 9999;
-}
-
 .cu-custom .cu-bar .border-custom {
   position: relative;
   background: rgba(0, 0, 0, 0.15);
