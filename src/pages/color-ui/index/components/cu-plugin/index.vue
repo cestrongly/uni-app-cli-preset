@@ -1,9 +1,9 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-04 20:18:12
- * @LastEditTime: 2022-07-06 00:29:22
+ * @LastEditTime: 2022-07-28 11:32:20
  * @LastEditors: cest
- * @FilePath: /uni-app-cli/src/pages/color-ui/index/components/cu-plugin/index.vue
+ * @FilePath: /dms-app-cli/src/pages/color-ui/index/components/cu-plugin/index.vue
  * @Description: 插件扩展
 -->
 <template lang="pug">
@@ -84,7 +84,7 @@ export default {
 
 .cu-item {
   position: relative;
-  background-color: var(--ui-bg-dark-color);
+  background-color: var(--black);
   .img-bg {
     position: absolute;
     width: 100%;
@@ -94,7 +94,7 @@ export default {
 }
 
 ::v-deep .tabbar {
-  background-color: var(--ui-bg-dark-color);
+  background-color: var(--black);
 }
 
 .cardTitle {

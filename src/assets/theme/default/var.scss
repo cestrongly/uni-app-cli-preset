@@ -1,79 +1,57 @@
-$u-main-color: #303133;
-$u-content-color: #606266;
-$u-tips-color: #909193;
-$u-light-color: #c0c4cc;
-$u-border-color: #dadbde;
-$u-bg-color: #f3f4f6;
-$u-disabled-color: #c8c9cc;
-
-$u-primary: #3c9cff;
-$u-primary-dark: #398ade;
-$u-primary-disabled: #9acafc;
-$u-primary-light: #ecf5ff;
-
-$u-warning: #f9ae3d;
-$u-warning-dark: #f1a532;
-$u-warning-disabled: #f9d39b;
-$u-warning-light: #fdf6ec;
-
-$u-success: #5ac725;
-$u-success-dark: #53c21d;
-$u-success-disabled: #a9e08f;
-$u-success-light: #f5fff0;
-
-$u-error: #f56c6c;
-$u-error-dark: #e45656;
-$u-error-disabled: #f7b2b2;
-$u-error-light: #fef0f0;
-
-$u-info: #909399;
-$u-info-dark: #767a82;
-$u-info-disabled: #c4c6c9;
-$u-info-light: #f4f4f5;
-
 :not(.dark) {
+  /* 主体颜色 */
+  --text-main-color: #303133;
+  --text-content-color: #606266;
+  --text-tips-color: #909193;
+  --text-light-color: #c0c4cc;
+  --border-color: #dadbde;
+  --bg-color: #f3f4f6;
+  --disabled-color: #c8c9cc;
+
+  /* 主题颜色 */
   --primary: #3c9cff;
   --primary-dark: #398ade;
   --primary-disabled: #9acafc;
   --primary-light: #ecf5ff;
 
+  /* 警告颜色 */
+  --warning: #f9ae3d;
+  --warning-dark: #f1a532;
+  --warning-disabled: #f9d39b;
+  --warning-light: #fdf6ec;
+
+  /* 信息颜色 */
   --info: #909399;
   --info-dark: #767a82;
   --info-disabled: #c4c6c9;
   --info-light: #f4f4f5;
 
+  /* 成功颜色 */
+  --success: #5ac725;
+  --success-dark: #53c21d;
+  --success-disabled: #a9e08f;
+  --success-light: #f5fff0;
+
+  /* 错误颜色 */
   --error: #f56c6c;
   --error-dark: #e45656;
   --error-disabled: #f7b2b2;
   --error-light: #fef0f0;
 
-  --ui-bg-color: #f3f4f6;
-  --ui-bg-dark-color: #606266;
-  --ui-bg-white: #ffffff;
-
-  --ui-content-color: #606266;
-
-  --bg-color: #f3f4f6;
-  --bg-dark: #606266;
-  --bg-white: #ffffff;
-
-  --text-content-color: #606266;
-
-  /* 文字颜色 */
-
-  --text-red: #e54d42;
-  --text-orange: #f37b1d;
-  --text-yellow: #fbbd08;
-  --text-olive: #8dc63f;
-  --text-green: #39b54a;
-  --text-cyan: #1cbbb4;
-  --text-blue: #0081ff;
-  --text-purple: #6739b6;
-  --text-mauve: #9c26b0;
-  --text-pink: #e03997;
-  --text-brown: #a5673f;
-  --text-grey: #8799a3;
-  --text-gray: #aaaaaa;
-  --text-black: #333333;
-  --text-white: #ffffff;
+  /* 预设颜色 */
+  --red: #e54d42;
+  --orange: #f37b1d;
+  --yellow: #fbbd08;
+  --olive: #8dc63f;
+  --green: #39b54a;
+  --cyan: #1cbbb4;
+  --blue: #0081ff;
+  --purple: #6739b6;
+  --mauve: #9c26b0;
+  --pink: #e03997;
+  --brown: #a5673f;
+  --grey: #8799a3;
+  --gray: #aaaaaa;
+  --black: #333333;
+  --white: #ffffff;
 }

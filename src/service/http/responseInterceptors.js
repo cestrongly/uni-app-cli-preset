@@ -43,7 +43,7 @@ module.exports = http => {
             url: '/pages/login/login'
           })
         } else if (response.data.code === 500) {
-          message = '账号异常，请联系系统管理员。错误原因:' + response.data.message
+          message = response.data.message
         } else {
           message = '出现错误，请稍后再试.' + response.errMsg
         }
