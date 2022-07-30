@@ -433,7 +433,7 @@ export default {
   }),
   computed: {
     CustomBar() {
-      return this.$CustomBar;
+      return this.$CustomStatusBarHeight;
     },
     avatar() {
       return [

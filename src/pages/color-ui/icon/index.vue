@@ -1217,7 +1217,7 @@ export default {
   }),
   computed: {
     CustomBar() {
-      return this.$CustomBar
+      return this.$CustomStatusBarHeight
     },
     CuIconSortByNameAsc() {
       return [].concat(this.cuIcon).sort(function (a, b) {
