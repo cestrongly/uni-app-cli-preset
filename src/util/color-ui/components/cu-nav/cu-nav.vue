@@ -1,23 +1,23 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-30 09:21:47
- * @LastEditTime: 2022-07-30 09:54:47
+ * @LastEditTime: 2022-07-30 11:30:51
  * @LastEditors: cest
  * @FilePath: /uni-app-cli-preset/src/util/color-ui/components/cu-nav/cu-nav.vue
  * @Description: 自定义导航栏
 -->
 
 <template lang="pug">
-.cu-nav(:style="[{ height: CustomBar + 'px' }]")
-  .cu-nav__body.fixed(:style="NavBodyStyle" :class="[bgColor, bgImageUrl? 'none-bg text-white bg-img' : '']")
-    .back(@tap="backEventHandler" v-if="showBack")
-      text.cuIcon-back
+.cu-nav(:style="[{ height: CustomStatusBarHeight + 'px' }]")
+  .cu-nav__body.fixed.flex.justify-center.align-center(:style="NavBodyStyle" :class="[bgColor, bgImageUrl? 'none-bg text-white bg-img' : '']")
+    .back.margin-lr-sm.text-df(@tap="backEventHandler" v-if="showBack")
+      //- .icon.icon-ba.cuIcon-back
       //- 具名插槽 自定义导航栏--返回
       slot(name="backText")
-    .title(:style="[{ top: StatusBar + 'px' }]")
+    .title.text-df(:style="[{ top: StatusBarHeight + 'px' }]")
       //- 具名插槽 自定义导航栏--标题
       slot(name="content")
-    .right
+    .right.margin-lr-sm
       //- 具名插槽 自定义导航栏--右边
       slot(name="right")
 </template>
@@ -81,3 +81,7 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+@import './stylus'
+</style>
