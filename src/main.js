@@ -2,7 +2,7 @@
  * @Author: cest
  * @Date: 2022-06-16 07:48:59
  * @LastEditors: cest
- * @LastEditTime: 2022-07-30 09:52:24
+ * @LastEditTime: 2022-07-30 10:08:52
  * @FilePath: /uni-app-cli-preset/src/main.js
  * @Description:
  * @Copyright (c) 2022 by cestrmail@163.com by cest, All Rights Reserved.
@@ -28,9 +28,11 @@ import store from './store'
 // 引入全局uView
 import uView from './uni_modules/uview-ui'
 // 引入自定义导航栏
-import cuCustom from './util/color-ui/components/cu-custom.vue'
+import cuCustom from './util/color-ui/components/cu-custom'
 // 引入自定义导航栏（新）
 import cuNav from './util/color-ui/components/cu-nav/cu-nav'
+// 引入主题组件
+import cuTheme from './util/color-ui/components/cu-theme/cu-theme'
 
 // @test
 // const host = 'https://unidemo.dcloud.net.cn/'
@@ -41,11 +43,15 @@ import cuNav from './util/color-ui/components/cu-nav/cu-nav'
 Vue.component('cu-custom', cuCustom)
 // 注册组件 自定义导航栏（新）
 Vue.component('cu-nav', cuNav)
+// 注册组件 主题
+Vue.component('cu-theme', cuTheme)
+
+// 安装 uView 插件
+Vue.use(uView)
+
 Vue.config.productionTip = false
 
 App.mpType = 'app'
-// 安装 uView 插件
-Vue.use(uView)
 
 const app = new Vue({
   ...App,
