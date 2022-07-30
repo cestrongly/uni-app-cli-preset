@@ -1,7 +1,7 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-09 13:14:15
- * @LastEditTime: 2022-07-15 21:46:14
+ * @LastEditTime: 2022-07-30 08:28:30
  * @LastEditors: cest
  * @FilePath: /uni-app-cli-preset/src/App.vue
  * @Description: 编辑描述内容
@@ -13,6 +13,7 @@ export default {
     console.log('App Launch')
 
     // #ifdef APP-NVUE
+    // App nvue
     plus.screen.lockOrientation('portrait-primary')
 
     const appid = plus.runtime.appid
@@ -52,6 +53,7 @@ export default {
     uni.getSystemInfo({
       success: function (e) {
         // #ifndef MP
+        // 微信小程序/支付宝小程序/百度小程序/头条小程序/QQ小程序
         Vue.prototype.$StatusBar = e.statusBarHeight
         if (e.platform === 'android') {
           Vue.prototype.$CustomBar = e.statusBarHeight + 50
@@ -61,6 +63,7 @@ export default {
         // #endif
 
         // #ifdef MP-WEIXIN
+        // 微信小程序
         Vue.prototype.$StatusBar = e.statusBarHeight
         const custom = wx.getMenuButtonBoundingClientRect()
         Vue.prototype.$Custom = custom
@@ -68,11 +71,10 @@ export default {
         // #endif
 
         // #ifdef MP-ALIPAY
+        // 支付宝小程序
         Vue.prototype.$StatusBar = e.statusBarHeight
         Vue.prototype.$CustomBar = e.statusBarHeight + e.titleBarHeight
         // #endif
-
-        // console.log('Vue.prototype',this)
       }
     })
   },
@@ -84,12 +86,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-// @import '@/assets/theme/dark/index.scss';
-// @import '@/assets/theme/default/index.scss';
-// @import '@/util/color-ui/index.scss';
-// @import '@/util/color-ui/animation.css';
-// @import '@/uni_modules/uview-ui/index.scss';
-// @import '@/assets/scss/index.scss';
-</style>
