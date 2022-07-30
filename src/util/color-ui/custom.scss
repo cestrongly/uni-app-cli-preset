@@ -1,10 +1,5 @@
 /*
-  ColorUi for uniApp  v2.1.6 | by 文晓港 2019-05-31 10:44:24
-  仅供学习交流，如作它用所承受的法律责任一概与作者无关
-
-  *使用 ColorUi 开发扩展与插件时，请注明基于 ColorUi 开发
-
-  （QQ交流群：240787041）
+  color-ui custom
 */
 
 // 变量 预设颜色
@@ -61,8 +56,6 @@
 @import './scss/modules/border-radius.scss';
 // 边框样式 细线 虚线 上右下左
 @import './scss/modules/border.scss';
-// 盒子阴影
-@import './scss/modules/cu-box-shadow.scss';
 
 //
 // color-ui
@@ -72,6 +65,12 @@
 // @import './scss/modules/cu-avatar.scss';
 // 操作条
 @import './scss/modules/cu-bar.scss';
+// 盒子边框--颜色
+@import './scss//modules/cu-box-line.scss';
+// 盒子边框（粗）--颜色
+@import './scss/modules/cu-box-lines.scss';
+// 盒子阴影
+@import './scss/modules/cu-box-shadow.scss';
 // 按钮
 @import './scss/modules/cu-btn.scss';
 // 卡片
@@ -104,9 +103,6 @@
 //
 // @import './scss/modules/icon.scss';
 // 设置有边框的盒子里字体颜色
-// @import './scss/modules/line.scss';
-// 设置有边框的盒子里字体颜色 盒子里还有盒子
-// @import './scss/modules/lines.scss';
 // 导航栏
 // @import './scss/modules/nav.scss';
 // 定制 Switch 性别
