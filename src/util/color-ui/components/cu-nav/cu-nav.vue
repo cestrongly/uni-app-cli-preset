@@ -1,9 +1,9 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-30 09:21:47
- * @LastEditTime: 2022-07-30 11:30:51
+ * @LastEditTime: 2022-08-01 08:44:47
  * @LastEditors: cest
- * @FilePath: /uni-app-cli-preset/src/util/color-ui/components/cu-nav/cu-nav.vue
+ * @FilePath: /dms-app-cli/src/util/color-ui/components/cu-nav/cu-nav.vue
  * @Description: 自定义导航栏
 -->
 
@@ -70,6 +70,8 @@ export default {
 
   methods: {
     backEventHandler(e) {
+      console.log('backEventHandler e',e)
+      console.log('backEventHandler backFunction',this.backFunction)
       if (typeof this.backFunction === 'function') {
         this.backFunction()
       } else {

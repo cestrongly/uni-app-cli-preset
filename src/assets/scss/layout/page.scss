@@ -1,9 +1,17 @@
-.cu-theme,
-:root,
-page {
+.stretch {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  min-height: 100%;
+}
+
+.cu-theme,
+:root,
+page {
+  @extend .stretch;
+}
+
+:root,
+page {
+  height: 100%;
   font-size: 12px;
 }
