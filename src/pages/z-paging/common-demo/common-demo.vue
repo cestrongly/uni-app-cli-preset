@@ -1,23 +1,37 @@
 <!--
  * @Author: cest
  * @Date: 2022-07-12 20:15:54
- * @LastEditTime: 2022-07-12 20:35:45
+ * @LastEditTime: 2022-08-17 15:18:34
  * @LastEditors: cest
- * @FilePath: /uni-app-cli/src/pages/z-paging/common-demo/common-demo.vue
+ * @FilePath: /uni-app-cli-preset/src/pages/z-paging/common-demo/common-demo.vue
  * @Description: 编辑描述内容
 -->
 <!-- 普通模式演示(vue) -->
-<template lang="pug">
-view.content
-  z-paging(ref="paging" v-model="dataList" @query="queryList")
-    //- 需要固定在顶部不滚动的view放在slot="top"的view中，如果需要跟着滚动，则不要设置slot="top"
-    //- 注意！此处的z-tabs为独立的组件，可替换为第三方的tabs，若需要使用z-tabs，请在插件市场搜索z-tabs并引入，否则会报插件找不到的错误
-    z-tabs(slot="top" @change="tabChange" :list="tabList")
-    //- 如果希望其他view跟着页面滚动，可以放在z-paging标签内
-    view.item(v-for="(item,index) in dataList" :key="index" @click="itemClick(item,index)")
-      view.item-title {{item.title}}
-      view.item-detail {{item.detail}}
-      view.item-line
+<template>
+  <view class="content">
+    <z-paging
+      ref="paging"
+      v-model="dataList"
+      @query="queryList"
+    >
+      <!--  需要固定在顶部不滚动的view放在slot="top"的view中，如果需要跟着滚动，则不要设置slot="top" --><!--  注意！此处的z-tabs为独立的组件，可替换为第三方的tabs，若需要使用z-tabs，请在插件市场搜索z-tabs并引入，否则会报插件找不到的错误 --><z-tabs
+        slot="top"
+        @change="tabChange"
+        :list="tabList"
+      /><!--  如果希望其他view跟着页面滚动，可以放在z-paging标签内 --><view
+        class="item"
+        v-for="(item,index) in dataList"
+        :key="index"
+        @click="itemClick(item,index)"
+      >
+        <view class="item-title">
+          {{ item.title }}
+        </view><view class="item-detail">
+          {{ item.detail }}
+        </view><view class="item-line" />
+      </view>
+    </z-paging>
+  </view>
 </template>
 
 <script>
